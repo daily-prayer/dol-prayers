@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet">
+    <style>
+      /* Define a class for title font */
+      .title-text {
+        font-family: 'IM Fell French Canon SC', serif;
+        font-size: 60px;
+        text-align: center;
+      }
+      /* Italic font */
+      @font-face {
+        font-family: Cataneo;
+        src: url(font/Cataneo_Light_BT_400.ttf);
+      }
+      /* Define a class for the date */
+      .date {
+        font-family: Cataneo, serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 12px;
+      }
+      .ordinal-date {
+        font-family: 'IM Fell French Canon SC', serif;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title -->
+    <div class="title-text" id="main-title">
+      Daily Prayer
+    </div>
+    <div class="date" id="selected-date">
+      <!-- The date will go here -->
+    </div>
+    <div class="ordinal-date" id="ordinal-date">
+      <!-- The ordinal date will go here -->
+    </div>
+    <script>
+      // Get the current date
+      //let currentDate = new Date();
+
+      let currentDate = new Date("2023-12-24");
+
+      // Undefined easterDay
+      let easterDay;
+
+      // Define an array to store month names
+      let monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+
+      // Define an array to store day names
+      let dayNames = [
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+      ];
+
+      // Define number of Sundays (There are a maximum of twenty-eight after Pentecost)
+      let sundaysAfter = [
+        'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth',
+        'Eleventh', 'Twelfth', 'Thirteenth', 'Fourteenth', 'Fifteenth', 'Sixteenth', 'Seventeenth', 'Eighteenth', 'Nineteenth', 'Twentieth',
+        'Twenty-First', 'Twenty-Second', 'Twenty-Third', 'Twenty-Fourth', 'Twenty-Fifth', 'Twenty-Sixth', 'Twenty-Seventh', 'Twenty-Eighth'
+      ];
+
+      // Get the day, month, and year from the current date
+      let day = currentDate.getDate()+1;
+      let month = monthNames[currentDate.getMonth()]; // Get the month name
+      let year = currentDate.getFullYear();
+
+      // Create a string for today's date in the desired format (e.g., "Month Day, Year")
+      let formattedDate = `${month} ${day}, ${year}`;
+
+      // Find the "selected-date" div by its ID and set its content to the formatted date
+      document.getElementById('selected-date').textContent = formattedDate;
+
+      // Calculate how many days have passed since Easter
+      const daysAfterEaster = calculateDaysAfterEaster(currentDate);
+
+      //console.log(`The input date is ${daysAfterEaster} days after Easter.`);
+
+      // Define a function to determine how many days after Easter the current date is
+      function calculateDaysAfterEaster(currentDate) {
+        // Parse the input date as a JavaScript Date object
+        let date = currentDate;
+
+        // Get the year of the input date
+        const year = date.getFullYear();
+
+        // Calculate the date of Easter for the given year
+        const a = year % 19;
+        const b = Math.floor(year / 100);
+        const c = year % 100;
+        const d = Math.floor(b / 4);
+        const e = b % 4;
+        const f = Math.floor((b + 8) / 25);
+        const g = Math.floor((b - f + 1) / 3);
+        const h = (19 * a + b - d - g + 15) % 30;
+        const i = Math.floor(c / 4);
+        const k = c % 4;
+        const l = (32 + 2 * e + 2 * i - h - k) % 7;
+        const m = Math.floor((a + 11 * h + 22 * l) / 451);
+        const month = Math.floor((h + l - 7 * m + 114) / 31); // Month of Easter
+        const day = ((h + l - 7 * m + 114) % 31) + 1; // Day of Easter
+
+        // Create a new Date object for Easter
+        const easterDate = new Date(year, month - 1, day);
+        // Set easterDay equal to easterDate
+        easterDay = easterDate
+
+        // Calculate the difference in days between the input date and Easter
+        const timeDifference = date.getTime() - easterDate.getTime();
+        const daysAfterEaster = Math.floor(timeDifference / (1000 * 60 * 60 * 24)+1);
+
+        // Return how many days have passed since Easter
+        return daysAfterEaster;
+      };
+
+      /* TO FIND THE DATE FOR ADVENT */
+      // Create a new date object for Christmas of the given year
+      const christmasDate = new Date(year, 11, 25); // Month is 11 for December (0-based index)
+
+      // Calculate the day of the week (0 = Sunday, 1 = Monday, etc.) for Christmas
+      const christmasDayOfWeek = christmasDate.getDay();
+
+      // The date of the Sunday before Christmas
+      const oneSundayBeforeChristmas = new Date(year, 11, christmasDate.getDate() - christmasDayOfWeek - 1);
+
+      // Define the Fourth Sunday before Christmas by finding the First Sunday before Christmas...
+      const fourSundaysBeforeChristmas = new Date(year, 11, christmasDate.getDate() - christmasDayOfWeek);
+      // and subtracting this by 21 (three weeks)
+      fourSundaysBeforeChristmas.setDate(oneSundayBeforeChristmas.getDate() - 21);
+
+      // Now, find out how many days after Easter Advent is
+      const adventPosition = calculateDaysAfterEaster(fourSundaysBeforeChristmas);
+      // Then, find out how many days after Easter Christmas is
+      const christmasPosition = calculateDaysAfterEaster(new Date(year, 11, 24));
+      // Then, find out how many days before Easter January 2 is
+      const twoJanPosition = calculateDaysAfterEaster(new Date(year, 0, 1));
+      // Then, find out how many days before Easter Epiphany is
+      const epiphanyPosition = calculateDaysAfterEaster(new Date(year, 0, 5));
+
+      console.log(epiphanyPosition);
+      console.log(daysAfterEaster);
+
+      if (daysAfterEaster == -46) {
+        console.log("It's Lent");
+      } else if (-46 < daysAfterEaster && daysAfterEaster < 0) {
+        console.log("It's Lent Season")
+      } else if (daysAfterEaster == 0) {
+        console.log("It's Easter Day");
+      } else if (0 < daysAfterEaster && daysAfterEaster < 49) {
+        console.log("It's Easter Season");
+      } else if (daysAfterEaster == 49) {
+        console.log("It's Pentecost Day");
+      } else if (49 < daysAfterEaster && daysAfterEaster < adventPosition) {
+        console.log("It's Pentecost Season");
+      } else if (daysAfterEaster == adventPosition) {
+        console.log("It's Advent");
+      } else if (adventPosition < daysAfterEaster && daysAfterEaster < christmasPosition) {
+        console.log("It's Advent Season");
+        // Define how many days after Advent it is
+        let daysAfterAdvent = daysAfterEaster - adventPosition;
+        // Determine which Sunday of Advent the target date falls on.
+        let sundayOfAdvent = Math.floor(daysAfterAdvent/7);
+        // Determine the ordinal number of the Sunday
+        let ordinalSunday = sundaysAfter[sundayOfAdvent];
+        // Determine the day of the week
+        let weekDay = dayNames[daysAfterAdvent - (sundayOfAdvent * 7)];
+        // If it is a Sunday...
+        if (weekDay == "Sunday") {
+          // Set the day as follows
+          document.getElementById('ordinal-date').textContent = "The " + ordinalSunday + " Sunday of Advent";
+        // Otherwise...
+        } else {
+          // Set the day as follows
+          document.getElementById('ordinal-date').textContent = "The " + weekDay + " after the " + ordinalSunday + " Sunday of Advent";
+        }
+      } else if (daysAfterEaster == christmasPosition) {
+        console.log("It's Christmas");
+      } else if (christmasPosition < daysAfterEaster && daysAfterEaster <= christmasPosition + 7 || twoJanPosition <= daysAfterEaster && daysAfterEaster < epiphanyPosition) {
+        console.log("It's Christmas Season");
+      } else if (daysAfterEaster == epiphanyPosition) {
+        console.log("It's Epiphany Day");
+      } else if (epiphanyPosition < daysAfterEaster && daysAfterEaster < -46) {
+        console.log("It's Epiphany Season");
+      }
+
+/*
+      function getEpiscopalLiturgicalDay(daysAfterEaster) {
+      // Create an array of liturgical seasons and their start dates
+      const liturgicalSeasons = [
+        { name: "Easter", start: 0 }, // Easter itself
+        { name: "Pentecost", start: 50 }, // Pentecost starts 50 days after Easter
+      ];
+
+      // Calculate the date of Easter for the given year
+      function calculateEasterDate(year) {
+        const a = year % 19;
+        const b = Math.floor(year / 100);
+        const c = year % 100;
+        const d = Math.floor(b / 4);
+        const e = b % 4;
+        const f = Math.floor((b + 8) / 25);
+        const g = Math.floor((b - f + 1) / 3);
+        const h = (19 * a + b - d - g + 15) % 30;
+        const i = Math.floor(c / 4);
+        const k = c % 4;
+        const l = (32 + 2 * e + 2 * i - h - k) % 7;
+        const m = Math.floor((a + 11 * h + 22 * l) / 451);
+        const month = Math.floor((h + l - 7 * m + 114) / 31);
+        const day = ((h + l - 7 * m + 114) % 31) + 1;
+
+        return new Date(year, month - 1, day);
+      }
+
+      // Calculate the date based on the number of days after Easter
+      const easterYear = new Date().getFullYear(); // Get the current year
+      const easterDate = calculateEasterDate(easterYear);
+      const targetDate = new Date(easterDate.getTime() + daysAfterEaster * 24 * 60 * 60 * 1000);
+
+      // Determine the liturgical season
+      let season;
+      for (const liturgical of liturgicalSeasons) {
+        if (targetDate.getDate() === (easterDate.getDate() + liturgical.start)) {
+          season = liturgical.name;
+          break;
+        }
+      }
+
+      // Format the result
+      const dayOfWeek = targetDate.toLocaleDateString("en-US", { weekday: "long" });
+      const nthSunday = liturgicalSeasons.find(season => season.name === "Pentecost").start / 7 + 1;
+
+      return `${dayOfWeek}, after the ${nthSunday}th Sunday after ${season}`;
+    }
+
+    // Example usage:
+    //const daysAfterEaster = 30; // Change this to the desired number of days after Easter
+    const result = getEpiscopalLiturgicalDay(daysAfterEaster);
+    console.log(result);
+*/
+    </script>
+  </body>
+</html>
