@@ -3,6 +3,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet"> 
     <style>
       /* Define a class for title font */
       .title-text {
@@ -29,6 +30,62 @@
         text-align: center;
         margin-top: 12px;
       }
+      h3 {
+        font-family: 'Baskervville', serif;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 12px;
+        font-weight: 400;
+      }
+      p {
+        font-family: 'Baskervville', serif;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 12px;
+        font-weight: 400;        
+      }
+      .intro {
+        font-family: 'IM Fell French Canon SC', serif;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 12px;        
+      }
+      .subhead {
+        font-family: 'Baskervville', serif;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 12px;
+        font-weight: 400;           
+      }
+      .versicle, .hymn, .morning_psalm_1 {
+        font-family: 'Baskervville', serif;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 12px;
+        font-weight: 400;
+      }
+      .confession-button-container, .hail-button-container {
+        text-align: center;
+      }
+      .confession-button-container button, .hail-button-container button {
+        display: none; /* Hide the buttons by default */
+        margin: 0 10px; /* Adjust the margin as needed */
+      }
+      .bc-confession, .hail {
+        display: none;
+      }
+
+      sup.sc-ldf-bible-reading {
+        display: var(--ldf-bible-reading-verse-number-display);
+        margin-left: 0;
+        margin-right: 0.25em;
+        top: -.5em;
+        position: relative;
+        line-height: 0;
+        vertical-align: initial;
+        font-size: 75%;
+      }
+
     </style>
   </head>
   <body>
@@ -42,11 +99,134 @@
     <div class="ordinal-date" id="ordinal-date">
       <!-- The ordinal date will go here -->
     </div>
+    <br>
+    <br>
+    <div class="hail-button-container">
+      <button id="luther-button">Broad Church Hail Mary</button>
+      <button id="angelus-button">The Angelus</button>
+    </div>
+    <br>
+    <div class="hail" id="hail"> 
+      <h3>Hail Mary</h3>
+      <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
+      <i>And she conceived by the Holy Ghost.</i><br>
+      <br>Hail, Mary, full of grace, the Lord is with thee.
+      <br>Blessed art thou among women, and blessed is the 
+      <br>fruit of thy womb, Jesus.&emsp;<i style='color:darkred;'>Luke 1:28;42</i><br>
+      <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
+      <br>into our hearts, that we who have known the
+      <br>Incarnation of thy Son Jesus Christ, announced by
+      <br>an angel to the Virgin Mary, may by his cross and 
+      <br>passion be brought unto the glory of his resurrection,
+      <br>through the same Jesus Christ our Lord. <i>Amen.</i></p><p>
+    </div>    
+    <div class="angelus" id="angelus">
+      <h3>The Angelus</h3>
+      <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
+      <i>And she conceived by the Holy Ghost.</i><br>
+      <br>Hail, Mary, full of grace, the Lord is with thee.
+      <br>Blessed art thou among women, and blessed is the 
+      <br>fruit of thy womb, Jesus.<br>
+      <i>Holy Mary, mother of God, pray for us sinners, now 
+      <br>and at the hour of our death.</i><br>
+      <br>Behold, the handmaid of the Lord.<br>
+      <i>Be it unto me according to thy word.</i><br>
+      <br>Hail, Mary, full of grace, the Lord is with thee.
+      <br>Blessed art thou among women, and blessed is the 
+      <br>fruit of thy womb, Jesus.<br>
+      <i>Holy Mary, mother of God, pray for us sinners, now 
+      <br>and at the hour of our death.</i><br>
+      <br>The Word was made flesh<br>
+      <i>And dwelt among us.</i><br>
+      <br>Hail, Mary, full of grace, the Lord is with thee.
+      <br>Blessed art thou among women, and blessed is the 
+      <br>fruit of thy womb, Jesus.<br>
+      <i>Holy Mary, mother of God, pray for us sinners, now 
+      <br>and at the hour of our death.</i><br>
+      <br>Pray for us, O Holy Mother of God;<br>
+      <i>That we may be made worthy of the promises of Christ.</i><br>
+      <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
+      <br>into our hearts, that we who have known the
+      <br>Incarnation of thy Son Jesus Christ, announced by
+      <br>an angel to the Virgin Mary, may by his cross and 
+      <br>passion be brought unto the glory of his resurrection,
+      <br>through the same Jesus Christ our Lord. <i>Amen.</i></p>
+    </div>
+    <br>
+    <h3>The Office</h3>
+    <div class="versicle" id="versicle"></div>
+    <br>
+    <br>
+    <div class="confession-button-container">
+      <button id="bc-button">Broad Church Confession</button>
+      <button id="confiteor-button">Pray Confiteor instead</button>
+    </div>
+    <br>
+    <div class="bc-confession" id="bc-confession">
+      <h3>Confession of Sin</h3>
+      <p>Let us humbly confess our sins unto Almighty God.<br>
+      <br><i style="color:darkred">Silence</i><br>
+      <br><i style="color:darkred">Say together</i><br>
+      <br><span class="intro">Almighty</span> and most merciful Father,
+      <br>We have erred and strayed from thy ways like
+      <br>lost sheep,
+      <br>we have followed too much the devices and desires
+      <br>of our own hearts,
+      <br>we have offended against thy holy laws,
+      <br>we have left undone those things which we ought
+      <br>to have done,
+      <br>and we have done those things which we ought not
+      <br>to have done.
+      <br>But thou, O Lord, have mercy upon us,
+      <br>spare thou those who confess their faults,
+      <br>restore thou those who are penitent,
+      <br>according to thy promises declared unto mankind
+      <br>in Christ Jesus our Lord;
+      <br>and grant, O most merciful Father, for his sake,
+      <br>that we may hereafter live a godly, righteous, and
+      <br>sober life,
+      <br>to the glory of thy holy Name. <i>Amen.</i><br>
+      <br>The Almighty and merciful Lord grant us
+      <br>absolution and remission of all our sins, true 
+      <br>repentance, amendment of life, and the grace and 
+      <br>consolation of his Holy Spirit. <i>Amen.</i></p>
+      <br>
+    </div>
+    <div class="confiteor" id="confiteor">
+      <h3>Confiteor</h3>
+      <p><span class="intro">Inspire our hearts</span> with honesty, with true 
+      <br>contrition, and with faith in your mercy. <i>Amen.</i><br>
+      <br><span class="intro">We confess</span> to Almighty God, to Blessed Mary 
+      <br>Ever-Virgin, to blessed Michael the Archangel,
+      <br>to blessed John the Baptist, to the holy Apostles  
+      <br>Peter and Paul, and to all the Saints, that we have
+      <br>sinned exceedingly in thought, word, and deed,
+      <br>through our fault, through our own fault, through 
+      <br>our own most grievous fault. Therefore we beg Blessed 
+      <br>Mary Ever-Virgin, blessed Michael the Archangel, 
+      <br>blessed John the Baptist, the holy Apostles Peter 
+      <br>and Paul, and all the Saints, to pray to the Lord
+      <br>our God for us.<br>
+      <br><span class="intro">Almighty</span> and merciful Lord grant us
+      <br>pardon, absolution, and remission of our sins. <i>Amen.</i><br>
+      <br>Turn us, then, O God our Savior.
+      <br><i>And let thine anger cease from us.</i></p>
+    </div>
+    <h3>Invitatory and Psalter</h3>
+    <p>O God, make speed to save us.
+    <br><i>O Lord, make haste to help us.</i><br>
+    <br>Glory be to the Father, and to the Son, and to the
+    <br>Holy Ghost: as it was in the beginning, is now, and 
+    <br>ever shall be, world without end. <i>Amen.</i><br>
+    <div class="hymn" id="hymn"></div>
+    <div class="morning_psalm_1" id="morning_psalm_1"></div>
+    </p>
+
     <script>
       // Get the current date
       //let currentDate = new Date();
 
-      let currentDate = new Date("2023-12-24");
+      let currentDate = new Date(2023, 8, 15);
 
       // Undefined easterDay
       let easterDay;
@@ -69,22 +249,147 @@
         'Twenty-First', 'Twenty-Second', 'Twenty-Third', 'Twenty-Fourth', 'Twenty-Fifth', 'Twenty-Sixth', 'Twenty-Seventh', 'Twenty-Eighth'
       ];
 
+      // Create an array of opening versicles suitable for any time of year for morning or evening prayer
+      let versicles = [
+        "I was glad when they said unto me, \"We will go into the<br>house of the Lord.\"&emsp;<i style='color:darkred;'>Psalms 122:1</i>",
+        "Seek him that made the Pleiades and Orion, that turneth deep<br>darkness into the morning, and darkeneth the day into night;<br>that calleth for the waters of the sea, and poureth them out<br>upon the face of the earth: The Lord is his Name.&emsp;<i style='color:darkred;'>Amos 5:8</i>",
+        "Thine is the day, O God, thine also the night; thou hast<br>established the moon and the sun. Thou hast fixed all the<br>boundaries of the earth; thou hast made summer and winter.&emsp;<i style='color:darkred;'>Psalms 74:15,16</i>",
+        "Thus saith the high and lofty One that inhabiteth eternity,<br>whose Name is Holy, \"I dwell in the high and holy place, with<br>him also that is of a contrite and humble spirit, to revive the<br>spirit of the humble, and to revive the heart of the contrite<br>ones.\"&emsp;<i style='color:darkred;'>Isaiah 57:15</i>",
+        "O worship the Lord in the beauty of holiness; let the whole<br>earth stand in awe of him.&emsp;<i style='color:darkred;'>Psalms 96:9</i>",
+        "O send out thy light and thy truth, that they may lead me,<br>and bring me unto thy holy hill, and to thy dwelling.&emsp;<i style='color:darkred;'>Psalms 43:3</i>",
+        "Jesus said, I am the light of the world; he that followeth me<br>shall not walk in darkness, but shall have the light of life.&emsp;<i style='color:darkred;'>John 8:12</i>"
+      ];
+
+      // Create an array of hymns 
+      let hymns = [
+        "<br><span class='subhead'>Come, Holy Ghost, who ever One</span><br><i style='color:darkred;'>Nunc, Sancte, nobis, Spiritus</i><br><br><span class='intro'>Come, Holy Ghost,</span> who ever One<br>Art with the Father and the Son;<br>Come, Holy Ghost, our souls possess<br>With thy full flood of holiness.<br><br>By every power, by heart and tongue,<br>By act and deed, thy praise be sung:<br>Inflame with perfect love each sense,<br>That others' souls may kindle thence.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<br><span class='subhead'>Maker of man</span><br><i style='color:darkred;'>Plasmator hominis, Deus</i><br><br><span class='intro'>Maker of men,</span> from heaven thy throne<br>Who orderest all things, God alone;<br>By whose decree the teeming earth<br>To reptile and to beast gave birth.<br><br>The mighty forms that fill the land,<br>Instinct with life at thy command,<br>Thou gavest subdued to humankind<br>For service in their rank assigned.<br><br>From all thy servants chase away<br>Whatever thought impure today<br>Hath mingled with the heart's intent,<br>Or with the actions hath been blent.<br><br>In heaven thine endless joys bestow,<br>But grant thy gifts of grace below;<br>From chains of strife our souls release,<br>Bind fast the gentle bands of peace.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Doth live and reign eternally. <i>Amen.</i>",
+        "<br><span class='subhead'>O God, creation's secret force</span><br><i style='color:darkred;'>Rerum Deus tenax vigor</i><br><br><span class='intro'>O God,</span> creation's secret force,<br>Thyself unmoved, all motion's source,<br>Who from the morn till evening's ray<br>Through all its changes guidest the day:<br><br>Grant us, when this short life is past,<br>The glorious evening that shall last;<br>That, by a holy death attained,<br>Eternal glory may be gained.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<br><span class='subhead'>God of truth, Lord of might</span><br><i style='color:darkred;'>Rector potens, verax Deus</i><br><br><span class='intro'>O God of truth,</span> O Lord of might,<br>Who orderest time and change aright,<br>And sendest the early morning ray,<br>And lightest the glow of perfect day;<br><br>Extinguish thou each sinful fire,<br>And banish every ill desire;<br>And while thou keepest the body whole<br>Shed forth thy peace upon the soul.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<br><span class='subhead'>O Christ, our joy</span><br><i style='color:darkred;'>Tu Christe nostrum gaudium</i><br><br><span class='intro'>O Christ,</span> our joy, to whom is given<br>A throne over all the thrones of heaven,<br>In thee, whose hand all things obey,<br>The world's vain pleasures pass away.<br><br>So, suppliants here, we seek to win<br>Thy pardon for thy people's sin,<br>That, by thine all-prevailing grace,<br>Uplifted, we may seek thy face.<br><br>And when, all heaven beneath thee bowed,<br>Thou comest to judgement throned in cloud,<br>Then from our guilt wash out the stain<br>And give us our lost crowns again.<br><br>Be thou our joy and strong defense,<br>Who art our future recompense:<br>So shall the light that springs from thee<br>Be ours through all eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
+        "<br><span class='subhead'>Eternal Monarch, King most High</span><br><i style='color:darkred;'>Aeterne Rex altissime</i><br><br><span class='intro'>Eternal Monarch,</span> King most High,<br>Whose Blood hath brought redemption nigh,<br>By whom the death of Death was wrought,<br>And conquering Grace's battle fought.<br><br>Ascending to the throne of might,<br>And seated at the Father's right,<br>All power in heaven is Jesus' own,<br>That here his manhood had not known.<br><br>That so, in nature's triple frame,<br>Each heavenly and each earthly name,<br>And things in hell's abyss abhorred,<br>May bend the knee and own him Lord.<br><br>Yea, Angels tremble when they see<br>How changed is our humanity;<br>That flesh hath purged what flesh had stained,<br>And God, the Flesh of God, hath reigned.<br><br>Be thou our joy, O mighty Lord,<br>As thou wilt be our great reward;<br>Let all our glory be in thee<br>Both now and through eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
+        "<br><span class='subhead'>Be present, Holy Trinity</span><br><i style='color:darkred;'>Adesto Sancta Trinitas</i><br><br><span class='intro'>Be present,</span> Holy Trinity,<br>Like splendor, and one Deity:<br>Of things above, and things below,<br>Beginning, that no end shall know.<br><br>Thee all the armies of the sky<br>Adore, and laud, and magnify:<br>And Nature, in her triple frame,<br>Forever sanctifies thy name.<br><br>And we, too, thanks and homage pay,<br>Thine own adoring flock today;<br>O join to that celestial song<br>The praises of our suppliant song.<br><br>Light, sole and one, we thee confess,<br>With triple praise we rightly bless;<br>Alpha and Omega we own,<br>With every spirit round thy throne.<br><br>To thee, O unbegotten One,<br>And thee, O sole begotten Son,<br>And thee, O Holy Ghost, we raise<br>Our equal and eternal praise. <i>Amen.</i>"
+      ];
+
       // Get the day, month, and year from the current date
-      let day = currentDate.getDate()+1;
+      let day = currentDate.getDate();
       let month = monthNames[currentDate.getMonth()]; // Get the month name
       let year = currentDate.getFullYear();
 
+      // Get the position of the day of the week from the current date
+      let dayPosition = currentDate.getDay();
+
+      // Write code to assign a different versicle and hymn for each day of the week
+      if (dayPosition == 0) {
+        document.getElementById('versicle').innerHTML = versicles[0];
+        document.getElementById('hymn').innerHTML = hymns[0];
+      } else if (dayPosition == 1) {
+        document.getElementById('versicle').innerHTML = versicles[1];
+        document.getElementById('hymn').innerHTML = hymns[1];
+      } else if (dayPosition == 2) {
+        document.getElementById('versicle').innerHTML = versicles[2];
+        document.getElementById('hymn').innerHTML = hymns[2];
+      } else if (dayPosition == 3) {
+        document.getElementById('versicle').innerHTML = versicles[3];
+        document.getElementById('hymn').innerHTML = hymns[3];
+      } else if (dayPosition == 4) {
+        document.getElementById('versicle').innerHTML = versicles[4];
+        document.getElementById('hymn').innerHTML = hymns[4];
+      } else if (dayPosition == 5) {
+        document.getElementById('versicle').innerHTML = versicles[5];
+        document.getElementById('hymn').innerHTML = hymns[5];
+      } else if (dayPosition == 6) {
+        document.getElementById('versicle').innerHTML = versicles[6];
+        document.getElementById('hymn').innerHTML = hymns[6];
+      };
+
+      // JavaScript to show the "First Button" when needed
+      document.getElementById("bc-button").style.display = "inline-block";
+      document.getElementById("luther-button").style.display = "inline-block";
+      // When the user clicks on the confiteor-button, show the Confiteor
+      document.getElementById("confiteor-button").onclick = function() {
+        document.getElementById("confiteor").style.display = "block";
+        document.getElementById("bc-confession").style.display = "none";
+        document.getElementById("confiteor-button").style.display = "none";
+        document.getElementById("bc-button").style.display = "inline-block";
+      };
+      // When the user clicks on the bc-button, show the Broad Church Confession
+      document.getElementById("bc-button").onclick = function() {
+        document.getElementById("bc-confession").style.display = "block";
+        document.getElementById("confiteor").style.display = "none";
+        document.getElementById("confiteor-button").style.display = "inline-block";
+        document.getElementById("bc-button").style.display = "none";
+      };
+      // When the user clicks on the luther-button, show the Hail Mary
+        document.getElementById("luther-button").onclick = function() {
+        document.getElementById("hail").style.display = "block";
+        document.getElementById("angelus").style.display = "none";
+        document.getElementById("luther-button").style.display = "none";
+        document.getElementById("angelus-button").style.display = "inline-block";
+      };
+      // When the user clicks on the angelus-button, show the Angelus
+      document.getElementById("angelus-button").onclick = function() {
+        document.getElementById("angelus").style.display = "block";
+        document.getElementById("hail").style.display = "none";
+        document.getElementById("angelus-button").style.display = "none";
+        document.getElementById("luther-button").style.display = "inline-block";
+      };
+
+/*
       // Create a string for today's date in the desired format (e.g., "Month Day, Year")
-      let formattedDate = `${month} ${day}, ${year}`;
+      let formattedDate;
+      if (month + " " + day == "December 32") {
+        formattedDate = "January 1, " + (year + 1);
+      } else {
+        formattedDate = `${month} ${day}, ${year}`;
+      };
+*/
+      // Define the formatted date
+      const formattedDate = `${month} ${day}, ${year}`;
 
       // Find the "selected-date" div by its ID and set its content to the formatted date
       document.getElementById('selected-date').textContent = formattedDate;
 
+      // Set an undefined variable for the date of Pentecost
+      let pentecostDate;
+
       // Calculate how many days have passed since Easter
       const daysAfterEaster = calculateDaysAfterEaster(currentDate);
 
-      //console.log(`The input date is ${daysAfterEaster} days after Easter.`);
+      // Define a function to determine how many days after Easter the current date is
+      function calculateDaysAfterEaster(date) {
+        // Calculate the date of Easter for the given year
+        function calculateEaster(year) {
+          const a = year % 19;
+          const b = Math.floor(year / 100);
+          const c = year % 100;
+          const d = Math.floor(b / 4);
+          const e = b % 4;
+          const f = Math.floor((b + 8) / 25);
+          const g = Math.floor((b - f + 1) / 3);
+          const h = (19 * a + b - d - g + 15) % 30;
+          const i = Math.floor(c / 4);
+          const k = c % 4;
+          const l = (32 + 2 * e + 2 * i - h - k) % 7;
+          const m = Math.floor((a + 11 * h + 22 * l) / 451);
+          const month = Math.floor((h + l - 7 * m + 114) / 31);
+          const day = ((h + l - 7 * m + 114) % 31) + 1;
+          return new Date(year, month - 1, day); // Month is 0-based in JavaScript
+        };
 
+        const currentYear = date.getFullYear();
+        const easterDate = calculateEaster(currentYear);
+        
+        // Define pentecostDate (49 days after Easter)
+        pentecostDate = new Date(easterDate.getFullYear(), easterDate.getMonth(), easterDate.getDate() + 49);
+
+        // Calculate the difference in days
+        const timeDifference = date - easterDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+
+        return daysDifference;
+      };
+/*
       // Define a function to determine how many days after Easter the current date is
       function calculateDaysAfterEaster(currentDate) {
         // Parse the input date as a JavaScript Date object
@@ -121,6 +426,7 @@
         // Return how many days have passed since Easter
         return daysAfterEaster;
       };
+*/
 
       /* TO FIND THE DATE FOR ADVENT */
       // Create a new date object for Christmas of the given year
@@ -140,17 +446,184 @@
       // Now, find out how many days after Easter Advent is
       const adventPosition = calculateDaysAfterEaster(fourSundaysBeforeChristmas);
       // Then, find out how many days after Easter Christmas is
-      const christmasPosition = calculateDaysAfterEaster(new Date(year, 11, 24));
-      // Then, find out how many days before Easter January 2 is
-      const twoJanPosition = calculateDaysAfterEaster(new Date(year, 0, 1));
+      const christmasPosition = calculateDaysAfterEaster(new Date(year, 11, 25));
       // Then, find out how many days before Easter Epiphany is
-      const epiphanyPosition = calculateDaysAfterEaster(new Date(year, 0, 5));
+      const epiphanyPosition = calculateDaysAfterEaster(new Date(year, 0, 6));
 
-      console.log(epiphanyPosition);
-      console.log(daysAfterEaster);
+      // Find the positions of other holy days
+      // The Holy Name of Our Lord Jesus Christ (January 1)
+      const holyName = calculateDaysAfterEaster(new Date(year, 0, 1));
+      // The Confession of Saint Peter the Apostle (January 18)
+      const peterConfession = calculateDaysAfterEaster(new Date(year, 0, 18));
+      // The Conversion of Saint Paul the Apostle (January 25)
+      const paulConversion = calculateDaysAfterEaster(new Date(year, 0, 25));
+      // The Presentation of Our Lord Jesus Christ in the Temple (February 2)
+      const presentation = calculateDaysAfterEaster(new Date(year, 1, 2));
+      // Saint Matthias the Apostle (February 24)
+      const matthias = calculateDaysAfterEaster(new Date(year, 1, 24));
+      // Saint Joseph (March 19)
+      const joseph = calculateDaysAfterEaster(new Date(year, 2, 19));
+      // The Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary (March 25)
+      const annunciation = calculateDaysAfterEaster(new Date(year, 2, 25));
+      // Saint Mark the Evangelist (April 25)
+      const mark = calculateDaysAfterEaster(new Date(year, 3, 25));
+      // Saint Philip and Saint James, Apostles (May 1)
+      const philipJames = calculateDaysAfterEaster(new Date(year, 4, 1));
+      // The Visitation of the Blessed Virgin Mary (May 31)
+      const visitation = calculateDaysAfterEaster(new Date(year, 4, 31));
+      // Saint Barnabas the Apostle (June 11)
+      const barnabas = calculateDaysAfterEaster(new Date(year, 5, 11));
+      // The Nativity of Saint John the Baptist (June 24)
+      const johnBaptist = calculateDaysAfterEaster(new Date(year, 5, 24));
+      // Saint Peter and Saint Paul, Apostles (June 29)
+      const peterPaul = calculateDaysAfterEaster(new Date(year, 5, 29));
+      // Independence Day
+      const independence = calculateDaysAfterEaster(new Date(year, 6, 4));
+      // Saint Mary Magdalene (July 22)
+      const maryMagdalene = calculateDaysAfterEaster(new Date(year, 6, 22));
+      // Saint James the Apostle (July 25)
+      const james = calculateDaysAfterEaster(new Date(year, 6, 25));
+      // The Transfiguration of Our Lord Jesus Christ (August 6)
+      const transfiguration = calculateDaysAfterEaster(new Date(year, 7, 6));
+      // Saint Mary the Virgin, Mother of Our Lord Jesus Christ (August 15)
+      const maryVirgin = calculateDaysAfterEaster(new Date(year, 7, 15));
+      // Saint Bartholomew the Apostle (August 24)
+      const bartholomew = calculateDaysAfterEaster(new Date(year, 7, 24));
+      // Holy Cross Day (September 14)
+      const holyCross = calculateDaysAfterEaster(new Date(year, 8, 14));
+      // Saint Matthew, Apostle and Evangelist (September 21)
+      const matthew = calculateDaysAfterEaster(new Date(year, 8, 21));
+      // Saint Michael and All Angels (September 29)
+      const michael = calculateDaysAfterEaster(new Date(year, 8, 29));
+      // Saint Luke the Evangelist (October 18)
+      const luke = calculateDaysAfterEaster(new Date(year, 9, 18));
+      // Saint James of Jerusalem, Brother of Our Lord Jesus Christ, and Martyr (October 23)
+      const jamesJerusalem = calculateDaysAfterEaster(new Date(year, 9, 23));
+      // Saint Simon and Saint Jude, Apostles (October 28)
+      const simonJude = calculateDaysAfterEaster(new Date(year, 9, 28));
+      // All Saints' Day (November 1)
+      const allSaints = calculateDaysAfterEaster(new Date(year, 10, 1));
+      // All Souls' Day (November 2)
+      const allSouls = calculateDaysAfterEaster(new Date(year, 10, 2));
+      // Saint Andrew the Apostle (November 30)
+      const andrew = calculateDaysAfterEaster(new Date(year, 10, 30));
+      // Saint Thomas the Apostle (December 21)
+      const thomas = calculateDaysAfterEaster(new Date(year, 11, 21));
+      // Saint Stephen, Deacon and Martyr (December 26)
+      const stephen = calculateDaysAfterEaster(new Date(year, 11, 26));
+      // Saint John, Apostle and Evangelist (December 27)
+      const john = calculateDaysAfterEaster(new Date(year, 11, 27));
+      // The Holy Innocents (December 28)
+      const innocents = calculateDaysAfterEaster(new Date(year, 11, 28));
 
-      if (daysAfterEaster == -46) {
-        console.log("It's Lent");
+      // Define the day of the week  
+      let dayOfWeekName = dayNames[currentDate.getDay()];
+
+      // Set undefined variables for the lectionary dates
+      let seasonName;
+
+      // Leave the Proper undefined
+      let proper;
+
+      // Check if daysAfterEaster is equal to any of the holy days
+      if (daysAfterEaster == holyName) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Holy Name of Our Lord Jesus Christ";
+      } else if (daysAfterEaster == peterConfession) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Confession of Saint Peter the Apostle";
+      } else if (daysAfterEaster == paulConversion) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Conversion of Saint Paul the Apostle";
+      } else if (daysAfterEaster == presentation) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Presentation of Our Lord Jesus Christ in the Temple";
+      } else if (daysAfterEaster == matthias) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Matthias the Apostle";
+      } else if (daysAfterEaster == joseph) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Joseph";
+      } else if (daysAfterEaster == annunciation) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary";
+      } else if (daysAfterEaster == mark) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Mark the Evangelist";
+      } else if (daysAfterEaster == philipJames) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Philip and Saint James, Apostles";
+      } else if (daysAfterEaster == visitation) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Visitation of the Blessed Virgin Mary";
+      } else if (daysAfterEaster == barnabas) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Barnabas the Apostle";
+      } else if (daysAfterEaster == johnBaptist) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Nativity of Saint John the Baptist";
+      } else if (daysAfterEaster == peterPaul) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Peter and Saint Paul, Apostles";
+      } else if (daysAfterEaster == independence) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Independence Day";
+      } else if (daysAfterEaster == maryMagdalene) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Mary Magdalene";
+      } else if (daysAfterEaster == james) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint James the Apostle";
+      } else if (daysAfterEaster == transfiguration) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Transfiguration of Our Lord Jesus Christ";
+      } else if (daysAfterEaster == maryVirgin) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Mary the Virgin, Mother of Our Lord Jesus Christ";
+      } else if (daysAfterEaster == bartholomew) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Bartholomew the Apostle";
+      } else if (daysAfterEaster == holyCross) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Holy Cross Day";
+      } else if (daysAfterEaster == matthew) {  
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Matthew, Apostle and Evangelist";
+      } else if (daysAfterEaster == michael) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Michael and All Angels";
+      } else if (daysAfterEaster == luke) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Luke the Evangelist";
+      } else if (daysAfterEaster == jamesJerusalem) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint James of Jerusalem, Brother of Our Lord Jesus Christ, and Martyr";
+      } else if (daysAfterEaster == simonJude) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Simon and Saint Jude, Apostles";
+      } else if (daysAfterEaster == allSaints) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "All Saints' Day";
+      } else if (daysAfterEaster == allSouls) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "All Souls' Day";
+      } else if (daysAfterEaster == andrew) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Andrew the Apostle";
+      } else if (daysAfterEaster == thomas) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Thomas the Apostle";
+      } else if (daysAfterEaster == stephen) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint Stephen, Deacon and Martyr";
+      } else if (daysAfterEaster == john) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Saint John, Apostle and Evangelist";
+      } else if (daysAfterEaster == innocents) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Holy Innocents";
+      } else if (daysAfterEaster == -46) {
+        console.log("It's Ash Wednesday");
       } else if (-46 < daysAfterEaster && daysAfterEaster < 0) {
         console.log("It's Lent Season")
       } else if (daysAfterEaster == 0) {
@@ -158,13 +631,67 @@
       } else if (0 < daysAfterEaster && daysAfterEaster < 49) {
         console.log("It's Easter Season");
       } else if (daysAfterEaster == 49) {
-        console.log("It's Pentecost Day");
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Whitsunday (Pentecost)";
       } else if (49 < daysAfterEaster && daysAfterEaster < adventPosition) {
         console.log("It's Pentecost Season");
+        // Define seasonName as "proper"
+        seasonName = "proper";
+        // Define how many days after Pentecost it is
+        let daysAfterPentecost = daysAfterEaster - 49;
+        // Determine which Sunday of Pentecost the target date falls on
+        let sundayOfPentecost = Math.floor(daysAfterPentecost/7);
+        // Determine the ordinal number of the Sunday
+        let ordinalSunday = sundaysAfter[sundayOfPentecost-1];
+        // Determine the day of the week
+        let weekDay = dayNames[daysAfterPentecost - (sundayOfPentecost * 7)];
+        // Calculate the First Proper after Pentecost
+        let firstProper;
+        // If pentecostDate is May 8 to May 14...
+        if (pentecostDate.getMonth() == 4 && pentecostDate.getDate() >= 8 && pentecostDate.getDate() <= 14) {
+          // Set firstProper to 1
+          firstProper = 1;
+        // If pentecostDate is May 15 to May 21...
+        } else if (pentecostDate.getMonth() == 4 && pentecostDate.getDate() >= 15 && pentecostDate.getDate() <= 21) {
+          // Set firstProper to 2
+          firstProper = 2;
+        // If pentecostDate is May 22 to May 28...
+        } else if (pentecostDate.getMonth() == 4 && pentecostDate.getDate() >= 22 && pentecostDate.getDate() <= 28) {
+          // Set firstProper to 3
+          firstProper = 3;
+        // If pentecostDate is May 29 to June 4...
+        } else if (pentecostDate.getMonth() == 4 && pentecostDate.getDate() >= 29 || pentecostDate.getMonth() == 5 && pentecostDate.getDate() <= 4) {
+          // Set firstProper to 4
+          firstProper = 4;
+        // If pentecostDate is June 5 to June 11...
+        } else if (pentecostDate.getMonth() == 5 && pentecostDate.getDate() >= 5 && pentecostDate.getDate() <= 11) {
+          // Set firstProper to 5
+          firstProper = 5;
+        // If pentecostDate is June 12 to June 18...
+        } else if (pentecostDate.getMonth() == 5 && pentecostDate.getDate() >= 12 && pentecostDate.getDate() <= 18) {
+          // Set firstProper to 6
+          firstProper = 6;
+        };
+        // Set the Proper after Pentecost
+        proper = firstProper + sundayOfPentecost;
+        // If it is a Sunday...
+        if (weekDay == "Sunday") {
+          // Set the day as follows
+          document.getElementById('ordinal-date').textContent = "The " + ordinalSunday + " Sunday after Pentecost";
+        // Otherwise...
+        } else {
+          // If it is the week after Pentecost...
+          if (sundayOfPentecost == 0) {
+            // Set the day as follows
+            document.getElementById('ordinal-date').textContent = "The " + weekDay + " after Pentecost";
+          } else {
+            // Set the day as follows
+            document.getElementById('ordinal-date').textContent = "The " + weekDay + " after the " + ordinalSunday + " Sunday after Pentecost";
+          }
+        };
       } else if (daysAfterEaster == adventPosition) {
         console.log("It's Advent");
       } else if (adventPosition < daysAfterEaster && daysAfterEaster < christmasPosition) {
-        console.log("It's Advent Season");
         // Define how many days after Advent it is
         let daysAfterAdvent = daysAfterEaster - adventPosition;
         // Determine which Sunday of Advent the target date falls on.
@@ -184,68 +711,160 @@
         }
       } else if (daysAfterEaster == christmasPosition) {
         console.log("It's Christmas");
-      } else if (christmasPosition < daysAfterEaster && daysAfterEaster <= christmasPosition + 7 || twoJanPosition <= daysAfterEaster && daysAfterEaster < epiphanyPosition) {
+      } else if (christmasPosition < daysAfterEaster && daysAfterEaster <= christmasPosition + 6 || holyName <= daysAfterEaster && daysAfterEaster < epiphanyPosition) {
         console.log("It's Christmas Season");
       } else if (daysAfterEaster == epiphanyPosition) {
         console.log("It's Epiphany Day");
       } else if (epiphanyPosition < daysAfterEaster && daysAfterEaster < -46) {
         console.log("It's Epiphany Season");
-      }
+      };
 
-/*
-      function getEpiscopalLiturgicalDay(daysAfterEaster) {
-      // Create an array of liturgical seasons and their start dates
-      const liturgicalSeasons = [
-        { name: "Easter", start: 0 }, // Easter itself
-        { name: "Pentecost", start: 50 }, // Pentecost starts 50 days after Easter
-      ];
+      // Define psalmSchedulePath
+      const psalmSchedulePath = 'support/bcp1979_daily_psalms.json';
+      // Define psalmSlugPath
+      const psalmSlugPath = 'support/by_slug.json';
 
-      // Calculate the date of Easter for the given year
-      function calculateEasterDate(year) {
-        const a = year % 19;
-        const b = Math.floor(year / 100);
-        const c = year % 100;
-        const d = Math.floor(b / 4);
-        const e = b % 4;
-        const f = Math.floor((b + 8) / 25);
-        const g = Math.floor((b - f + 1) / 3);
-        const h = (19 * a + b - d - g + 15) % 30;
-        const i = Math.floor(c / 4);
-        const k = c % 4;
-        const l = (32 + 2 * e + 2 * i - h - k) % 7;
-        const m = Math.floor((a + 11 * h + 22 * l) / 451);
-        const month = Math.floor((h + l - 7 * m + 114) / 31);
-        const day = ((h + l - 7 * m + 114) % 31) + 1;
+      // Run the function to return the psalm schedule
+      getPsalmSchedule();
+      
+      // Define an asynchronous function to access the data in support/bcp1979_daily_psalms.json and log it to the console
+      async function getPsalmSchedule() {
 
-        return new Date(year, month - 1, day);
-      }
+        // Define an empty array to hold the evening psalm key 
+        let eveningPsalmKey = [];
+        // Define an empty array to hold the morning psalm key
+        let morningPsalmKey = [];
+        // Define an empty array to hold the evening psalm verses
+        let eveningPsalmVerses = [];
+        // Define an empty array to hold the morning psalm verses
+        let morningPsalmVerses = [];
 
-      // Calculate the date based on the number of days after Easter
-      const easterYear = new Date().getFullYear(); // Get the current year
-      const easterDate = calculateEasterDate(easterYear);
-      const targetDate = new Date(easterDate.getTime() + daysAfterEaster * 24 * 60 * 60 * 1000);
+        // Empty the eveningPsalmKey array
+        eveningPsalmKey.length = 0;
+        // Empty the morningPsalmKey array
+        morningPsalmKey.length = 0;
+        // Empty the eveningPsalmVerses array
+        eveningPsalmVerses.length = 0;
+        // Empty the morningPsalmVerses array
+        morningPsalmVerses.length = 0;
+        
+        // Use fetch() to fetch the data in support/bcp1979_daily_psalms.json
+        const response = await fetch(psalmSchedulePath);
+        // Use await to wait for the response to be returned
+        const psalmSchedule = await response.json();
 
-      // Determine the liturgical season
-      let season;
-      for (const liturgical of liturgicalSeasons) {
-        if (targetDate.getDate() === (easterDate.getDate() + liturgical.start)) {
-          season = liturgical.name;
-          break;
-        }
-      }
+        // Use fetch() to fetch the data in support/by_slug.json
+        const slugResponse = await fetch(psalmSlugPath);
+        // Use await to wait for the response to be returned
+        const psalmSlug = await slugResponse.json();
+        
+        // Establish an undefined variable to identify the lectionaryYear
+        let lectionaryYear;
+        // Define the year of the chosen date
+        const year = currentDate.getFullYear();
+        // If the year is an odd year...
+        if (year % 2 == 1) {
+          // Set lectionaryYear to 1
+          lectionaryYear =  "1";
+        } else {
+          // Otherwise, set lectionaryYear to 2
+          lectionaryYear = "2";
+        };
 
-      // Format the result
-      const dayOfWeek = targetDate.toLocaleDateString("en-US", { weekday: "long" });
-      const nthSunday = liturgicalSeasons.find(season => season.name === "Pentecost").start / 7 + 1;
+        // Define the lectionaryKey
+        const lectionaryKey = dayOfWeekName.toLowerCase() + "-proper-" + proper.toString();
 
-      return `${dayOfWeek}, after the ${nthSunday}th Sunday after ${season}`;
-    }
+        // Loop through the psalmSchedule object
+        for (let i = 0; i < psalmSchedule.length; i++) {
+          // If the day of the year is equal to the current day of the year...
+          if (psalmSchedule[i].day == lectionaryKey && psalmSchedule[i].when == lectionaryYear) {
+            // If the type is "evening_psalms"...
+            if (psalmSchedule[i].type == "evening_psalms") {
+              // Push the key to the eveningPsalmKey array
+              eveningPsalmKey.push(psalmSchedule[i].citation);
+            } else {
+              // Otherwise, push the key to the morningPsalmKey array
+              morningPsalmKey.push(psalmSchedule[i].citation);
+            };
+          };
+        };
 
-    // Example usage:
-    //const daysAfterEaster = 30; // Change this to the desired number of days after Easter
-    const result = getEpiscopalLiturgicalDay(daysAfterEaster);
-    console.log(result);
-*/
+        // Iterate through the psalmSlug object
+        Object.entries(psalmSlug).forEach((item) => {
+          // Iterate through the eveningPsalmKey array
+          for (let i = 0; i < eveningPsalmKey.length; i++) {
+            // If the item is equal to the key...
+            if (item[0] == "en-bcp1979-" + eveningPsalmKey[i]) {
+              
+              // Define the Psalm number
+              let psalmNumber = item[1][0].metadata.localname;
+              // Define the Latin name of the psalm
+              let latinName = item[1][0].metadata.latinname;
+
+              // Define the Psalm header
+              let psalmHeader = "<br><br><span class='subhead'>" + psalmNumber + "</span><br><i style='color:darkred;'>" + latinName + "</i><br><br>";
+
+              // Iterate through the psalm verses
+              for (let x = 0; x < item[1][0].value[0].value.length; x++) {
+                // Define the verse data
+                let verseData = item[1][0].value[0].value[x];
+                // Define the line
+                let line = '<sup class="sc-ldf-bible-reading">' + verseData.number + '</sup> ' + verseData.verse + '<br>' + verseData.halfverse + '<br>';
+                // Append the line to the psalmHeader
+                psalmHeader += line;
+              };
+
+              // Push psalmHeader to the eveningPsalmVerses array
+              eveningPsalmVerses.push(psalmHeader + '<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>');
+            };
+          };
+          // Iterate through the morningPsalmKey array
+          for (let i = 0; i < morningPsalmKey.length; i++) {
+            // If the item is equal to the key...
+            if (item[0] == "en-bcp1979-" + morningPsalmKey[i]) {
+              
+              // Define the Psalm number
+              let psalmNumber = item[1][0].metadata.localname;
+              // Define the Latin name of the psalm
+              let latinName = item[1][0].metadata.latinname;
+
+              // Define the Psalm header
+              let psalmHeader = "<br><br><span class='subhead'>" + psalmNumber + "</span><br><i style='color:darkred;'>" + latinName + "</i><br><br>";
+
+              // Iterate through the psalm verses
+              for (let x = 0; x < item[1][0].value[0].value.length; x++) {
+                // Define the verse data
+                let verseData = item[1][0].value[0].value[x];
+                // Define the line
+                let line = '<sup class="sc-ldf-bible-reading">' + verseData.number + '</sup> ' + verseData.verse + '<br>' + verseData.halfverse + '<br>';
+                // Append the line to the psalmHeader
+                psalmHeader += line;
+              };
+
+              // Push psalmHeader to the morningPsalmVerses array
+              morningPsalmVerses.push(psalmHeader + '<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>');
+            };
+          };
+        });
+
+        // Append the first entry in morningPsalmVerses to the morningPsalm div
+        document.getElementById('morning_psalm_1').innerHTML += morningPsalmVerses[0];
+
+        // Loop through the morningPsalmVerses array
+        for (let i = 0; i < morningPsalmVerses.length; i++) {
+          // Append the morningPsalmVerses to the morningPsalm div
+          // document.getElementById('morning_psalm_1').innerHTML += morningPsalmVerses[i];
+        };
+
+        // Loop through the eveningPsalmVerses array
+        for (let i = 0; i < eveningPsalmVerses.length; i++) {
+          // Append the first eveningPsalmVerses to the eveningPsalm div
+          //document.getElementById('evening_psalms').innerHTML += eveningPsalmVerses[i];
+        };
+
+      };
+    
+
     </script>
   </body>
 </html>
