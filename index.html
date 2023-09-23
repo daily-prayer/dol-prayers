@@ -57,7 +57,7 @@
         margin-top: 12px;
         font-weight: 400;           
       }
-      .versicle, .hymn, .morning_psalm_1, .morning_psalm_2 {
+      .versicle, .hymn, .second_hymn, .morning_psalm, .evening_psalm, .canticle, .second_canticle, .collect {
         font-family: 'Baskervville', serif;
         font-size: 16px;
         text-align: center;
@@ -86,7 +86,7 @@
         font-size: 75%;
       }
 
-      .first_reading {
+      .first_reading, .second_reading, .third_reading, .fourth_reading {
         font-family: 'Baskervville', serif;
         font-size: 16px;
         text-align: left;
@@ -94,6 +94,11 @@
         width: 40%;
         margin-top: 12px;
         font-weight: 400;
+      }
+
+      /* Initially set part four to display: none */
+      .part_four {
+        display: none;
       }
 
     </style>
@@ -228,23 +233,134 @@
     <br>Glory be to the Father, and to the Son, and to the
     <br>Holy Ghost: as it was in the beginning, is now, and 
     <br>ever shall be, world without end. <i>Amen.</i><br>
+    <!-- A daily hymn follows here (In place of Phos Hilaron)-->
     <div class="hymn" id="hymn"></div>
-    <div class="morning_psalm_1" id="morning_psalm_1"></div>
+    <!-- The morning psalms -->
+    <div class="morning_psalm" id="morning_psalm"></div>
+    <!-- The lesson -->
     <h3>The Lesson</h3></p>
+    <!-- The first reading -->
     <p><span class='subhead'>The First Reading</span>
     <br><i id="first_reading_citation" style='color:darkred;'></i><br>
     <br><span id="reading_heading"></span></p>
     <div class="first_reading" id="first_reading"></div>
-    <p>The Word of the Lord.
-    <br><i>Thanks be to God.</i>
-    <div class="morning_psalm_2" id="morning_psalm_2"></div></p>
+    <!-- The evening psalms -->
+    <p><div class="evening_psalm" id="evening_psalm"></div></p>
+    <!-- The second reading -->
+    <p><span class='subhead'>The Second Reading</span>
+    <br><i id="second_reading_citation" style='color:darkred;'></i><br>
+    <br><span id="second_reading_heading"></span></p>
+    <div class="second_reading" id="second_reading"></div>
+    <!-- A second daily hymn follows here -->
+    <div class="second_hymn" id="second_hymn"></div><br>
+    <!-- The third reading -->
+    <p><span class='subhead'>The Third Reading</span>
+    <br><i id="third_reading_citation" style='color:darkred;'></i><br>
+    <br><span id="third_reading_heading"></span></p>
+    <div class="third_reading" id="third_reading"></div>
+    <!-- The daily canticle -->
+    <div class="canticle" id="canticle"></div><br>
+    <!-- Possible part four -->
+    <div class="part_four" id="part_four">
+      <!-- The fourth reading -->
+      <p><span class='subhead'>The Fourth Reading</span>
+      <br><i id="fourth_reading_citation" style='color:darkred;'></i><br>
+      <br><span id="fourth_reading_heading"></span></p>
+      <div class="fourth_reading" id="fourth_reading"></div>
+      <!-- The second daily canticle -->
+      <div class="second_canticle" id="second_canticle"></div><br>
+    </div>
+    <!-- The Apostle's Creed -->
+    <p><span class='subhead'>The Apostle's Creed</span><br>
+    <br>I believe in God, the Father almighty,
+    <br>maker of heaven and earth;<br>
+    <br>And in Jesus Christ his only Son our Lord;
+    <br>who was conceived by the Holy Ghost,
+    <br>born of the Virgin Mary,
+    <br>suffered under Pontius Pilate,
+    <br>was crucified, dead, and buried.
+    <br>He descended into hell.
+    <br>The third day he rose again from the dead.
+    <br>He ascended into heaven,
+    <br>and sitteth on the right hand of God the Father almighty.
+    <br>From thence he shall come to judge the quick and the dead.<br>
+    <br>I believe in the Holy Ghost,
+    <br>the holy catholic Church,
+    <br>the communion of saints,
+    <br>the forgiveness of sins,
+    <br>the resurrection of the body,
+    <br>and the life everlasting. <i>Amen.</i><br>
+    <br><h3>The Prayers</h3></p>
+    <p>The Lord be with you
+    <br><i>And with thy spirit</i>
+    <br>Let us pray.<br>
+    <br><span class='subhead'>The Lord's Prayer</span>
+    <br><i style='color:darkred;'>Pater noster</i><br>
+    <br>Our Father, who art in heaven,
+    <br>hallowed be thy Name,
+    <br>thy kingdom come,
+    <br>thy will be done,
+    <br>on earth as it is in heaven.
+    <br>Give us this day our daily bread.
+    <br>And forgive us our trespasses,
+    <br>as we forgive those who trespass against us.
+    <br>And lead us not into temptation,
+    <br>but deliver us from evil.
+    <br>For thine is the kingdom, and the power, and the glory,
+    <br>for ever and ever. <i>Amen.</i><br>
+    <br><span class='subhead'>Suffrages</span><br>
+    <br>O God, from whom all holy desires, all good counsels,
+    <br>and all just works do proceed; Give unto thy servants
+    <br>that peace which the world cannot give; that both our
+    <br>hearts may be set to obey thy commandments, and also
+    <br>that by thee, we, being defended from the fear of our
+    <br>enemies, may pass our time in rest and quietness;
+    <br>through the merits of Jesus Christ our Savior. <i>Amen.</i><br>
+    <br>O Lord, show thy mercy upon us;
+    <br><i>And grant us thy salvation.</i>
+    <br>Endue thy ministers with righteousness;
+    <br><i>And make thy chosen people joyful.</i>
+    <br>Give peace, O Lord, in all the world;
+    <br><i>For only in thee can we live in safety.</i>
+    <br>Lord, keep this nation under thy care;
+    <br><i>And guide us in the way of justice and truth.</i>
+    <br>Let thy way be known upon the earth;
+    <br><i>Thy saving health among all nations.</i>
+    <br>Let not the needy, O Lord, be forgotten;
+    <br><i>Nor the hope of the poor be taken away.</i>
+    <br>Create in us clean hearts, O God;
+    <br><i>And sustain us with thy Holy Spirit.</i><br><br>
+    <br><span class='subhead'>The Collect</span></p>
+    <!-- The daily collect -->
+    <div class="collect" id="collect"></div><br>
+    <p><span class='subhead'>A General Thanksgiving</span><br>
+    <br>Almighty God, Father of all mercies, we
+    <br>thine unworthy servants do give thee most
+    <br>humble and hearty thanks for all thy
+    <br>goodness and loving-kindness to us, and to
+    <br>all. We bless thee for our creation, 
+    <br>preservation, and all the blessings of this 
+    <br>life; but above all, for thine inestimable
+    <br>love in the redemption of the world by our
+    <br>Lord Jesus Christ; for the means of grace, 
+    <br>and for the hope of glory. 
+    <br><br>And, we beseech thee, give us that due 
+    <br>sense of all thy mercies, that our hearts 
+    <br>may be unfeignedly thankful, and that we 
+    <br>shew forth thy praise, not only with our 
+    <br>lips, but in our lives; by giving up 
+    <br>ourselves to thy service, and by walking 
+    <br>before thee in holiness and righteousness  
+    <br>all our days; through Jesus Christ our Lord,  
+    <br>to whom with thee and the Holy Ghost be all  
+    <br>honor and glory, world without end. <i>Amen.</i></p>
     
 
     <script>
       // Get the current date
-      //let currentDate = new Date();
+      let currentDate = new Date();
 
-      let currentDate = new Date(2023, 8, 22);
+      //let currentDate = new Date(2023, 8, 21);
 
       // Undefined easterDay
       let easterDay;
@@ -278,6 +394,22 @@
         "Jesus said, I am the light of the world; he that followeth me<br>shall not walk in darkness, but shall have the light of life.&emsp;<i style='color:darkred;'>John 8:12</i>"
       ];
 
+      // Create an array of opening versicles suitable for specific holy days
+      let holyVersicles = [
+        /* St. Matthew */ "While ye gather up the tares, ye root up also the wheat with them.<br>Let both grow together until the harvest.&emsp;<i style='color:darkred;'>Matthew 13:29-30</i>",
+        /* St. Michael */ "Bless the Lord, ye his angels, that excel in strength, that<br>do his commandments, hearkening unto the voice of his<br>word.&emsp;<i style='color:darkred;'>Psalms 103:20</i><br>Bless the Lord, O my soul: and all that is within me<br>bless his holy name.&emsp;<i style='color:darkred;'>Psalms 103:1</i>",
+        /* St. Luke */ "Bring forth the best robe, and put it on him;<br>and put a ring on his hand, and shoes on his feet:<br>For this my son was dead, and is alive again;<br>he was lost, and is found.&emsp;<i style='color:darkred;'>Luke 16:22,24</i>",
+        /* St. James */ "The wisdom that is from above is first pure, then peaceable,<br>gentle, and easy to be intreated, full of mercy and good<br>fruits, without partiality, and without hypocrisy.&emsp;<i style='color:darkred;'>James 3:17</i>",
+        /* Simon and Jude */ "Ye shall receive power, after that the Holy Ghost is come<br>upon you: and ye shall be witnesses unto me both in<br>Jerusalem, and in all Judaea, and in Samaria, and unto<br>the uttermost part of the earth.&emsp;<i style='color:darkred;'>Acts 1:8</i>",
+        /* All Saints */ "Let thy priests, O Lord, be clothed with salvation, and let thy<br>saints rejoice in goodness.&emsp;<i style='color:darkred;'>2 Chronicles 6:41</i>",
+        /* All Souls */ "And God shall wipe away all tears from their eyes; and there<br>shall be no more death, neither sorrow, nor crying, neither<br>shall there be any more pain: for the former things are<br>passed away.&emsp;<i style='color:darkred;'>Revelation 21:4</i>",
+        /* St. Andrew */ "He saw Simon and Andrew his brother casting a net into the sea:<br>for they were fishers. And Jesus said unto them, \"Come ye<br> after me, and I will make you to become fishers of men.\" And<br>straightaway they forsook their nets, and followed him.&emsp;<i style='color:darkred;'>Mark 1:16-18</i>",
+        /* St. Thomas */ "Jesus saith unto him, \"Thomas, because thou hast seen me,<br>thou hast believed: blessed are they that have not seen,<br>and yet have believed.\"&emsp;<i style='color:darkred;'>John 20:29</i>",
+        /* St. Stephen */ "And they stoned Stephen, calling upon God, and saying,<br>\"Lord Jesus, receive my spirit.\" And he kneeled down, and<br>cried with a loud voice, \"Lord, lay not this sin to their<br>charge.\" And when he had said this, he fell asleep.&emsp;<i style='color:darkred;'>Acts 7:59-60</i>",
+        /* St. John */ "Beloved, let us love one another: for love is of God; and<br>every one that loveth is born of God, and knoweth God. He that<br>loveth not, knoweth not God; for God is love.&emsp;<i style='color:darkred;'>1 John 4:7-8</i>",
+        /* Holy Innocents */ "Thus saith the Lord; A voice was heard in Ramah, lamentation,<br>and bitter weeping; Rahel weeping for her children refused<br>to be comforted for her children, because they were not.&emsp;<i style='color:darkred;'>Jeremiah 31:15</i>"
+      ];
+
       // Create an array of hymns 
       let hymns = [
         "<br><span class='subhead'>Come, Holy Ghost, who ever One</span><br><i style='color:darkred;'>Nunc, Sancte, nobis, Spiritus</i><br><br><span class='intro'>Come, Holy Ghost,</span> who ever One<br>Art with the Father and the Son;<br>Come, Holy Ghost, our souls possess<br>With thy full flood of holiness.<br><br>By every power, by heart and tongue,<br>By act and deed, thy praise be sung:<br>Inflame with perfect love each sense,<br>That others' souls may kindle thence.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
@@ -290,15 +422,15 @@
       ];
 
       // Create an array of all books of the Bible
-      let books = ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","FirstSamuel","SecondSamuel","FirstKings","SecondKings","FirstChronicles","SecondChronicles","Ezra","Nehemiah","Esther","Job","Proverbs","Ecclesiastes","SongOfSolomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Tobit","Judith","Wisdom","Ecclesiasticus","Baruch","EpistleJeremiah","PrayerOfAzariah","Susanna","Bel","FirstMaccabees","SecondMaccabees","Matthew","Mark","Luke","John","Acts","Romans","FirstCorinthians","SecondCorinthians","Galatians","Ephesians","Philippians","Colossians","FirstThessalonians","SecondThessalonians","FirstTimothy","SecondTimothy","Titus","Philemon","Hebrews","James","FirstPeter","SecondPeter","FirstJohn","SecondJohn","ThirdJohn","Jude","Revelation"];
+      let books = ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","FirstSamuel","SecondSamuel","FirstKings","SecondKings","FirstChronicles","SecondChronicles","Ezra","Nehemiah","Esther","Job","Proverbs","Ecclesiastes","SongOfSolomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","FirstEsdras","SecondEsdras","Tobit","Judith","Wisdom","Ecclesiasticus","Baruch","EpistleJeremiah","PrayerOfAzariah","Susanna","Bel","FirstMaccabees","SecondMaccabees","Matthew","Mark","Luke","John","Acts","Romans","FirstCorinthians","SecondCorinthians","Galatians","Ephesians","Philippians","Colossians","FirstThessalonians","SecondThessalonians","FirstTimothy","SecondTimothy","Titus","Philemon","Hebrews","James","FirstPeter","SecondPeter","FirstJohn","SecondJohn","ThirdJohn","Jude","Revelation"];
       // Create an array of all book abbreviations used in the 1979 Book of Common Prayer
-      let abbreviations = ["Gen.","Exod.","Lev.","Num.","Deut.","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chron.","2 Chron.","Ezra","Neh.","Esther","Job","Prov.","Eccles.","Song","Isa.","Jeremiah","Lam.","Ezek.","Dan.","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Hab.","Zeph.","Haggai","Zech.","Mal.","Tobit","Jdt.","Wisdom","Ecclus.","Baruch","Ep.Jer.","Pr.Az.","Sus.","Bel","1 Macc.","2 Macc.","Matt.","Mark","Luke","John","Acts","Rom.","1 Cor.","2 Cor.","Gal.","Eph.","Philippians","Col.","1 Thess.","2 Thess.","1 Tim.","2 Tim.","Titus","Philemon","Heb.","James","1 Pet.","2 Pet.","1 John","2 John","3 John","Jude","Revelation"];
+      let abbreviations = ["Gen.","Exod.","Lev.","Num.","Deut.","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chron.","2 Chron.","Ezra","Neh.","Esther","Job","Prov.","Eccles.","Song","Isa.","Jeremiah","Lam.","Ezek.","Dan.","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Hab.","Zeph.","Haggai","Zech.","Mal.","1 Esdras","2 Esdras","Tobit","Jdt.","Wisdom","Ecclus.","Baruch","Ep.Jer.","Pr.Az.","Sus.","Bel","1 Macc.","2 Macc.","Matt.","Mark","Luke","John","Acts","Rom.","1 Cor.","2 Cor.","Gal.","Eph.","Philippians","Col.","1 Thess.","2 Thess.","1 Tim.","2 Tim.","Titus","Philemon","Heb.","James","1 Pet.","2 Pet.","1 John","2 John","3 John","Jude","Revelation"];
 
       // To test if a book is one of the Gospels
       const gospels = ["Matthew", "Mark", "Luke", "John"];
       // To test if a book has multiple parts
-      const firstBooks = ["FirstSamuel","FirstKings","FirstChronicles","FirstMaccabees"];
-      const secondBooks = ["SecondSamuel","SecondKings","SecondChronicles","SecondMaccabees"];
+      const firstBooks = ["FirstSamuel","FirstKings","FirstChronicles","FirstEsdras","FirstMaccabees"];
+      const secondBooks = ["SecondSamuel","SecondKings","SecondChronicles","SecondEsdras","SecondMaccabees"];
       // Test if a book is one of the Catholic Epistles of...
       const epistles = ["James","Jude"];
       const firstEpistles = ["FirstPeter","FirstJohn"];
@@ -311,6 +443,9 @@
       const firstEpistlesPaulTo = ["FirstTimothy"];
       const secondEpistlesPaul = ["SecondCorinthians","SecondThessalonians"];
       const secondEpistlesPaulTo = ["SecondTimothy"];
+      
+      // Test if a book is in the Apocrypha
+      const apocrypha = ["FirstEsdras","SecondEsdras","Tobit","Judith","Wisdom","Ecclesiasticus","Baruch","EpistleJeremiah","PrayerOfAzariah","Susanna","Bel","FirstMaccabees","SecondMaccabees"];
 
       // Get the day, month, and year from the current date
       let day = currentDate.getDate();
@@ -447,6 +582,8 @@
       // Find the positions of other holy days
       // The Holy Name of Our Lord Jesus Christ (January 1)
       const holyName = calculateDaysAfterEaster(new Date(year, 0, 1));
+      // The Eve of the Epiphany (January 5)
+      const epiphanyEve = calculateDaysAfterEaster(new Date(year, 0, 5));
       // The Confession of Saint Peter the Apostle (January 18)
       const peterConfession = calculateDaysAfterEaster(new Date(year, 0, 18));
       // The Conversion of Saint Paul the Apostle (January 25)
@@ -457,16 +594,22 @@
       const matthias = calculateDaysAfterEaster(new Date(year, 1, 24));
       // Saint Joseph (March 19)
       const joseph = calculateDaysAfterEaster(new Date(year, 2, 19));
+      // The Eve of the Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary (March 24)
+      const annunciationEve = calculateDaysAfterEaster(new Date(year, 2, 24));
       // The Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary (March 25)
       const annunciation = calculateDaysAfterEaster(new Date(year, 2, 25));
       // Saint Mark the Evangelist (April 25)
       const mark = calculateDaysAfterEaster(new Date(year, 3, 25));
       // Saint Philip and Saint James, Apostles (May 1)
       const philipJames = calculateDaysAfterEaster(new Date(year, 4, 1));
+      // The Eve of the Visitation of the Blessed Virgin Mary (May 30)
+      const visitationEve = calculateDaysAfterEaster(new Date(year, 4, 30));
       // The Visitation of the Blessed Virgin Mary (May 31)
       const visitation = calculateDaysAfterEaster(new Date(year, 4, 31));
       // Saint Barnabas the Apostle (June 11)
       const barnabas = calculateDaysAfterEaster(new Date(year, 5, 11));
+      // The Eve of the Nativity of Saint John the Baptist (June 23)
+      const johnBaptistEve = calculateDaysAfterEaster(new Date(year, 5, 23));
       // The Nativity of Saint John the Baptist (June 24)
       const johnBaptist = calculateDaysAfterEaster(new Date(year, 5, 24));
       // Saint Peter and Saint Paul, Apostles (June 29)
@@ -483,6 +626,8 @@
       const maryVirgin = calculateDaysAfterEaster(new Date(year, 7, 15));
       // Saint Bartholomew the Apostle (August 24)
       const bartholomew = calculateDaysAfterEaster(new Date(year, 7, 24));
+      // Eve of Holy Cross Day (September 13)
+      const holyCrossEve = calculateDaysAfterEaster(new Date(year, 8, 13));
       // Holy Cross Day (September 14)
       const holyCross = calculateDaysAfterEaster(new Date(year, 8, 14));
       // Saint Matthew, Apostle and Evangelist (September 21)
@@ -495,6 +640,8 @@
       const jamesJerusalem = calculateDaysAfterEaster(new Date(year, 9, 23));
       // Saint Simon and Saint Jude, Apostles (October 28)
       const simonJude = calculateDaysAfterEaster(new Date(year, 9, 28));
+      // Eve of All Saints' Day (October 31)
+      const allSaintsEve = calculateDaysAfterEaster(new Date(year, 9, 31));
       // All Saints' Day (November 1)
       const allSaints = calculateDaysAfterEaster(new Date(year, 10, 1));
       // All Souls' Day (November 2)
@@ -503,12 +650,16 @@
       const andrew = calculateDaysAfterEaster(new Date(year, 10, 30));
       // Saint Thomas the Apostle (December 21)
       const thomas = calculateDaysAfterEaster(new Date(year, 11, 21));
+      // Christmas Eve (December 24)
+      const christmasEve = calculateDaysAfterEaster(new Date(year, 11, 24));
       // Saint Stephen, Deacon and Martyr (December 26)
       const stephen = calculateDaysAfterEaster(new Date(year, 11, 26));
       // Saint John, Apostle and Evangelist (December 27)
       const john = calculateDaysAfterEaster(new Date(year, 11, 27));
       // The Holy Innocents (December 28)
       const innocents = calculateDaysAfterEaster(new Date(year, 11, 28));
+      // The Eve of Holy Name (December 31)
+      const holyNameEve = calculateDaysAfterEaster(new Date(year, 11, 31));
 
       // Define the day of the week  
       let dayOfWeekName = dayNames[currentDate.getDay()];
@@ -518,6 +669,9 @@
 
       // Leave the Proper undefined
       let proper;
+
+      // Leave the holy day key undefined
+      let holyKey;
 
       // Check if daysAfterEaster is equal to any of the holy days
       if (daysAfterEaster == holyName) {
@@ -577,45 +731,114 @@
       } else if (daysAfterEaster == bartholomew) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Bartholomew the Apostle";
+      } else if (daysAfterEaster == holyCrossEve) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Eve of Holy Cross Day";
+        // Set the holyKey as follows
+        holyKey = "eve-of-holy-cross";
       } else if (daysAfterEaster == holyCross) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Holy Cross Day";
       } else if (daysAfterEaster == matthew) {  
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Matthew, Apostle and Evangelist";
+        // Set the holyKey as follows
+        holyKey = "st-matthew";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[0];
       } else if (daysAfterEaster == michael) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Michael and All Angels";
+        // Set the holyKey as follows
+        holyKey = "st-michael";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[1];
       } else if (daysAfterEaster == luke) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Luke the Evangelist";
+        // Set the holyKey as follows
+        holyKey = "st-luke";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[2];
       } else if (daysAfterEaster == jamesJerusalem) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint James of Jerusalem, Brother of Our Lord Jesus Christ, and Martyr";
+        // Set the holyKey as follows
+        holyKey = "st-james-of-jerusalem";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[3];
       } else if (daysAfterEaster == simonJude) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Simon and Saint Jude, Apostles";
+        // Set the holyKey as follows
+        holyKey = "ss-simon-and-jude";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[4];
+      } else if (daysAfterEaster == allSaintsEve) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "All Hallows' Eve";
+        // Set the holyKey as follows
+        holyKey = "eve-of-all-saints";
       } else if (daysAfterEaster == allSaints) {
+        console.log("It's All Saints' Day");
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "All Saints' Day";
+        // Set the holyKey as follows
+        holyKey = "all-saints-day";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[5];
       } else if (daysAfterEaster == allSouls) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "All Souls' Day";
+        // Set the holyKey as follows
+        holyKey = "all-souls-day";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[6];
       } else if (daysAfterEaster == andrew) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Andrew the Apostle";
+        // Set the holyKey as follows
+        holyKey = "st-andrew";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[7];
       } else if (daysAfterEaster == thomas) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Thomas the Apostle";
+        // Set the holyKey as follows
+        holyKey = "st-thomas";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[8];
+      } else if (daysAfterEaster == christmasEve) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "Christmas Eve";
+        // Set the holyKey as follows
+        holyKey = "christmas-eve";
       } else if (daysAfterEaster == stephen) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Stephen, Deacon and Martyr";
+        // Set the holyKey as follows
+        holyKey = "st-stephen";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[9];
       } else if (daysAfterEaster == john) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint John, Apostle and Evangelist";
+        // Set the holyKey as follows
+        holyKey = "st-john";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[10];
       } else if (daysAfterEaster == innocents) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "The Holy Innocents";
+        // Set the holyKey as follows
+        holyKey = "holy-innocents";
+        // Set the versicle as follows
+        document.getElementById('versicle').innerHTML = holyVersicles[11];
+      } else if (daysAfterEaster == holyNameEve) {
+        // Set the day as follows
+        document.getElementById('ordinal-date').textContent = "The Eve of the Holy Name of Our Lord Jesus Christ";
+        // Set the holyKey as follows
+        holyKey = "eve-holy-name";
       } else if (daysAfterEaster == -46) {
         console.log("It's Ash Wednesday");
       } else if (-46 < daysAfterEaster && daysAfterEaster < 0) {
@@ -739,8 +962,10 @@
         let firstReadingKey;
 // An undefined variable to hold the second reading key
         let secondReadingKey;
-// An undefined variable to hold the gospel reading key
-        let gospelReadingKey;
+// An undefined variable to hold the third reading key
+        let thirdReadingKey = "";
+// An undefined variable to hold the fourth reading key
+        let fourthReadingKey = "";
 
         // Empty the eveningPsalmKey array
         eveningPsalmKey.length = 0;
@@ -781,19 +1006,36 @@
 
 // Need to revise this to be specific to the liturgical season
         // Define the lectionaryKey
-        const lectionaryKey = dayOfWeekName.toLowerCase() + "-proper-" + proper.toString();
+        let lectionaryKey;
+        // If the holyKey is defined...
+        if (holyKey) {
+          // Set the lectionaryKey to the holyKey
+          lectionaryKey = holyKey;
+        } else {
+          // Otherwise, set the lectionaryKey to the day of the week and the proper
+          lectionaryKey = dayOfWeekName.toLowerCase() + "-proper-" + proper.toString();
+        };
 
         // Loop through the psalmSchedule object
         for (let i = 0; i < psalmSchedule.length; i++) {
+          
+          // Convert the psalmSchedule[i].id to a numeric value
+          let psalmId = parseInt(psalmSchedule[i].id);
+
+          // Order the psalmSchedule by the psalmId
+          psalmSchedule.sort(function(a, b) {
+            return a.id - b.id;
+          });
+          
           // If the day of the year is equal to the current day of the year...
           if (psalmSchedule[i].day == lectionaryKey && psalmSchedule[i].when == lectionaryYear) {
             // If the type is "evening_psalms"...
             if (psalmSchedule[i].type == "evening_psalms") {
-              // Push the key to the eveningPsalmKey array
+              // Push the key to the eveningPsalmKey array in the order of the psalmId
               eveningPsalmKey.push(psalmSchedule[i].citation);
             } else {
               // Otherwise, push the key to the morningPsalmKey array
-              morningPsalmKey.push(psalmSchedule[i].citation);
+              morningPsalmKey.push(psalmSchedule[i].citation);             
             };
           };
         };
@@ -810,14 +1052,32 @@
               // Otherwise, push the key to the secondReadingKey array
               secondReadingKey = dailyOfficeSchedule[i].citation;
             } else if (dailyOfficeSchedule[i].type == "gospel") {
-              // Otherwise, push the key to the gospelReadingKey array
-              gospelReadingKey = dailyOfficeSchedule[i].citation;
+              // Otherwise, push the key to the thirdReadingKey array
+              thirdReadingKey = dailyOfficeSchedule[i].citation;
+            } else if (dailyOfficeSchedule[i].type == "holy_day_morning_1") {
+              // If the type is "holy_day_morning_1", push the key to the firstReadingKey array
+              firstReadingKey = dailyOfficeSchedule[i].citation;
+            } else if (dailyOfficeSchedule[i].type == "holy_day_morning_2") {
+              // If the type is "holy_day_morning_2", push the key to the secondReadingKey array
+              secondReadingKey = dailyOfficeSchedule[i].citation;
+            } else if (dailyOfficeSchedule[i].type == "holy_day_evening_1") {
+              // If the type is "holy_day_evening_1", push the key to the thirdReadingKey array
+              thirdReadingKey = dailyOfficeSchedule[i].citation;
+            } else if (dailyOfficeSchedule[i].type == "holy_day_evening_2") {
+              // If the type is "holy_day_evening_2", push the key to the fourthReadingKey array
+              fourthReadingKey = dailyOfficeSchedule[i].citation;
             };
           };
         };
 
-        // Push firstReadingKey to first_reading_citation
-        document.getElementById('first_reading_citation').textContent = firstReadingKey;
+        // Define the "first_reading_citation" element
+        document.getElementById('first_reading_citation').innerHTML = firstReadingKey;
+        // Define the "second_reading_citation" element
+        document.getElementById('second_reading_citation').innerHTML = secondReadingKey;
+        // Define the "third_reading_citation" element
+        document.getElementById('third_reading_citation').innerHTML = thirdReadingKey;
+        // Define the "fourth_reading_citation" element
+        document.getElementById('fourth_reading_citation').innerHTML = fourthReadingKey;
 
 // Check if any string segment in firstReadingKey is equal to any string in the abbreviation array
         for (let i = 0; i < abbreviations.length; i++) {
@@ -831,478 +1091,482 @@
             // Replace the abbreviation with the full book name
             secondReadingKey = secondReadingKey.replace(abbreviations[i], books[i]);
           };
-          // If the gospelReadingKey includes the abbreviation...
-          if (gospelReadingKey.includes(abbreviations[i])) {
+          // If the thirdReadingKey includes the abbreviation...
+          if (thirdReadingKey.includes(abbreviations[i])) {
             // Replace the abbreviation with the full book name
-            gospelReadingKey = gospelReadingKey.replace(abbreviations[i], books[i]);
+            thirdReadingKey = thirdReadingKey.replace(abbreviations[i], books[i]);
+          };
+          // If the fourthReadingKey includes the abbreviation...
+          if (fourthReadingKey.includes(abbreviations[i])) {
+            // Replace the abbreviation with the full book name
+            fourthReadingKey = fourthReadingKey.replace(abbreviations[i], books[i]);
           };
         };
 
-// The books and chapters of the first readings
-        // Define the name of the book
+// The books and chapters of the readings
+        // Define the name of the books
         let frBookName = firstReadingKey.split(" ")[0];
+        let srBookName = secondReadingKey.split(" ")[0];
+        let trBookName = thirdReadingKey.split(" ")[0];
+        let ftrBookName = fourthReadingKey.split(" ")[0];
         // Define an empty array to hold the possible chapter numbers
-        let frChapterNumbers = [];
+        //let frChapterNumbers = [];
+        //let srChapterNumbers = [];
         // Define an empty array to hold the possible chapter json paths
         let frChapterPaths = [];
-
-        // Declare the variables outside the if statement
-        let bookVal; 
-        let filterBook;
-
-        if (gospels.includes(frBookName)) {
-          bookVal = "The Gospel of "; // Remove the 'let' keyword here
-          filterBook = frBookName;
-        } else if (firstBooks.includes(frBookName)) {
-          bookVal = "The First Book of ";
-          filterBook = frBookName.replace("First","");
-        } else if (secondBooks.includes(frBookName)) {
-          bookVal = "The Second Book of ";
-          filterBook = frBookName.replace("Second","");
-        } else if (frBookName == "SongOfSolomon") {
-          bookVal = "The ";
-          filterBook = "Song of Solomon";
-        } else if (frBookName == "Ecclesiastes") {
-          bookVal = "";
-          filterBook = "Ecclesiastes";
-        } else if (frBookName == "Ecclesiasticus") {
-          bookVal = "";
-          filterBook = "Ecclesiasticus";
-        } else if (frBookName == "EpistleJeremiah") {
-          bookVal = "The Epistle of ";
-          filterBook = "Jeremiah";
-        } else if (frBookName == "PrayerOfAzariah") {
-          bookVal = "The Prayer of ";
-          filterBook = "Azariah and the Song of the Three Jews";
-        } else if (frBookName == "Susanna") {
-          bookVal = "The Story of ";
-          filterBook = "Susanna";
-        } else if (frBookName == "Bel") {
-          bookVal = "Of ";
-          filterBook = "Bel and the Dragon";
-        } else if (epistles.includes(frBookName)) {
-          bookVal = "The Epistle of ";
-          filterBook = "St. " + frBookName + " the Apostle";
-        } else if (firstEpistles.includes(frBookName)) {
-          bookVal = "The First Epistle of ";
-          filterBook = "St. " + frBookName.replace("First","") + " the Apostle";
-        } else if (secondEpistles.includes(frBookName)) {
-          bookVal = "The Second Epistle of ";
-          filterBook = "St. " + frBookName.replace("Second","") + " the Apostle";
-        } else if (thirdEpistles.includes(frBookName)) {
-          bookVal = "The Third Epistle of ";
-          filterBook = "St. " + frBookName.replace("Third","") + " the Apostle";
-        } else if (epistlesPaul.includes(frBookName)) {
-          bookVal = "The Epistle of St. Paul the Apostle to the ";
-          filterBook = frBookName;
-        } else if (epistlesPaulTo.includes(frBookName)) {
-          bookVal = "The Epistle of St. Paul the Apostle to ";
-          filterBook = frBookName;
-        } else if (firstEpistlesPaul.includes(frBookName)) {
-          bookVal = "The First Epistle of St. Paul the Apostle to the ";
-          filterBook = frBookName.replace("First","");
-        } else if (secondEpistlesPaul.includes(frBookName)) {
-          bookVal = "The Second Epistle of St. Paul the Apostle to the ";
-          filterBook = frBookName.replace("Second","");
-        } else if (firstEpistlesPaulTo.includes(frBookName)) {
-          bookVal = "The First Epistle of St. Paul the Apostle to ";
-          filterBook = frBookName.replace("First","");
-        } else if (secondEpistlesPaulTo.includes(frBookName)) {
-          bookVal = "The Second Epistle of St. Paul the Apostle to ";
-          filterBook = frBookName.replace("Second","");
-        } else {
-          bookVal = "The Book of "; // Remove the 'let' keyword here
-          filterBook = frBookName;
-        };
-
-        // Add to reading_heading
-        document.getElementById('reading_heading').textContent = "A reading from " + bookVal + filterBook;
-        // A variable to hold the first reading text
-        let firstReadingText = "";
-
-        // Clear the arrays
-        frChapterNumbers.length = 0;
-        frChapterPaths.length = 0;
-
-        // Test if the firstReadingKey includes a comma
-        if (firstReadingKey.includes(",")) {
-          // If it does, split the string at the commas
-          firstReadingKeyList = firstReadingKey.split(",");
-        } else {
-          // Otherwise, do not split the string
-          firstReadingKeyList = [firstReadingKey];
-        };
-
-        // If firstReadingKeyList has four segments...
-        if (firstReadingKeyList.length == 4) {
-          // Check if the first segment includes two colons
-          if (firstReadingKeyList[0].split(":").length == 3) {
-            // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[1].slice(-2).replace(/[\s,-]+/g, '')); 
+        let srChapterPaths = [];
+        let trChapterPaths = [];
+        let ftrChapterPaths = [];
+        
+        // Define a function to format the book name
+        function formatBookName(bookName) {
+          if (gospels.includes(bookName)) {
+            return "The Gospel of " + bookName;
+          } else if (firstBooks.includes(bookName)) {
+            return "The First Book of " + bookName.replace("First", "");
+          } else if (secondBooks.includes(bookName)) {
+            return "The Second Book of " + bookName.replace("Second", "");
+          } else if (bookName === "SongOfSolomon") {
+            return "The Song of Solomon";
+          } else if (bookName === "Ecclesiastes") {
+            return "Ecclesiastes";
+          } else if (bookName === "Ecclesiasticus") {
+            return "Ecclesiasticus";
+          } else if (bookName === "EpistleJeremiah") {
+            return "The Epistle of Jeremiah";
+          } else if (bookName === "PrayerOfAzariah") {
+            return "The Prayer of Azariah and the Song of the Three Jews";
+          } else if (bookName === "Susanna") {
+            return "The Story of Susanna";
+          } else if (bookName === "Bel") {
+            return "Bel and the Dragon";
+          } else if (epistles.includes(bookName)) {
+            return "The Epistle of St. " + bookName + " the Apostle";
+          } else if (firstEpistles.includes(bookName)) {
+            return "The First Epistle of St. " + bookName.replace("First", "") + " the Apostle";
+          } else if (secondEpistles.includes(bookName)) {
+            return "The Second Epistle of St. " + bookName.replace("Second", "") + " the Apostle";
+          } else if (thirdEpistles.includes(bookName)) {
+            return "The Third Epistle of St. " + bookName.replace("Third", "") + " the Apostle";
+          } else if (epistlesPaul.includes(bookName)) {
+            return "The Epistle of St. Paul the Apostle to the " + bookName;
+          } else if (epistlesPaulTo.includes(bookName)) {
+            return "The Epistle of St. Paul the Apostle to " + bookName;
+          } else if (firstEpistlesPaul.includes(bookName)) {
+            return "The First Epistle of St. Paul the Apostle to the " + bookName.replace("First", "");
+          } else if (secondEpistlesPaul.includes(bookName)) {
+            return "The Second Epistle of St. Paul the Apostle to the " + bookName.replace("Second", "");
+          } else if (firstEpistlesPaulTo.includes(bookName)) {
+            return "The First Epistle of St. Paul the Apostle to " + bookName.replace("First", "");
+          } else if (secondEpistlesPaulTo.includes(bookName)) {
+            return "The Second Epistle of St. Paul the Apostle to " + bookName.replace("Second", "");
           } else {
-            // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-          };
-          // Check if the second segment includes any colons
-          if (firstReadingKeyList[1].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[1].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[1].slice(-2).replace(/[\s,-]+/g, '')); 
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            };
-          } else {
-            console.log("There are no colons in the second segment");
-          };
-          // Check if the third segment includes any colons
-          if (firstReadingKeyList[2].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[2].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[1].slice(-2).replace(/[\s,-]+/g, '')); 
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            };
-          } else {
-            console.log("There are no colons in the third segment");
-          };
-          // Check if the fourth segment includes any colons
-          if (firstReadingKeyList[3].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[3].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[3].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[3].split(":")[1].slice(-2).replace(/[\s,-]+/g, '')); 
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[3].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            };
-          } else {
-            console.log("There are no colons in the fourth segment");
-          };
-        // If the firstReadingKeyList has three segments...
-        } else if (firstReadingKeyList.length == 3) {
-          // Check if the first segment includes two colons
-          if (firstReadingKeyList[0].split(":").length == 3) {
-            // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));  
-          } else {
-            // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));  
-          };
-          // Check if the second segment includes any colons
-          if (firstReadingKeyList[1].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[1].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));  
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));              
-            };
-          } else {
-            console.log("There are no colons in the second segment");
-          };
-          // Check if the third segment includes any colons
-          if (firstReadingKeyList[2].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[2].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));              
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[2].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            };
-          } else {
-            console.log("There are no colons in the third segment");
-          };
-        // If the firstReadingKeyList has two segments...
-        } else if (firstReadingKeyList.length == 2) {
-          // Check if the first segment includes two colons
-          if (firstReadingKeyList[0].split(":").length == 3) {
-            // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));
-          } else {
-            // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-          };
-          // Check if the second segment includes any colons
-          if (firstReadingKeyList[1].includes(":")) {
-            // If it does, check if it includes two colons
-            if (firstReadingKeyList[1].split(":").length == 3) {
-              // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-              // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));
-            } else {
-              // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-              frChapterNumbers.push(firstReadingKeyList[1].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            };
-          } else {
-            console.log("There are no colons in the second segment");
-          };
-        // If the firstReadingKeyList has one segment...
-        } else if (firstReadingKeyList.length == 1) {
-          // Check if the first segment includes two colons
-          if (firstReadingKeyList[0].split(":").length == 3) {
-            // Get the two characters before the first colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-            // Get the two characters before the second colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[1].slice(-2).replace(/[\s,-]+/g, ''));
-          } else {
-            // Get the two characters before the colon, and if these two characters contain a space, comma, or hyphen, replace them with nothing using regex
-            frChapterNumbers.push(firstReadingKeyList[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, ''));
-          };
-        };
-
-        // Loop through the frChapterNumbers array
-        for (let i = 0; i < frChapterNumbers.length; i++) {
-          // If the frChapterNumbers array is not empty...
-          if (frChapterNumbers[i] != "") {
-            // Push the chapter number to the frChapterPaths array
-            frChapterPaths.push("nrsv/"+frBookName + "-" + frChapterNumbers[i]+".json");
-          };
-        };
-
-// The verses for each book and chapter of the first readings
-        // Define an empty array to hold objects with the first reading verses
-        let firstReadingObject = [];
-
-        // An undefined variable to hold the first reading verses
-        let firstReadingVerses;
-
-        // Create a regular expression pattern to match chapter numbers with their following ":" character
-        const regexPattern = new RegExp(frChapterNumbers.map(num => `(${num}:)`, "g").join("|"));
-
-        // Use the regular expression to split the string while preserving chapter numbers
-        firstReadingVerses = firstReadingKey.split(regexPattern).filter(Boolean);
-
-        // Pop the first entry in the array (The book name)
-        firstReadingVerses.shift();
-
-        // For each entry with a final comma, remove it
-        for (let i = 0; i < firstReadingVerses.length; i++) {
-          // If the last character of an entry is a comma, remove it
-          if (firstReadingVerses[i].slice(-1) == ",") {
-            firstReadingVerses[i] = firstReadingVerses[i].slice(0, -1);
-          };
-        };
-
-        // For each entry with a colon, create a new object with the chapter paths and verses as stored values
-        for (let i = 0; i < firstReadingVerses.length; i++) {
-          // If the entry includes a colon...
-          if (firstReadingVerses[i].includes(":")) {
-            // Create a new object with "verses" as the first key and the verses as the value and "book" as the second key with the frChapterPaths entry matching each chapter number as the value
-            firstReadingObject.push({"book": frChapterPaths[frChapterNumbers.indexOf(firstReadingVerses[i].split(":")[0])],"verses": firstReadingVerses[i+1]});
-          };
-        };
-
-        let followingVerse;
-
-        // For each object in the firstReadingObject array...
-        for (let i = 0; i < firstReadingObject.length; i++) {
-          // Split the verses at the commas
-          firstReadingObject[i].verses = firstReadingObject[i].verses.split(",");
-          // Loop through the verses array
-          for (let x = 0; x < firstReadingObject[i].verses.length; x++) {
-            // If the verse includes a hyphen...
-            if (firstReadingObject[i].verses[x].includes("-")) {
-              // Split the verse at the hyphen
-              let verseRange = firstReadingObject[i].verses[x].split("-");
-              // If verseRange[1] does not exist...
-              if (verseRange[1] == "") {
-                // Replace the verse as follows
-                firstReadingObject[i].verses[x] = "bookVerse >= " + verseRange[0];
-                // And identify the following object's first verse
-                followingVerse = firstReadingObject[i+1].verses[0];
-              } else {
-                // Replace the verse with the range of verses
-                firstReadingObject[i].verses[x] = verseRange[0] + " <= bookVerse && bookVerse <= " + verseRange[1];
-              };
-            // Where the verse equals the followingVerse...
-            } else if (firstReadingObject[i].verses.includes(followingVerse)) {
-              // Prepend "< " to the verse
-              firstReadingObject[i].verses[firstReadingObject[i].verses.indexOf(followingVerse)] = "bookVerse <= " + firstReadingObject[i].verses[firstReadingObject[i].verses.indexOf(followingVerse)];
-            } else {
-              // Replace the verse with the following
-              firstReadingObject[i].verses[x] = 'bookVerse == ' + firstReadingObject[i].verses[x];
-            };
-          };       
-        };
-
-        // Loop through the firstReadingObject array
-        for (let i = 0; i < firstReadingObject.length; i++) {
-          // Define the verses array
-          let objectVerses = firstReadingObject[i].verses;
-          // Define the path to the book json files
-          let bookPath = firstReadingObject[i].book;
-          // Fetch the data in the json files
-          const response = await fetch(bookPath);
-          // Wait for the response to be returned
-          const firstReadingData = await response.json();
-          // Loop through the book arrays
-          for (let x = 0; x < firstReadingData.length; x++) {
-            let bookVerse = firstReadingData[x].verse;
-            let bookText = firstReadingData[x].text;
-            // Loop through objectVerses
-            for (let y = 0; y < objectVerses.length; y++) {
-              // Check if the json verse is within the range
-              if (eval(objectVerses[y])) {
-                let bookLine = '<sup class="sc-ldf-bible-reading">' + bookVerse + '</sup> ' + bookText;
-                // If so, append the text to the firstReadingText
-                firstReadingText += bookLine;
-              };
-            };
+            return "The Book of " + bookName;
           }
         };
 
-        document.getElementById('first_reading').innerHTML += firstReadingText;
+        // Format the book names and assign them to variables
+        let bookVal = formatBookName(frBookName);
+        let sBookVal = formatBookName(srBookName);
+        let tBookVal = formatBookName(trBookName);
+        let ftBookVal = formatBookName(ftrBookName);
 
+        // Update the reading headings according to Gospel status
+        updateReadingHeading(frBookName, 'reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', bookVal);
+        updateReadingHeading(srBookName, 'second_reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', sBookVal);
+        updateReadingHeading(trBookName, 'third_reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', tBookVal);
+        updateReadingHeading(ftrBookName, 'fourth_reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', ftBookVal);
 
-
-
-
-        // Iterate through the psalmSlug object
-        Object.entries(psalmSlug).forEach((item) => {
-          // Iterate through the eveningPsalmKey array
-          for (let i = 0; i < eveningPsalmKey.length; i++) {
-            // If the item is equal to the key...
-            if (item[0] == "en-bcp1979-" + eveningPsalmKey[i]) {
-              
-              // Define the Psalm number
-              let psalmNumber = item[1][0].metadata.localname;
-              // Define the Latin name of the psalm
-              let latinName = item[1][0].metadata.latinname;
-
-              // Define the Psalm header
-              let psalmHeader = "<br><br><span class='subhead'>" + psalmNumber + "</span><br><i style='color:darkred;'>" + latinName + "</i><br><br>";
-
-              // Iterate through the psalm verses
-              for (let x = 0; x < item[1][0].value[0].value.length; x++) {
-                // Define the verse data
-                let verseData = item[1][0].value[0].value[x];
-                // Define the line
-                let line = '<sup class="sc-ldf-bible-reading">' + verseData.number + '</sup> ' + verseData.verse + '<br>' + verseData.halfverse + '<br>';
-                // Append the line to the psalmHeader
-                psalmHeader += line;
-              };
-
-              // Push psalmHeader to the eveningPsalmVerses array
-              eveningPsalmVerses.push(psalmHeader + '<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>');
-            };
-          };
-          // Iterate through the morningPsalmKey array
-          for (let i = 0; i < morningPsalmKey.length; i++) {
-            // If the item is equal to the key...
-            if (item[0] == "en-bcp1979-" + morningPsalmKey[i]) {
-              
-              // Define the Psalm number
-              let psalmNumber = item[1][0].metadata.localname;
-              // Define the Latin name of the psalm
-              let latinName = item[1][0].metadata.latinname;
-
-              // Define the Psalm header
-              let psalmHeader = "<br><br><span class='subhead'>" + psalmNumber + "</span><br><i style='color:darkred;'>" + latinName + "</i><br><br>";
-
-              // Iterate through the psalm verses
-              for (let x = 0; x < item[1][0].value[0].value.length; x++) {
-                // Define the verse data
-                let verseData = item[1][0].value[0].value[x];
-                // Define the line
-                let line = '<sup class="sc-ldf-bible-reading">' + verseData.number + '</sup> ' + verseData.verse + '<br>' + verseData.halfverse + '<br>';
-                // Append the line to the psalmHeader
-                psalmHeader += line;
-              };
-
-              // Push psalmHeader to the morningPsalmVerses array
-              morningPsalmVerses.push(psalmHeader + '<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>');
-            };
-          };
-        });
-
-        console.log(morningPsalmKey);
-        console.log(eveningPsalmKey);
-
-        console.log(morningPsalmVerses);
-
-        // Fill an array with hymns from the 1982 Hymnal of the Episcopal Church
-        const morningHymns = [
-          /* Sunday */ "<br><span class='subhead'>O love, how deep, how broad</span><br><i style='color:darkred;'>De amore Christi</i><br><br><span class='intro'>O love,</span> how deep, how broad, how high,<br>how passing thought and fantasy,<br>that God, the Son of God, should take<br>our mortal form for mortals' sake.<br><br>For us baptized, for us he bore<br>his holy fast and hungered sore;<br>for us temptations sharp he knew;<br>for us the tempter overthrew.<br><br>For us he prayed; for us he taught;<br>for us his daily works he wrought:<br>by words and signs and actions, thus<br>still seeking not himself, but us.<br><br>For us to wicked hands betrayed,<br>scourged, mocked, in purple robe arrayed,<br>he bore the shameful cross and death;<br>for us gave up his dying breath.<br><br>For us he rose from death again;<br>for us he went on high to reign;<br>for us he sent his Spirit here<br>to guide, to strengthen, and to cheer.<br><br>All glory to our Lord and God<br>for love so deep, so high, so broad;<br>the Trinity whom we adore<br>forever and forevermore.<br><br><i>Amen.</i>",
-          /* Monday */ "<br><span class='subhead'>O God, our help in ages past</span><br><i style='color:darkred;'>Domine, refugium</i><br><br><span class='intro'>O God,</span> our help in ages past,<br>our hope for years to come,<br>our shelter from the stormy blast,<br>and our eternal home:<br><br>under the shadow of thy throne<br>thy saints have dwelt secure;<br>sufficient is thine arm alone,<br>and our defense is sure.<br><br>Before the hills in order stood,<br>or earth received her frame,<br>from everlasting thou art God,<br>to endless years the same.<br><br>A thousand ages in thy sight<br>are like an evening gone;<br>short as the watch that ends the night<br>before the rising sun.<br><br>Time, like an ever-rolling stream,<br>bears all our years away;<br>they fly, forgotten, as a dream<br>dies at the opening day.<br><br>O God, our help in ages past,<br>our hope for years to come,<br>be thou our guide while life shall last,<br>and our eternal home.<br><br><i>Amen.</i>",
-          /* Tuesday */ "<br><span class='subhead'>Our God, to whom we turn</span><br><i style='color:darkred;'>O Gott, du frommer Gott</i><br><br><span class='intro'>O God,</span> to whom we turn<br>when weary with illusion,<br>whose stars serenely burn<br>above this earth's confusion,<br>thine is the mighty plan,<br>the steadfast order sure<br>in which the world began,<br>endures, and will endure.<br><br>Thou art thyself the truth;<br>though we who seek to find thee<br>have tried, with thoughts uncouth,<br>in feeble words to bind thee,<br>it is because thou art<br>we're driven to the quest;<br>till truth from falsehood part,<br>our hearts can find no rest.<br><br>All beauty speaks of thee:<br>the mountains and the rivers,<br>the line of lifted sea,<br>where spreading moonlight quivers,<br>the hymns thy people raise,<br>the psalms and anthems strong,<br>hint at the glorious praise<br>of thy eternal song.<br><br>Where goodness comes to light<br>we glimpse thy plan unfolding;<br>where justice wins its fight<br>thou art the Kingdom molding;<br>the blood of friend as sign<br>of love for comrade spilt,<br>reflects the vast design<br>by which thy hose is built.<br><br>Thou hidden fount of love,<br>of peace, and truth, and beauty,<br>inspire us from above<br>with joy and strength for duty.<br>May thy fresh light arise<br>with each clouded heart,<br>and give us open eyes<br>To see thee as thou art.<br><br><i>Amen.</i>",
-          /* Wednesday */ "<br><span class='subhead'>Blow ye the trumpet, blow</span><br><i style='color:darkred;'>A Wesleyan Hymn</i><br><br><span class='intro'>Blow ye</span> the trumpet, blow!<br>The gladly solemn sound;<br>let all the nations know,<br>to earth's remotest bound:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br>Jesus, our great High Priest,<br>hath full atonement made;<br>ye weary spirits, rest;<br>ye mournful souls, be glad:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br>Extol the Lamb of God,<br>the sacrificial Lamb;<br>redemption thro' his blood<br>throughout the world proclaim:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br>Ye slaves of sin and hell,<br>your liberty receive,<br>and safe in Jesus dwell,<br>and blest in Jesus live:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br>Ye who have sold for naught<br>your heritage above,<br>receive it back unbought,<br>the gift of Jesus' love:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br>The gospel trumpet hear,<br>the news of heav'nly grace;<br>and, saved from earth, appear<br>before your Savior's face:<br><br>The year of jubilee is come;<br>return, ye ransomed sinners, home.<br><br><i>Amen.</i>",
-          /* Thursday */ "<br><span class='subhead'>The spacious firmament</span><br><i style='color:darkred;'>Caeli enarrant</i><br><br><span class='intro'>The spacious firmament</span> on high,<br>with all the blue ethereal sky,<br>and spangled heavens, a shining frame,<br>their great Original proclaim.<br>The unwearied sun from day to day<br>does his Creator's power display;<br>and publishes to every land<br>the work of an almighty hand.<br><br>Soon as the evening shades prevail,<br>the moon takes up the wondrous tale,<br>and nightly to the listening earth<br>repeats the story of her birth:<br>whilst all the stars that round her burn,<br>and all the planets in their turn,<br>confirm the tidings as they roll,<br>and spread the truth from pole to pole.<br><br>What though in solemn silence all<br>move round the dark terrestrial ball?<br>What though no real voice nor sound<br>amid their radiant orbs be found?<br>In reason's ear they all rejoice,<br>and utter forth a glorious voice;<br>forever singing as they shine,<br>'The hand that made us is divine.'<br><br><i>Amen.</i>",
-          /* Friday */ "<br><span class='subhead'>Sing, my tongue</span><br><i style='color:darkred;'>Pange lingua</i><br><br><span class='intro'>Sing, my tongue,</span> the glorious battle;<br>of the mighty conflict sing;<br>tell the triumph of the victim,<br>to his cross thy tribute bring.<br>Jesus Christ, the world's Redeemer<br>from that cross now reigns as King.<br><br>Thirty years among us dwelling,<br>his appointed time fulfilled,<br>born for this, he meets his passion,<br>this the Savior freely willed:<br>on the cross the Lamb is lifted,<br>where his precious blood is spilled.<br><br>He endures the nails, the spitting,<br>vinegar, and spear, and reed;<br>from that holy body broken<br>blood and water forth proceed:<br>earth, and stars, and sky, and ocean,<br>by that flood from stain are freed.<br><br>Faithful cross! above all other,<br>one and only noble tree!<br>None in foliage, none in blossom,<br>none in fruit thy peer may be:<br>sweetest wood and sweetest iron!<br>sweetest weight is hung on thee.<br><br>Bend thy boughs, O tree of glory!<br>Thy relaxing sinews bend;<br>for awhile the ancient rigor<br>that thy birth bestowed, suspend;<br>and the King of heavenly beauty<br>gently on thine arms extend.<br><br>Praise and honor to the Father,<br>praise and honor to the Son,<br>praise and honor to the Spirit,<br>ever Three and ever One:<br>one in might and one in glory<br>while eternal ages run.<br><br><i>Amen.</i>",
-          /* Saturday */ "<br><span class='subhead'>Sing of Mary, pure and lowly</span><br><i style='color:darkred;'>Canadian Anglican Hymn</i><br><br><span class='intro'>Sing of Mary,</span> pure and lowly,<br>virgin mother undefiled;<br>sing of God's own Son most holy,<br>who became her little child.<br>Fairest child of fairest mother,<br>God the Lord who came to earth,<br>Word made flesh, our very brother,<br>takes our nature by his birth.<br><br>Sing of Jesus, son of Mary,<br>in the home at Nazareth,<br>toil and labor cannot weary<br>love enduring unto death.<br>Constant was the love he gave her,<br>though he went forth from her side,<br>forth to preach, and heal, and suffer,<br>till on Calvary he died.<br><br>Glory be to God the Father;<br>glory be to God the Son;<br>glory be to God the Spirit;<br>glory to the Three in One.<br>From the heart of blessed Mary,<br>from all saints the song ascends,<br>and the Church the strain reechoes<br>unto earth's remotest ends.<br><br><i>Amen.</i>"
-        ];
-
-        // Append the first entry in morningPsalmVerses to the morningPsalm div
-        document.getElementById('morning_psalm_1').innerHTML += morningPsalmVerses[0];
-
-        // If morningPsalmVerses has more than one entry
-        if (morningPsalmVerses.length > 1) {
-          // Append the remaining entries to the morning_psalm_2 div
-          for (let i = 1; i < morningPsalmVerses.length; i++) {
-            document.getElementById('morning_psalm_2').innerHTML += morningPsalmVerses[i];
-          };
-        } else {
-          // Otherwise, find out what day of the week it is
-          if (dayPosition == 0) {
-            // If it is Sunday, append the first entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[0];
-          } else if (dayPosition == 1) {
-            // If it is Monday, append the second entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[1];
-          } else if (dayPosition == 2) {
-            // If it is Tuesday, append the third entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[2];
-          } else if (dayPosition == 3) {
-            // If it is Wednesday, append the fourth entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[3];
-          } else if (dayPosition == 4) {
-            // If it is Thursday, append the fifth entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[4];
-          } else if (dayPosition == 5) {
-            // If it is Friday, append the sixth entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[5];
-          } else if (dayPosition == 6) {
-            // If it is Saturday, append the seventh entry in morningHymns to the morning_psalm_2 div
-            document.getElementById('morning_psalm_2').innerHTML += morningHymns[6];
+        // Define a function to update reading headings based on Gospel status
+        function updateReadingHeading(bookName, elementId, prefix, bookValue) {
+          const element = document.getElementById(elementId);
+          // If the reading is a Gospel...
+          if (gospels.includes(bookName)) {
+            element.textContent = prefix + bookName;
+          // Else if the reading is not a Gospel...
+          } else {
+            element.textContent = 'A reading from ' + bookValue;
           };
         };
+      
+        // A variable to hold the first reading text
+        let firstReadingText = "";
+        let secondReadingText = "";
+        let thirdReadingText = "";
+        let fourthReadingText = "";
+
+        // Function to extract chapter numbers from a reading key
+        function extractChapterNumbers(readingKey) {
+          const chapterNumbers = [];
+          const segments = readingKey.split(",");
+          
+          for (const segment of segments) {
+            const parts = segment.split(":");
+            
+            if (parts.length >= 2) {
+              // Get the two characters before the first and second colons
+              const firstPart = parts[0].slice(-2).replace(/[\s,-]+/g, '');
+              const secondPart = parts[1].slice(-2).replace(/[\s,-]+/g, '');
+              
+              if (firstPart) chapterNumbers.push(firstPart);
+              if (secondPart) chapterNumbers.push(secondPart);
+            } else if (parts.length === 1) {
+              // Get the two characters before the colon
+              const firstPart = parts[0].split(":")[0].slice(-2).replace(/[\s,-]+/g, '');
+              
+              if (firstPart) chapterNumbers.push(firstPart);
+            }
+          }
+          
+          return chapterNumbers;
+        }
+
+        // Clear the arrays
+        //frChapterNumbers.length = 0;
+        frChapterPaths.length = 0;
+        //srChapterNumbers.length = 0;
+        srChapterPaths.length = 0;
+        trChapterPaths.length = 0;
+        ftrChapterPaths.length = 0;
+
+        // Extract chapter numbers for firstReadingKey
+        const frChapterNumbers = extractChapterNumbers(firstReadingKey);
+        // Extract chapter numbers for secondReadingKey
+        const srChapterNumbers = extractChapterNumbers(secondReadingKey);
+        // Extract chapter numbers for thirdReadingKey
+        const trChapterNumbers = extractChapterNumbers(thirdReadingKey);
+        // Extract chapter numbers for fourthReadingKey
+        const ftrChapterNumbers = extractChapterNumbers(fourthReadingKey);
+
+        // Generate chapter paths
+        for (const number of frChapterNumbers) {
+          if (number) frChapterPaths.push(`nrsv/${frBookName}-${number}.json`);
+        };
+
+        for (const number of srChapterNumbers) {
+          if (number) srChapterPaths.push(`nrsv/${srBookName}-${number}.json`);
+        };
+
+        for (const number of trChapterNumbers) {
+          if (number) trChapterPaths.push(`nrsv/${trBookName}-${number}.json`);
+        };
+
+        for (const number of ftrChapterNumbers) {
+          if (number) ftrChapterPaths.push(`nrsv/${ftrBookName}-${number}.json`);
+        };
+
+
+// The verses for each book and chapter of the readings
+
+        // Define a function to split and clean verses
+        function splitAndCleanVerses(readingKey, chapterNumbers) {
+          const regexPattern = new RegExp(chapterNumbers.map(num => `(${num}:)`, "g").join("|"));
+          const verses = readingKey.split(regexPattern).filter(Boolean);
+
+          // Pop the first entry (The book name)
+          verses.shift();
+
+          // Remove trailing commas
+          return verses.map(verse => (verse.endsWith(",") ? verse.slice(0, -1) : verse));
+        };
+
+        // Define an empty array to hold objects with the reading verses
+        //let firstReadingObject = [];
+        //let secondReadingObject = [];
+
+        // An undefined variable to hold the reading verses
+        let firstReadingVerses = splitAndCleanVerses(firstReadingKey, frChapterNumbers);
+        let secondReadingVerses = splitAndCleanVerses(secondReadingKey, srChapterNumbers);
+        let thirdReadingVerses = splitAndCleanVerses(thirdReadingKey, trChapterNumbers);
+        let fourthReadingVerses = splitAndCleanVerses(fourthReadingKey, ftrChapterNumbers);
+
+        // Define a function to create reading objects
+        function createReadingObjects(verses, chapterPaths, chapterNumbers) {
+          const readingObjects = [];
+          for (let i = 0; i < verses.length; i++) {
+            // If the entry includes a colon...
+            if (verses[i].includes(":")) {
+              readingObjects.push({"book": chapterPaths[chapterNumbers.indexOf(verses[i].split(":")[0])],"verses": verses[i+1]});
+            }
+          };
+          return readingObjects;
+        };
+
+        const firstReadingObject = createReadingObjects(firstReadingVerses, frChapterPaths, frChapterNumbers);
+        const secondReadingObject = createReadingObjects(secondReadingVerses, srChapterPaths, srChapterNumbers);
+        const thirdReadingObject = createReadingObjects(thirdReadingVerses, trChapterPaths, trChapterNumbers);
+        const fourthReadingObject = createReadingObjects(fourthReadingVerses, ftrChapterPaths, ftrChapterNumbers);
+
+        let followingVerse;
+        let followingVerse2;
+        let followingVerse3;
+        let followingVerse4;
+
+        // Define a function to process reading objects and range transformations
+        function processReadingObjects(readingObject, followingVerse) {
+          for (let i = 0; i < readingObject.length; i++) {
+            // Split the verses at the commas
+            readingObject[i].verses = readingObject[i].verses.split(",");
+            
+            for (let x = 0; x < readingObject[i].verses.length; x++) {
+              const verse = readingObject[i].verses[x];
+              
+              if (verse.includes("-")) {
+                const verseRange = verse.split("-");
+                
+                if (verseRange[1] == "") {
+                  // Replace the verse as follows
+                  readingObject[i].verses[x] = `bookVerse >= ${verseRange[0]}`;
+                  // And identify the following object's first verse
+                  followingVerse = readingObject[i + 1].verses[0];
+                } else {
+                  // Replace the verse with the range of verses
+                  readingObject[i].verses[x] = `${verseRange[0]} <= bookVerse && bookVerse <= ${verseRange[1]}`;
+                }
+              } else if (readingObject[i].verses.includes(followingVerse)) {
+                // Prepend "< " to the verse
+                readingObject[i].verses[readingObject[i].verses.indexOf(followingVerse)] = `bookVerse <= ${followingVerse}`;
+              } else {
+                // Replace the verse with the following
+                readingObject[i].verses[x] = `bookVerse == ${verse}`;
+              };
+            };
+          };
+        };
+
+        // Process the firstReadingObject
+        processReadingObjects(firstReadingObject, followingVerse);
+
+        // Process the secondReadingObject
+        processReadingObjects(secondReadingObject, followingVerse2);
+
+        // Process the thirdReadingObject
+        processReadingObjects(thirdReadingObject, followingVerse3);
+
+        // Process the fourthReadingObject
+        processReadingObjects(fourthReadingObject, followingVerse4);
+
+        // Define a function to fetch and process reading data
+        async function fetchAndProcessReadingData(readingObject, readingText) {
+          for (let i = 0; i < readingObject.length; i++) {
+            const objectVerses = readingObject[i].verses;
+            const bookPath = readingObject[i].book;
+
+            // Fetch the data in the json files
+            const response = await fetch(bookPath);
+            // Wait for the response to be returned
+            const readingData = await response.json();
+
+            // Loop through the book arrays
+            for (let x = 0; x < readingData.length; x++) {
+              const bookVerse = readingData[x].verse;
+              const bookText = readingData[x].text;
+
+              // Loop through objectVerses
+              for (let y = 0; y < objectVerses.length; y++) {
+                // Check if the json verse is within the range
+                if (eval(objectVerses[y])) {
+                  const bookLine = '<sup class="sc-ldf-bible-reading">' + bookVerse + '</sup> ' + bookText;
+                  // Append the text to the readingText
+                  readingText += bookLine;
+                };
+              };
+            };
+          };
+          return readingText;
+        };
+
+        // Call the function for firstReadingObject
+        firstReadingText = await fetchAndProcessReadingData(firstReadingObject, firstReadingText);
+
+        // Call the function for secondReadingObject
+        secondReadingText = await fetchAndProcessReadingData(secondReadingObject, secondReadingText);
+
+        // Call the function for thirdReadingObject
+        thirdReadingText = await fetchAndProcessReadingData(thirdReadingObject, thirdReadingText);
+
+        // Call the function for fourthReadingObject
+        fourthReadingText = await fetchAndProcessReadingData(fourthReadingObject, fourthReadingText);
+
+        // Add the readings to the page
+        document.getElementById('first_reading').innerHTML += firstReadingText;
+        document.getElementById('second_reading').innerHTML += secondReadingText;
+        document.getElementById('third_reading').innerHTML += thirdReadingText;
+        document.getElementById('fourth_reading').innerHTML += fourthReadingText;
+
+        // Define a function to append content based on Apocrypha and Gospel status
+        function appendContent(elementId, isApocrypha, isGospel) {
+          const element = document.getElementById(elementId);
+
+          if (isApocrypha) {
+            element.innerHTML += "<br><br><p>Here endeth the Reading.</p>";
+          } else if (isGospel) {
+            element.innerHTML += "<br><br><p>The Gospel of the Lord.<br><i>Praise be to thee, O Christ.</i></p>";
+          } else {
+            element.innerHTML += "<br><br><p>The Word of the Lord.<br><i>Thanks be to God.</i></p>";
+          };
+        };
+
+        // Use the function for first_reading
+        appendContent('first_reading', apocrypha.includes(frBookName), gospels.includes(frBookName));
+
+        // Use the function for second_reading
+        appendContent('second_reading', apocrypha.includes(srBookName), gospels.includes(srBookName));
+
+        // Use the function for third_reading
+        appendContent('third_reading', apocrypha.includes(trBookName), gospels.includes(trBookName));
+
+        // Use the function for fourth_reading
+        appendContent('fourth_reading', apocrypha.includes(ftrBookName), gospels.includes(ftrBookName));
+
+        // If the fourth reading is not empty...
+        if (document.getElementById('fourth_reading').innerHTML != "") {
+          // Display the part_four div
+          document.getElementById('part_four').style.display = "block";
+        } else {
+          // Hide the part_four div
+          document.getElementById('part_four').style.display = "none";
+        };
+
+        // Define a function to process the psalms
+        function processPsalm(psalmKey, psalmVerses) {
+          // Iterate through the psalmKey array
+          for (let i = 0; i < psalmKey.length; i++) {
+            // Define the key
+            const key = psalmKey[i];
+            // Define the item with the psalmSlug
+            const item = psalmSlug["en-bcp1979-" + key];
+
+            if (item) {
+              // Define the name of the psalm
+              const psalmNumber = item[0].metadata.localname;
+              // Define its Latin name
+              const latinName = item[0].metadata.latinname;
+              // Give the psalm a header
+              let psalmHeader = `<br><br><span class='subhead'>${psalmNumber}</span><br><i style='color:darkred;'>${latinName}</i><br><br>`;
+
+              // Loop through the verses
+              for (let x = 0; x < item[0].value[0].value.length; x++) {
+                const verseData = item[0].value[0].value[x];
+                // Format each line
+                const line = `<sup class="sc-ldf-bible-reading">${verseData.number}</sup> ${verseData.verse}<br>${verseData.halfverse}<br>`;
+                // Add each line to the header
+                psalmHeader += line;
+              };
+
+              // Order psalmHeader according to the psalmKey array
+              psalmVerses[psalmKey.indexOf(key)] = `${psalmHeader}<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>`;
+            };
+          };
+        };
+
+        // Process morning and evening psalms
+        processPsalm(morningPsalmKey, morningPsalmVerses);
+        processPsalm(eveningPsalmKey, eveningPsalmVerses);
 
         // Loop through the morningPsalmVerses array
         for (let i = 0; i < morningPsalmVerses.length; i++) {
           // Append the morningPsalmVerses to the morningPsalm div
-          // document.getElementById('morning_psalm_1').innerHTML += morningPsalmVerses[i];
+          document.getElementById('morning_psalm').innerHTML += morningPsalmVerses[i];
         };
 
         // Loop through the eveningPsalmVerses array
         for (let i = 0; i < eveningPsalmVerses.length; i++) {
           // Append the first eveningPsalmVerses to the eveningPsalm div
-          //document.getElementById('evening_psalms').innerHTML += eveningPsalmVerses[i];
+          document.getElementById('evening_psalm').innerHTML += eveningPsalmVerses[i];
         };
 
       };
     
+      // Fill an array with hymns from the 1982 Hymnal of the Episcopal Church
+      const secondHymns = [
+        /* Sunday */ "<br><span class='subhead'>O love, how deep, how broad</span><br><i style='color:darkred;'>De amore Christi</i><br><br><span class='intro'>O love,</span> how deep, how broad, how high,<br>how passing thought and fantasy,<br>that God, the Son of God, should take<br>our mortal form for mortals' sake.<br><br>For us baptized, for us he bore<br>his holy fast and hungered sore;<br>for us temptations sharp he knew;<br>for us the tempter overthrew.<br><br>For us he prayed; for us he taught;<br>for us his daily works he wrought:<br>by words and signs and actions, thus<br>still seeking not himself, but us.<br><br>For us to wicked hands betrayed,<br>scourged, mocked, in purple robe arrayed,<br>he bore the shameful cross and death;<br>for us gave up his dying breath.<br><br>For us he rose from death again;<br>for us he went on high to reign;<br>for us he sent his Spirit here<br>to guide, to strengthen, and to cheer.<br><br>All glory to our Lord and God<br>for love so deep, so high, so broad;<br>the Trinity whom we adore<br>forever and forevermore.<br><br><i>Amen.</i>",
+        /* Monday */ "<br><span class='subhead'>O God, our help in ages past</span><br><i style='color:darkred;'>Domine, refugium</i><br><br><span class='intro'>O God,</span> our help in ages past,<br>our hope for years to come,<br>our shelter from the stormy blast,<br>and our eternal home:<br><br>under the shadow of thy throne<br>thy saints have dwelt secure;<br>sufficient is thine arm alone,<br>and our defense is sure.<br><br>Before the hills in order stood,<br>or earth received her frame,<br>from everlasting thou art God,<br>to endless years the same.<br><br>A thousand ages in thy sight<br>are like an evening gone;<br>short as the watch that ends the night<br>before the rising sun.<br><br>Time, like an ever-rolling stream,<br>bears all our years away;<br>they fly, forgotten, as a dream<br>dies at the opening day.<br><br>O God, our help in ages past,<br>our hope for years to come,<br>be thou our guide while life shall last,<br>and our eternal home.<br><br><i>Amen.</i>",
+        /* Tuesday */ "<br><span class='subhead'>Our God, to whom we turn</span><br><i style='color:darkred;'>O Gott, du frommer Gott</i><br><br><span class='intro'>O God,</span> to whom we turn<br>when weary with illusion,<br>whose stars serenely burn<br>above this earth's confusion,<br>thine is the mighty plan,<br>the steadfast order sure<br>in which the world began,<br>endures, and will endure.<br><br>Thou art thyself the truth;<br>though we who seek to find thee<br>have tried, with thoughts uncouth,<br>in feeble words to bind thee,<br>it is because thou art<br>we're driven to the quest;<br>till truth from falsehood part,<br>our hearts can find no rest.<br><br>All beauty speaks of thee:<br>the mountains and the rivers,<br>the line of lifted sea,<br>where spreading moonlight quivers,<br>the hymns thy people raise,<br>the psalms and anthems strong,<br>hint at the glorious praise<br>of thy eternal song.<br><br>Where goodness comes to light<br>we glimpse thy plan unfolding;<br>where justice wins its fight<br>thou art the Kingdom molding;<br>the blood of friend as sign<br>of love for comrade spilt,<br>reflects the vast design<br>by which thy hose is built.<br><br>Thou hidden fount of love,<br>of peace, and truth, and beauty,<br>inspire us from above<br>with joy and strength for duty.<br>May thy fresh light arise<br>with each clouded heart,<br>and give us open eyes<br>To see thee as thou art.<br><br><i>Amen.</i>",
+        /* Wednesday */ "<br><span class='subhead'>Let saints on earth in concert sing</span><br><i style='color:darkred;'>A Wesleyan Hymn</i><br><br><span class='intro'>Let saints</span> on earth in concert sing<br>with those whose work is done;<br>for all the servants of our King<br>in heaven and earth are one.<br><br>One family we dwell in him,<br>one Church, above, beneath,<br><br>though now divided by the stream,<br>the narrow stream of death.<br>One army of the living God,<br>to his command we bow;<br><br>part of the host have crossed the flood,<br>and part are crossing now.<br><br>E'en now by faith we join our hands<br>with those that went before,<br>and greet the everliving bands<br>on the eternal shore.<br><br>Jesus, be thou our constant Guide;<br>then, when the word is given,<br>bid Jordan's narrow stream divide,<br>and bring us safe to heaven.<br><br><i>Amen.</i>",
+        /* Thursday */ "<br><span class='subhead'>The spacious firmament</span><br><i style='color:darkred;'>Caeli enarrant</i><br><br><span class='intro'>The spacious firmament</span> on high,<br>with all the blue ethereal sky,<br>and spangled heavens, a shining frame,<br>their great Original proclaim.<br>The unwearied sun from day to day<br>does his Creator's power display;<br>and publishes to every land<br>the work of an almighty hand.<br><br>Soon as the evening shades prevail,<br>the moon takes up the wondrous tale,<br>and nightly to the listening earth<br>repeats the story of her birth:<br>whilst all the stars that round her burn,<br>and all the planets in their turn,<br>confirm the tidings as they roll,<br>and spread the truth from pole to pole.<br><br>What though in solemn silence all<br>move round the dark terrestrial ball?<br>What though no real voice nor sound<br>amid their radiant orbs be found?<br>In reason's ear they all rejoice,<br>and utter forth a glorious voice;<br>forever singing as they shine,<br>'The hand that made us is divine.'<br><br><i>Amen.</i>",
+        /* Friday */ "<br><span class='subhead'>Sing, my tongue</span><br><i style='color:darkred;'>Pange lingua</i><br><br><span class='intro'>Sing, my tongue,</span> the glorious battle;<br>of the mighty conflict sing;<br>tell the triumph of the victim,<br>to his cross thy tribute bring.<br>Jesus Christ, the world's Redeemer<br>from that cross now reigns as King.<br><br>Thirty years among us dwelling,<br>his appointed time fulfilled,<br>born for this, he meets his passion,<br>this the Savior freely willed:<br>on the cross the Lamb is lifted,<br>where his precious blood is spilled.<br><br>He endures the nails, the spitting,<br>vinegar, and spear, and reed;<br>from that holy body broken<br>blood and water forth proceed:<br>earth, and stars, and sky, and ocean,<br>by that flood from stain are freed.<br><br>Faithful cross! above all other,<br>one and only noble tree!<br>None in foliage, none in blossom,<br>none in fruit thy peer may be:<br>sweetest wood and sweetest iron!<br>sweetest weight is hung on thee.<br><br>Bend thy boughs, O tree of glory!<br>Thy relaxing sinews bend;<br>for awhile the ancient rigor<br>that thy birth bestowed, suspend;<br>and the King of heavenly beauty<br>gently on thine arms extend.<br><br>Praise and honor to the Father,<br>praise and honor to the Son,<br>praise and honor to the Spirit,<br>ever Three and ever One:<br>one in might and one in glory<br>while eternal ages run.<br><br><i>Amen.</i>",
+        /* Saturday */ "<br><span class='subhead'>Sing of Mary, pure and lowly</span><br><i style='color:darkred;'>Canadian Anglican Hymn</i><br><br><span class='intro'>Sing of Mary,</span> pure and lowly,<br>virgin mother undefiled;<br>sing of God's own Son most holy,<br>who became her little child.<br>Fairest child of fairest mother,<br>God the Lord who came to earth,<br>Word made flesh, our very brother,<br>takes our nature by his birth.<br><br>Sing of Jesus, son of Mary,<br>in the home at Nazareth,<br>toil and labor cannot weary<br>love enduring unto death.<br>Constant was the love he gave her,<br>though he went forth from her side,<br>forth to preach, and heal, and suffer,<br>till on Calvary he died.<br><br>Glory be to God the Father;<br>glory be to God the Son;<br>glory be to God the Spirit;<br>glory to the Three in One.<br>From the heart of blessed Mary,<br>from all saints the song ascends,<br>and the Church the strain reechoes<br>unto earth's remotest ends.<br><br><i>Amen.</i>"
+      ];
+
+      // Create an array of canticles
+      let canticles = [
+        /* Sunday */ "<br><span class='subhead'>Glory be to God</span><br><i style='color:darkred;'>Gloria in excelsis</i><br><br><span class='intro'>Glory be</span> to God on high,<br>and on earth peace, good will towards men.<br><br>We praise thee, we bless thee,<br>we worship thee<br>we glorify thee<br>we give thanks to thee for thy great glory,<br>O Lord God, heavenly King,<br>God the Father Almighty.<br><br>O Lord, the only-begotten Son, Jesus Christ;<br>O Lord God, Lamb of God, Son of the Father,<br>that takest away the sins of the world,<br>have mercy upon us.<br>Thou that takest away the sins of the world,<br>receive our prayer.<br>Thou that sittest at the right hand of God the Father,<br>have mercy upon us.<br><br>For thou only art holy;<br>thou only art the Lord;<br>thou only, O Christ,<br>with the Holy Ghost,<br>art most high in the glory of God the Father.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
+        /* Monday */ "<br><span class='subhead'>A Song of Praise</span><br><i style='color:darkred;'>Benedictus es, Domine</i><br><i style='color:darkred;'>Song of the Three Young Men, 29-34</i><br><br><span class='intro'>Blessed art thou,</span> O Lord God of our fathers;<br>praised and exalted above all for ever.<br>Blessed art thou for the Name of thy Majesty;<br>praised and exalted above all for ever.<br>Blessed art thou in the temple of thy holiness;<br>praised and exalted above all for ever.<br>Blessed art thou that beholdest the depths,<br>and dwellest between the Cherubim;<br>praised and exalted above all for ever.<br>Blessed art thou on the glorious throne of thy kingdom;<br>praised and exalted above all for ever.<br>Blessed art thou in the firmament of heaven;<br>praised and exalted above all for ever.<br>Blessed art thou, O Father, Son, and Holy Spirit;<br>praised and exalted above all for ever.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
+        /* Tuesday */ "<br><span class='subhead'>A Song of Penitence</span><br><i style='color:darkred;'>Kyrie Pantokrator</i><br><i style='color:darkred;'>Prayer of Manasseh, 1-2, 4, 6-7, 11-15</i><br><br><span class='intro'>O Lord</span> Almighty,<br>God of our fathers,<br>of Abraham and Isaac and Jacob<br>and of their righteous offspring;<br>Thou hast made heaven and earth with all their<br>array;<br>All things quake with fear at thy presence;<br>they tremble because of thy power.<br>But thy merciful promise is beyond all measure;<br>it surpasseth all that our minds can fathom.<br>O Lord, thou art full of compassion,<br>long-suffering, and abounding in mercy.<br>Thou holdest back thy hand;<br>thou dost not punish as we deserve.<br>In thy great goodness, Lord, thou hast promised<br>forgiveness to sinners,<br>that they may repent of their sin and be saved.<br>And now, O Lord, I bend the knee of my heart,<br>and make my appeal, sure of thy gracious goodness.<br>I have sinned, O Lord, I have sinned,<br>and I know my wickedness only too well.<br>Therefore I make this prayer to thee:<br>Forgive me, Lord, forgive me.<br>Do not let me perish in my sin,<br>nor condemn me to the depths of the earth.<br>For thou, O Lord, art the God of those who repent,<br>and in me thou wilt show forth thy goodness;<br>Unworthy as I am, thou wilt save me,<br>in accordance with thy great mercy,<br>and I will praise thee without ceasing<br>all the days of my life.<br>For all the powers of heaven sing thy praises,<br>and thine is the glory to ages of ages.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
+        /* Wednesday */ "<br><span class='subhead'>The Song of Simeon</span><br><i style='color:darkred;'>Nunc dimittis</i><br><i style='color:darkred;'>Luke 2:29-32</i><br><br><span class='intro'>Lord,</span> now lettest thou thy servant depart in peace,<br>according to thy word;<br>For mine eyes have seen thy salvation,<br>which thou hast prepared before the face of all people,<br>To be a light to lighten the Gentiles,<br>and to be the glory of thy people Israel.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>",
+        /* Thursday */ "<br><span class='subhead'>The Song of Zechariah</span><br><i style='color:darkred;'>Benedictus Dominus Deus</i><br><i style='color:darkred;'>Luke 1:68-79</i><br><br><span class='intro'>Blessed be</span> the Lord God of Israel,<br>for he hath visited and redeemed his people;<br>And hath raised up a mighty salvation for us<br>in the house of his servant David,<br>As he spake by the mouth of his holy prophets,<br>which have been since the world began:<br>That we should be saved from our enemies,<br>and from the hand of all that hate us;<br>To perform the mercy promised to our forefathers,<br>and to remember his holy covenant;<br>To perform the oath which he sware to our forefather Abraham,<br>that he would give us,<br>That we being delivered out of the hand of our enemies<br>might serve him without fear,<br>In holiness and righteousness before him,<br>all the days of our life.<br><br>And thou, child, shalt be called the prophet of the Highest,<br>for thou shalt go before the face of the Lord<br>to prepare his ways;<br>To give knowledge of salvation unto his people<br>for the remission of their sins,<br>Through the tender mercy of our God,<br>whereby the dayspring from on high hath visited us;<br>To give light to them that sit in darkness<br>and in the shadow of death,<br>and to guide our feet into the way of peace.<br><br>Glory to the Father, and to the Son, and to the Holy Spirit:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>",
+        /* Friday */ "<br><span class='subhead'>We Praise Thee</span><br><i style='color:darkred;'>Te Deum laudamus</i><br><br><span class='intro'>We praise thee</span>, O God; we acknowledge thee to be the Lord.<br>All the earth doth worship thee, the Father everlasting.<br>To thee all angels cry aloud,<br>the Heavens and all the Powers therein.<br>To thee Cherubim and Seraphim continually do cry:<br>Holy, holy, holy, Lord God of Sabaoth;<br>Heaven and earth are full of the majesty of thy glory.<br>The glorious company of the apostles praise thee.<br>The goodly fellowship of the prophets praise thee.<br>The noble army of martyrs praise thee.<br>The holy Church throughout all the world<br>doth acknowledge thee,<br>the Father, of an infinite majesty,<br>Thine adorable, true, and only Son,<br>also the Holy Ghost the Comforter.<br><br>Thou art the King of glory, O Christ.<br>Thou art the everlasting Son of the Father.<br>When thou tookest upon thee to deliver man,<br>thou didst humble thyself to be born of a Virgin.<br>When thou hadst overcome the sharpness of death,<br>thou didst open the kingdom of heaven to all believers.<br>Thou sittest at the right hand of God, in the glory of the Father.<br>We believe that thou shalt come to be our judge.<br>We therefore pray thee, help thy servants,<br>whom thou hast redeemed with thy precious blood.<br>Make them to be numbered with thy saints,<br>in glory everlasting.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
+        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><br><i style='color:darkred;'>Luke 1:46-55</i><br><br><span class='intro'>My soul</span> doth magnify the Lord,<br>and my spirit hath rejoiced in God my Savior.<br>For he hath regarded<br>the lowliness of his handmaiden.<br>For behold from henceforth<br>all generations shall call me blessed.<br>For he that is mighty hath magnified me,<br>and holy is his Name.<br>And his mercy is on them that fear him<br>throughout all generations.<br>He hath showed strength with his arm;<br>He hath scattered the proud in the imagination of their hearts.<br>He hath put down the mighty from their seat,<br>and hath exalted the humble and meek.<br>He hath filled the hungry with good things,<br>and the rich he hath sent empty away.<br>He remembering his mercy hath holpen his servant Israel,<br>as he promised to our forefathers,<br>Abraham and his seed forever.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>"
+      ];
+
+      // Create an array of second canticles for every day of the week
+      let secondCanticles = [
+        /* Sunday */ "<br><span class='subhead'>A Song of Christ's Appearing</span><br><i style='color:darkred;'>1 Timothy 3:16; 6:15,16</i><br><br><span class='intro'>Christ</span> was believed in throughout the world<br>and taken up in glory.<br><br>Christ Jesus was revealed in the flesh<br>and vindicated in the spirit.<br>He was seen by angels<br>and proclaimed among the nations.<br>Believed in throughout the world,<br>he was taken up in glory.<br>This will be made manifest at the proper time<br>by the blessed and only Sovereign,<br>Who alone has immortality,<br>and dwells in unapproachable light.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>Christ was believed in throughout the world<br>and taken up in glory.",
+        /* Monday */ "<br><span class='subhead'>A Song of God's Assembled</span><br><i style='color:darkred;'>Hebrews 12:22-24a,28,29</i><br><br><span class='intro'>We have</span> come before the throne of God<br>to share in the inheritance of the saints in light.<br><br>We have come before God's holy mountain,<br>to the heavenly Jerusalem, the city of the living God.<br>We have come before countless angels making festival,<br>before the assembly of the firstborn citizens of heaven.<br>We have come before God, who is judge of all,<br>before the spirits of the just made perfect.<br>We have come before Jesus,<br>the mediator of the new covenant.<br>We are receiving a kingdom that cannot be shaken:<br>so let us give thanks and offer to God acceptable worship,<br>Full of reverence and awe;<br>for our God is a consuming fire.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>We have come before the throne of God<br>to share in the inheritance of the saints in light.",
+        /* Tuesday */ "<br><span class='subhead'>A Song of God's Chosen One</span><br><i style='color:darkred;'>Isaiah 11:1,2,3b-4a,6,9</i><br><br><span class='intro'>The earth</span> shall be full of the knowledge of the Lord.<br><br>There shall come forth a shoot from the stock of Jesse,<br>and a branch shall grow out of his roots.<br>And the Spirit of the Lord shall rest upon him,<br>the spirit of wisdom and understanding,<br>The spirit of counsel and might,<br>the spirit of knowledge and the fear of the Lord.<br>He shall not judge by what his eyes see,<br>or decide by what his ears hear,<br>But with righteousness he shall judge the poor,<br>and decide with equity for the meek of the earth.<br>The wolf shall dwell with the lamb,<br>and the leopard shall lie down with the kid.<br>The calf, the lion and the fatling together,<br>with a little child to lead them.<br>They shall not hurt or destroy in all my holy mountain,<br>for the earth shall be full of the knowledge of the Lord<br>as the waters cover the sea.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>The earth shall be full of the knowledge of the Lord.",
+        /* Wednesday */ "<br><span class='subhead'>A Song of the Word of the Lord</span><br><i style='color:darkred;'>Isaiah 55:6-11</i><br><br><span class='intro'>Return</span> to the Lord, who will have mercy,<br>to our God, who will richly pardon.<br><br>Seek the Lord while he may be found,<br>call upon him while he is near;<br>Let the wicked abandon their ways,<br>and the unrighteous their thoughts;<br>Return to the Lord, who will have mercy;<br>to our God, who will richly pardon.<br>'For my thoughts are not your thoughts,<br>neither are your ways my ways,' says the Lord.<br>'For as the heavens are higher than the earth,<br>So are my ways higher than your ways<br>and my thoughts than your thoughts.<br>'As the rain and the snow come down from above,<br>and return not again but water the earth,<br>'Bringing forth life and giving growth,<br>seed for sowing and bread to eat,<br>'So is my word that goes forth from my mouth;<br>it will not return to me fruitless,<br>'But it will accomplish that which I purpose,<br>and succeed in the task I gave it.'<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>Return to the Lord who will have mercy,<br>to our God, who will richly pardon.",
+        /* Thursday */ "<br><span class='subhead'>A Song of Tobit</span><br><i style='color:darkred;'>Tobit 13:1,3,4-6a</i><br><br><span class='intro'>See what</span> the Lord our God has done<br>and exalt him in the sight of the living.<br><br>Blessed be God, who lives for ever,<br>whose reign endures throughout all ages.<br>Declare God's praise before the nations,<br>you who are the children of Israel.<br>For if our God has scattered you among them,<br>there too has he shown you his greatness.<br>Exalt him in the sight of the living,<br>because he is our Lord and God and our Father for ever.<br>Though God punishes you for your wickedness,<br>mercy will be shown to you all.<br>God will gather you from every nation,<br>from wherever you have been scattered.<br>When you turn to the Lord<br>with all your heart and soul,<br>God will hide his face from you no more.<br>See what the Lord has done for you<br>and give thanks with a loud voice.<br>Praise the Lord of righteousness<br>and exalt the King of the ages.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>See what the Lord our God has done<br>and exalt him in the sight of the living.",
+        /* Friday */ "<br><span class='subhead'>The Song of Christ's Glory</span><br><i style='color:darkred;'>Philippians 2:5-11</i><br><br><span class='intro'>At the name</span> of Jesus<br>every knee shall bow.<br><br>Christ Jesus was in the form of God,<br>but he did not cling to equality with God.<br>He emptied himself, taking the form of a servant,<br>and was born in our human likeness.<br>Being found in human form he humbled himself,<br>and became obedient unto death, even death on a cross.<br>Therefore God has highly exalted him,<br>and bestowed on him the name above every name,<br>That at the name of Jesus every knee shall bow,<br>in heaven and on earth and under the earth;<br>And every tongue confess that Jesus Christ is Lord,<br>to the glory of God the Father.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>At the name of Jesus<br>every knee shall bow.",
+        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><i style='color:darkred;'>David Mowbray</i><br><br><span class='intro'>With Mary</span> let my soul rejoice,<br>and praise God's holy name<br>his saving love from first to last,<br>from age to age the same!<br><br>How strong his arm, how great his power!<br>the proud he will disown;<br>the meek and humble he exalts<br>to share his glorious throne.<br><br>The rich our God will send away<br>and feed the hungry poor;<br>the arms of love remain outstretched<br>at mercy's open door.<br><br>So shall God's promise be fulfilled,<br>to Israel firmly made:<br>a child is born, a Son is given<br>whose crown will never fade.<br><br>All glory to the Father, Son<br>and Spirit now proclaim;<br>with Mary let the world rejoice<br>and praise God's holy name!<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>"
+      ];
+
+      // Create an array of collects for every day of the week
+      let collects = [
+        /* Sunday */ "<br><span class='intro'>Lord God,</span> whose Son our Savior Jesus Christ triumphed<br>over the powers of death and prepared for us our place<br>in the new Jerusalem: Grant that we, who have this day<br>given thanks for his resurrection, may praise thee in that<br>City of which he is the light, and where he liveth and<br>reigneth for ever and ever. <i>Amen.</i>",
+        /* Monday */ "<br><span class='intro'>O God,</span> the King eternal, whose light divides the day<br>from the night and turns the shadow of death into the<br>morning: Drive far from us all wrong desires, incline our<br>hearts to keep thy law, and guide our feet into the way of<br>peace; that, having done thy will with cheerfulness while it<br>was day, we may, when night cometh, rejoice to give thee<br>thanks; through Jesus Christ our Lord. <i>Amen.</i>",
+        /* Tuesday */ "<br><span class='intro'>O God,</span> whose glory it is always to have mercy: Be<br>gracious to all who have gone astray from thy ways, and<br>bring us again with penitent hearts and steadfast faith<br>to embrace and hold fast the unchangeable truth of thy<br>Word, Jesus Christ thy Son; who with thee and the Holy<br>Spirit liveth and reigneth, one God, for ever and ever. <i>Amen.</i>",
+        /* Wednesday */ "<br><span class='intro'>O God,</span> who didst enlighten the holy Apostle Saint<br>Paul with the knowledge of thy Son Jesus Christ: Grant<br>us, we beseech thee, that, being rooted and grounded in<br>thy truth, we may be faithful to confess thy name,<br>through Jesus Christ our Lord, who liveth and reigneth<br>with thee and the Holy Spirit, one God, now and for ever. <i>Amen.</i>",
+        /* Thursday */ "<br><span class='intro'>O God,</span> who in a wonderful Sacrament hast left unto us<br>a memorial of thy passion: Grant us, we beseech thee, so<br>to venerate the sacred mysteries of thy Body and Blood,<br>that we may ever perceive within ourselves the fruit of<br>thy redemption; who livest and reignest with the Father<br>and the Holy Spirit, one God, for ever and ever. <i>Amen.</i>",
+        /* Friday */ "<br><span class='intro'>O Lord</span> Jesus Christ, who by thy death didst take away the<br>sting of death: Grant unto us thy servants so to follow in<br>faith where thou hast led the way, that we may at length<br>fall asleep peacefully in thee and awake up after thy likeness;<br>for thy tender mercies' sake. <i>Amen.</i>",
+        /* Saturday */ "<br><span class='intro'>O God,</span> the source of eternal light: Shed forth thine<br>unending day upon us who watch for thee, that our lips<br>may praise thee, our lives may bless thee, and our<br>worship on the morrow may give thee glory; through Jesus<br>Christ our Lord. <i>Amen.</i>"
+      ];
+
+      // Find out what day of the week it is according to the dayPosition variable
+      // If it is Sunday, append the first entry in secondHymns to the second_hymn div
+      if (dayPosition == 0) {
+        document.getElementById('second_hymn').innerHTML += secondHymns[0];
+        document.getElementById('canticle').innerHTML += canticles[0];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[0];
+        document.getElementById('collect').innerHTML += collects[0];
+      } else if (dayPosition == 1) {
+        // If it is Monday, append the second entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[1];
+        document.getElementById('canticle').innerHTML += canticles[1];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[1];
+        document.getElementById('collect').innerHTML += collects[1];
+      } else if (dayPosition == 2) {
+        // If it is Tuesday, append the third entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[2];
+        document.getElementById('canticle').innerHTML += canticles[2];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[2];
+        document.getElementById('collect').innerHTML += collects[2];
+      } else if (dayPosition == 3) {
+        // If it is Wednesday, append the fourth entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[3];
+        document.getElementById('canticle').innerHTML += canticles[3];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[3];
+        document.getElementById('collect').innerHTML += collects[3];
+      } else if (dayPosition == 4) {
+        // If it is Thursday, append the fifth entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[4];
+        document.getElementById('canticle').innerHTML += canticles[4];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[4];
+        document.getElementById('collect').innerHTML += collects[4];
+      } else if (dayPosition == 5) {
+        // If it is Friday, append the sixth entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[5];
+        document.getElementById('canticle').innerHTML += canticles[5];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[5];
+        document.getElementById('collect').innerHTML += collects[5];
+      } else if (dayPosition == 6) {
+        // If it is Saturday, append the seventh entry in secondHymns to the second_hymn div
+        document.getElementById('second_hymn').innerHTML += secondHymns[6];
+        document.getElementById('canticle').innerHTML += canticles[6];
+        document.getElementById('second_canticle').innerHTML += secondCanticles[6];
+        document.getElementById('collect').innerHTML += collects[6];
+      }; 
+
 
     </script>
   </body>

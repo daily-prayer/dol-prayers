@@ -5957,7 +5957,7 @@
   {
     "whentype": "year",
     "day": "all-souls-day",
-    "citation": "1 Thess. 4:13–18",
+    "citation": "1 Thess. 4:13-18",
     "type": "second_reading",
     "when": "1",
     "id": "6231",
@@ -11610,7 +11610,7 @@
     "id": "6230",
     "type": "first_reading",
     "whentype": "year",
-    "citation": "Wisdom 3:1–9",
+    "citation": "Wisdom 3:19",
     "when": "1",
     "day": "all-souls-day",
     "lectionary": "bcp1979_daily_office"
@@ -13779,7 +13779,7 @@
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "when": "2",
-    "citation": "Isa. 25:6–9",
+    "citation": "Isa. 25:69",
     "day": "all-souls-day",
     "type": "first_reading"
   },
