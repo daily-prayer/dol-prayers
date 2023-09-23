@@ -1177,6 +1177,8 @@
         updateReadingHeading(trBookName, 'third_reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', tBookVal);
         updateReadingHeading(ftrBookName, 'fourth_reading_heading', 'The Holy Gospel of our Lord Jesus Christ according to ', ftBookVal);
 
+        console.log(ftrBookName);
+
         // Define a function to update reading headings based on Gospel status
         function updateReadingHeading(bookName, elementId, prefix, bookValue) {
           const element = document.getElementById(elementId);
@@ -1420,7 +1422,7 @@
         appendContent('fourth_reading', apocrypha.includes(ftrBookName), gospels.includes(ftrBookName));
 
         // If the fourth reading is not empty...
-        if (document.getElementById('fourth_reading').innerHTML != "") {
+        if (ftrBookName != "") {
           // Display the part_four div
           document.getElementById('part_four').style.display = "block";
         } else {
