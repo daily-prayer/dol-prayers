@@ -89,12 +89,21 @@
         font-size: 75%;
       }
 
+      .centered-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+        /* text-align: left; */ /* Left-aligns text within each paragraph */
+        max-width: 375px;
+        margin: 0 auto; /* Center horizontally within the parent container (body) */
+      }
+
       .first_reading, .second_reading, .third_reading, .fourth_reading {
         font-family: 'Baskervville', serif;
         font-size: 16px;
-        text-align: left;
+        /*text-align: left;
         margin-left: 30%;
-        width: 40%;
+        width: 40%;*/
         margin-top: 12px;
         font-weight: 400;
       }
@@ -239,28 +248,28 @@
     <!-- A daily hymn follows here (In place of Phos Hilaron)-->
     <div class="hymn" id="hymn"></div>
     <!-- The morning psalms -->
-    <div class="morning_psalm" id="morning_psalm"></div>
+    <div class="centered-column"><div class="morning_psalm" id="morning_psalm"></div></div>
     <!-- The lesson -->
     <h3>The Lesson</h3></p>
     <!-- The first reading -->
     <p><span class='subhead'>The First Reading</span>
     <br><i id="first_reading_citation" style='color:darkred;'></i><br>
     <br><span id="reading_heading"></span></p>
-    <div class="first_reading" id="first_reading"></div>
+    <div class="centered-column"><div class="first_reading" id="first_reading"></div></div>
     <!-- The evening psalms -->
-    <p><div class="evening_psalm" id="evening_psalm"></div></p>
+    <p><div class="centered-column"><div class="evening_psalm" id="evening_psalm"></div></div></p>
     <!-- The second reading -->
     <p><span class='subhead'>The Second Reading</span>
     <br><i id="second_reading_citation" style='color:darkred;'></i><br>
     <br><span id="second_reading_heading"></span></p>
-    <div class="second_reading" id="second_reading"></div>
+    <div class="centered-column"><div class="second_reading" id="second_reading"></div></div>
     <!-- A second daily hymn follows here -->
     <div class="second_hymn" id="second_hymn"></div><br>
     <!-- The third reading -->
     <p><span class='subhead'>The Third Reading</span>
     <br><i id="third_reading_citation" style='color:darkred;'></i><br>
     <br><span id="third_reading_heading"></span></p>
-    <div class="third_reading" id="third_reading"></div>
+    <div class="centered-column"><div class="third_reading" id="third_reading"></div></div>
     <!-- The daily canticle -->
     <div class="canticle" id="canticle"></div><br>
     <!-- Possible part four -->
@@ -269,7 +278,7 @@
       <p><span class='subhead'>The Fourth Reading</span>
       <br><i id="fourth_reading_citation" style='color:darkred;'></i><br>
       <br><span id="fourth_reading_heading"></span></p>
-      <div class="fourth_reading" id="fourth_reading"></div>
+      <div class="centered-column"><div class="fourth_reading" id="fourth_reading"></div></div>
       <!-- The second daily canticle -->
       <div class="second_canticle" id="second_canticle"></div><br>
     </div>
