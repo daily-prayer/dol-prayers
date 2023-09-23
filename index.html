@@ -98,7 +98,7 @@
         /* text-align: left; */ /* Left-aligns text within each paragraph */
         max-width: 375px;
         margin: 0 auto; /* Center horizontally within the parent container (body) */
-        font-size: 16px;
+        /*font-size: 16px;*/
       }
 
       .first_reading, .second_reading, .third_reading, .fourth_reading {
@@ -119,274 +119,276 @@
     </style>
   </head>
   <body>
-    <!-- Title -->
-    <div class="title-text" id="main-title">
-      Daily Prayer
-    </div>
-    <div class="date" id="selected-date">
-      <!-- The date will go here -->
-    </div>
-    <div class="ordinal-date" id="ordinal-date">
-      <!-- The ordinal date will go here -->
-    </div>
-    <br>
-    <br>
-    <div class="hail-button-container">
-      <button id="luther-button">Broad Church Hail Mary</button>
-      <button id="angelus-button">The Angelus</button>
-    </div>
-    <br>
-    <div class="hail" id="hail"> 
-      <h3>Hail Mary</h3>
-      <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
-      <i>And she conceived by the Holy Ghost.</i><br>
-      <br>Hail, Mary, full of grace, the Lord is with thee.
-      <br>Blessed art thou among women, and blessed is the 
-      <br>fruit of thy womb, Jesus.&emsp;<i style='color:darkred;'>Luke 1:28;42</i><br>
-      <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
-      <br>into our hearts, that we who have known the
-      <br>Incarnation of thy Son Jesus Christ, announced by
-      <br>an angel to the Virgin Mary, may by his cross and 
-      <br>passion be brought unto the glory of his resurrection,
-      <br>through the same Jesus Christ our Lord. <i>Amen.</i></p><p>
-    </div>    
-    <div class="angelus" id="angelus">
-      <h3>The Angelus</h3>
-      <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
-      <i>And she conceived by the Holy Ghost.</i><br>
-      <br>Hail, Mary, full of grace, the Lord is with thee.
-      <br>Blessed art thou among women, and blessed is the 
-      <br>fruit of thy womb, Jesus.<br>
-      <i>Holy Mary, mother of God, pray for us sinners, now 
-      <br>and at the hour of our death.</i><br>
-      <br>Behold, the handmaid of the Lord.<br>
-      <i>Be it unto me according to thy word.</i><br>
-      <br>Hail, Mary, full of grace, the Lord is with thee.
-      <br>Blessed art thou among women, and blessed is the 
-      <br>fruit of thy womb, Jesus.<br>
-      <i>Holy Mary, mother of God, pray for us sinners, now 
-      <br>and at the hour of our death.</i><br>
-      <br>The Word was made flesh<br>
-      <i>And dwelt among us.</i><br>
-      <br>Hail, Mary, full of grace, the Lord is with thee.
-      <br>Blessed art thou among women, and blessed is the 
-      <br>fruit of thy womb, Jesus.<br>
-      <i>Holy Mary, mother of God, pray for us sinners, now 
-      <br>and at the hour of our death.</i><br>
-      <br>Pray for us, O Holy Mother of God;<br>
-      <i>That we may be made worthy of the promises of Christ.</i><br>
-      <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
-      <br>into our hearts, that we who have known the
-      <br>Incarnation of thy Son Jesus Christ, announced by
-      <br>an angel to the Virgin Mary, may by his cross and 
-      <br>passion be brought unto the glory of his resurrection,
-      <br>through the same Jesus Christ our Lord. <i>Amen.</i></p>
-    </div>
-    <br>
-    <h3>The Office</h3>
-    <div class="versicle" id="versicle"></div>
-    <br>
-    <br>
-    <div class="confession-button-container">
-      <button id="bc-button">Broad Church Confession</button>
-      <button id="confiteor-button">Pray Confiteor instead</button>
-    </div>
-    <br>
-    <div class="bc-confession" id="bc-confession">
-      <h3>Confession of Sin</h3>
-      <p>Let us humbly confess our sins unto Almighty God.<br>
-      <br><i style="color:darkred">Silence</i><br>
-      <br><i style="color:darkred">Say together</i><br>
-      <br><span class="intro">Almighty</span> and most merciful Father,
-      <br>We have erred and strayed from thy ways like
-      <br>lost sheep,
-      <br>we have followed too much the devices and desires
-      <br>of our own hearts,
-      <br>we have offended against thy holy laws,
-      <br>we have left undone those things which we ought
-      <br>to have done,
-      <br>and we have done those things which we ought not
-      <br>to have done.
-      <br>But thou, O Lord, have mercy upon us,
-      <br>spare thou those who confess their faults,
-      <br>restore thou those who are penitent,
-      <br>according to thy promises declared unto mankind
-      <br>in Christ Jesus our Lord;
-      <br>and grant, O most merciful Father, for his sake,
-      <br>that we may hereafter live a godly, righteous, and
-      <br>sober life,
-      <br>to the glory of thy holy Name. <i>Amen.</i><br>
-      <br>The Almighty and merciful Lord grant us
-      <br>absolution and remission of all our sins, true 
-      <br>repentance, amendment of life, and the grace and 
-      <br>consolation of his Holy Spirit. <i>Amen.</i></p>
+    <div class="centered-column">
+      <!-- Title -->
+      <div class="title-text" id="main-title">
+        Daily Prayer
+      </div>
+      <div class="date" id="selected-date">
+        <!-- The date will go here -->
+      </div>
+      <div class="ordinal-date" id="ordinal-date">
+        <!-- The ordinal date will go here -->
+      </div>
       <br>
+      <br>
+      <div class="hail-button-container">
+        <button id="luther-button">Broad Church Hail Mary</button>
+        <button id="angelus-button">The Angelus</button>
+      </div>
+      <br>
+      <div class="hail" id="hail"> 
+        <h3>Hail Mary</h3>
+        <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
+        <i>And she conceived by the Holy Ghost.</i><br>
+        <br>Hail, Mary, full of grace, the Lord is with thee.
+        <br>Blessed art thou among women, and blessed is the 
+        <br>fruit of thy womb, Jesus.&emsp;<i style='color:darkred;'>Luke 1:28;42</i><br>
+        <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
+        <br>into our hearts, that we who have known the
+        <br>Incarnation of thy Son Jesus Christ, announced by
+        <br>an angel to the Virgin Mary, may by his cross and 
+        <br>passion be brought unto the glory of his resurrection,
+        <br>through the same Jesus Christ our Lord. <i>Amen.</i></p><p>
+      </div>    
+      <div class="angelus" id="angelus">
+        <h3>The Angelus</h3>
+        <p><span class="intro">The angel of the Lord</span> announced unto Mary,<br>
+        <i>And she conceived by the Holy Ghost.</i><br>
+        <br>Hail, Mary, full of grace, the Lord is with thee.
+        <br>Blessed art thou among women, and blessed is the 
+        <br>fruit of thy womb, Jesus.<br>
+        <i>Holy Mary, mother of God, pray for us sinners, now 
+        <br>and at the hour of our death.</i><br>
+        <br>Behold, the handmaid of the Lord.<br>
+        <i>Be it unto me according to thy word.</i><br>
+        <br>Hail, Mary, full of grace, the Lord is with thee.
+        <br>Blessed art thou among women, and blessed is the 
+        <br>fruit of thy womb, Jesus.<br>
+        <i>Holy Mary, mother of God, pray for us sinners, now 
+        <br>and at the hour of our death.</i><br>
+        <br>The Word was made flesh<br>
+        <i>And dwelt among us.</i><br>
+        <br>Hail, Mary, full of grace, the Lord is with thee.
+        <br>Blessed art thou among women, and blessed is the 
+        <br>fruit of thy womb, Jesus.<br>
+        <i>Holy Mary, mother of God, pray for us sinners, now 
+        <br>and at the hour of our death.</i><br>
+        <br>Pray for us, O Holy Mother of God;<br>
+        <i>That we may be made worthy of the promises of Christ.</i><br>
+        <br><span class="intro">We beseech thee,</span> O Lord, pour thy grace
+        <br>into our hearts, that we who have known the
+        <br>Incarnation of thy Son Jesus Christ, announced by
+        <br>an angel to the Virgin Mary, may by his cross and 
+        <br>passion be brought unto the glory of his resurrection,
+        <br>through the same Jesus Christ our Lord. <i>Amen.</i></p>
+      </div>
+      <br>
+      <h3>The Office</h3>
+      <div class="versicle" id="versicle"></div>
+      <br>
+      <br>
+      <div class="confession-button-container">
+        <button id="bc-button">Broad Church Confession</button>
+        <button id="confiteor-button">Pray Confiteor instead</button>
+      </div>
+      <br>
+      <div class="bc-confession" id="bc-confession">
+        <h3>Confession of Sin</h3>
+        <p>Let us humbly confess our sins unto Almighty God.<br>
+        <br><i style="color:darkred">Silence</i><br>
+        <br><i style="color:darkred">Say together</i><br>
+        <br><span class="intro">Almighty</span> and most merciful Father,
+        <br>We have erred and strayed from thy ways like
+        <br>lost sheep,
+        <br>we have followed too much the devices and desires
+        <br>of our own hearts,
+        <br>we have offended against thy holy laws,
+        <br>we have left undone those things which we ought
+        <br>to have done,
+        <br>and we have done those things which we ought not
+        <br>to have done.
+        <br>But thou, O Lord, have mercy upon us,
+        <br>spare thou those who confess their faults,
+        <br>restore thou those who are penitent,
+        <br>according to thy promises declared unto mankind
+        <br>in Christ Jesus our Lord;
+        <br>and grant, O most merciful Father, for his sake,
+        <br>that we may hereafter live a godly, righteous, and
+        <br>sober life,
+        <br>to the glory of thy holy Name. <i>Amen.</i><br>
+        <br>The Almighty and merciful Lord grant us
+        <br>absolution and remission of all our sins, true 
+        <br>repentance, amendment of life, and the grace and 
+        <br>consolation of his Holy Spirit. <i>Amen.</i></p>
+        <br>
+      </div>
+      <div class="confiteor" id="confiteor">
+        <h3>Confiteor</h3>
+        <p><span class="intro">Inspire our hearts</span> with honesty, with true 
+        <br>contrition, and with faith in your mercy. <i>Amen.</i><br>
+        <br><span class="intro">We confess</span> to Almighty God, to Blessed Mary 
+        <br>Ever-Virgin, to blessed Michael the Archangel,
+        <br>to blessed John the Baptist, to the holy Apostles  
+        <br>Peter and Paul, and to all the Saints, that we have
+        <br>sinned exceedingly in thought, word, and deed,
+        <br>through our fault, through our own fault, through 
+        <br>our own most grievous fault. Therefore we beg Blessed 
+        <br>Mary Ever-Virgin, blessed Michael the Archangel, 
+        <br>blessed John the Baptist, the holy Apostles Peter 
+        <br>and Paul, and all the Saints, to pray to the Lord
+        <br>our God for us.<br>
+        <br><span class="intro">Almighty</span> and merciful Lord grant us
+        <br>pardon, absolution, and remission of our sins. <i>Amen.</i><br>
+        <br>Turn us, then, O God our Savior.
+        <br><i>And let thine anger cease from us.</i></p>
+      </div>
+      <h3>Invitatory and Psalter</h3>
+      <p>O God, make speed to save us.
+      <br><i>O Lord, make haste to help us.</i><br>
+      <br>Glory be to the Father, and to the Son, and to the
+      <br>Holy Ghost: as it was in the beginning, is now, and 
+      <br>ever shall be, world without end. <i>Amen.</i><br>
+      <!-- A daily hymn follows here (In place of Phos Hilaron)-->
+      <div class="hymn" id="hymn"></div>
+      <!-- The morning psalms -->
+      <div class="morning_psalm" id="morning_psalm"></div>
+      <!-- The lesson -->
+      <h3>The Lesson</h3></p>
+      <!-- The first reading -->
+      <p><span class='subhead'>The First Reading</span>
+      <br><i id="first_reading_citation" style='color:darkred;'></i><br>
+      <br><span id="reading_heading"></span></p>
+      <div class="first_reading" id="first_reading"></div>
+      <!-- The evening psalms -->
+      <p><div class="evening_psalm" id="evening_psalm"></div></p>
+      <!-- The second reading -->
+      <p><span class='subhead'>The Second Reading</span>
+      <br><i id="second_reading_citation" style='color:darkred;'></i><br>
+      <br><span id="second_reading_heading"></span></p>
+      <div class="second_reading" id="second_reading"></div>
+      <!-- A second daily hymn follows here -->
+      <div class="second_hymn" id="second_hymn"></div><br>
+      <!-- The third reading -->
+      <p><span class='subhead'>The Third Reading</span>
+      <br><i id="third_reading_citation" style='color:darkred;'></i><br>
+      <br><span id="third_reading_heading"></span></p>
+      <div class="third_reading" id="third_reading"></div>
+      <!-- The daily canticle -->
+      <div class="canticle" id="canticle"></div><br>
+      <!-- Possible part four -->
+      <div class="part_four" id="part_four">
+        <!-- The fourth reading -->
+        <p><span class='subhead'>The Fourth Reading</span>
+        <br><i id="fourth_reading_citation" style='color:darkred;'></i><br>
+        <br><span id="fourth_reading_heading"></span></p>
+        <div class="fourth_reading" id="fourth_reading"></div>
+        <!-- The second daily canticle -->
+        <div class="second_canticle" id="second_canticle"></div><br>
+      </div>
+      <!-- The Apostle's Creed -->
+      <p><span class='subhead'>The Apostle's Creed</span><br>
+      <br><span class='intro'>I believe</span> in God, the Father almighty,
+      <br>maker of heaven and earth;<br>
+      <br>And in Jesus Christ his only Son our Lord;
+      <br>who was conceived by the Holy Ghost,
+      <br>born of the Virgin Mary,
+      <br>suffered under Pontius Pilate,
+      <br>was crucified, dead, and buried.
+      <br>He descended into hell.
+      <br>The third day he rose again from the dead.
+      <br>He ascended into heaven,
+      <br>and sitteth on the right hand of God the Father almighty.
+      <br>From thence he shall come to judge the quick and the dead.<br>
+      <br>I believe in the Holy Ghost,
+      <br>the holy catholic Church,
+      <br>the communion of saints,
+      <br>the forgiveness of sins,
+      <br>the resurrection of the body,
+      <br>and the life everlasting. <i>Amen.</i><br>
+      <br><h3>The Prayers</h3></p>
+      <p>The Lord be with you
+      <br><i>And with thy spirit</i>
+      <br>Let us pray.<br>
+      <br><span class='subhead'>The Lord's Prayer</span>
+      <br><i style='color:darkred;'>Pater noster</i><br>
+      <br><span class='intro'>Our Father,</span> who art in heaven,
+      <br>hallowed be thy Name,
+      <br>thy kingdom come,
+      <br>thy will be done,
+      <br>on earth as it is in heaven.
+      <br>Give us this day our daily bread.
+      <br>And forgive us our trespasses,
+      <br>as we forgive those who trespass against us.
+      <br>And lead us not into temptation,
+      <br>but deliver us from evil.
+      <br>For thine is the kingdom, and the power, and the glory,
+      <br>for ever and ever. <i>Amen.</i><br>
+      <br><span class='subhead'>Suffrages</span><br>
+      <br><span class='intro'>O God,</span> from whom all holy desires, all good counsels,
+      <br>and all just works do proceed; Give unto thy servants
+      <br>that peace which the world cannot give; that both our
+      <br>hearts may be set to obey thy commandments, and also
+      <br>that by thee, we, being defended from the fear of our
+      <br>enemies, may pass our time in rest and quietness;
+      <br>through the merits of Jesus Christ our Savior. <i>Amen.</i><br>
+      <br><span class='intro'>O Lord,</span> show thy mercy upon us;
+      <br><i>And grant us thy salvation.</i><br>
+      <br>Endue thy ministers with righteousness;
+      <br><i>And make thy chosen people joyful.</i><br>
+      <br>Give peace, O Lord, in all the world;
+      <br><i>For only in thee can we live in safety.</i><br>
+      <br>Lord, keep this nation under thy care;
+      <br><i>And guide us in the way of justice and truth.</i><br>
+      <br>Let thy way be known upon the earth;
+      <br><i>Thy saving health among all nations.</i><br>
+      <br>Let not the needy, O Lord, be forgotten;
+      <br><i>Nor the hope of the poor be taken away.</i><br>
+      <br>Create in us clean hearts, O God;
+      <br><i>And sustain us with thy Holy Spirit.</i><br><br>
+      <br><span class='subhead'>The Collect</span></p>
+      <!-- The daily collect -->
+      <div class="collect" id="collect"></div><br>
+      <p><span class='subhead'>A General Thanksgiving</span><br>
+      <br><span class='intro'>Almighty God,</span> Father of all mercies, we
+      <br>thine unworthy servants do give thee most
+      <br>humble and hearty thanks for all thy
+      <br>goodness and loving-kindness to us, and to
+      <br>all. We bless thee for our creation, 
+      <br>preservation, and all the blessings of this 
+      <br>life; but above all, for thine inestimable
+      <br>love in the redemption of the world by our
+      <br>Lord Jesus Christ; for the means of grace, 
+      <br>and for the hope of glory. 
+      <br><br>And, we beseech thee, give us that due 
+      <br>sense of all thy mercies, that our hearts 
+      <br>may be unfeignedly thankful, and that we 
+      <br>shew forth thy praise, not only with our 
+      <br>lips, but in our lives; by giving up 
+      <br>ourselves to thy service, and by walking 
+      <br>before thee in holiness and righteousness  
+      <br>all our days; through Jesus Christ our Lord,  
+      <br>to whom with thee and the Holy Ghost be all  
+      <br>honor and glory, world without end. <i>Amen.</i><br>
+      <br><span class='subhead'>A Prayer of St. Chrysostom</span><br>
+      <br><span class='intro'>Almighty God,</span> who hast given us grace at this
+      <br>time with one accord to make our common
+      <br>supplication unto thee; and hast promised through
+      <br>thy well-beloved Son that when two or three are
+      <br>gathered together in his Name thou wilt be in the 
+      <br>midst of them: Fulfill now, O Lord, the desires 
+      <br>and petitions of thy servants as may be best for 
+      <br>us; granting us in this world knowledge of thy 
+      <br>truth, and in the world to come life everlasting.
+      <br><i>Amen</i><br>
+      <br>Lord, hear our prayer. 
+      <br><i>And let our cry come unto thee.</i><br> 
+      <br>Let us bless the Lord.
+      <br><i>Thanks be to God.</i><br> 
+      <br>May the souls of the faithful, through 
+      <br>the mercy of God, rest in peace.
+      <br><i>Amen.</i></p>
     </div>
-    <div class="confiteor" id="confiteor">
-      <h3>Confiteor</h3>
-      <p><span class="intro">Inspire our hearts</span> with honesty, with true 
-      <br>contrition, and with faith in your mercy. <i>Amen.</i><br>
-      <br><span class="intro">We confess</span> to Almighty God, to Blessed Mary 
-      <br>Ever-Virgin, to blessed Michael the Archangel,
-      <br>to blessed John the Baptist, to the holy Apostles  
-      <br>Peter and Paul, and to all the Saints, that we have
-      <br>sinned exceedingly in thought, word, and deed,
-      <br>through our fault, through our own fault, through 
-      <br>our own most grievous fault. Therefore we beg Blessed 
-      <br>Mary Ever-Virgin, blessed Michael the Archangel, 
-      <br>blessed John the Baptist, the holy Apostles Peter 
-      <br>and Paul, and all the Saints, to pray to the Lord
-      <br>our God for us.<br>
-      <br><span class="intro">Almighty</span> and merciful Lord grant us
-      <br>pardon, absolution, and remission of our sins. <i>Amen.</i><br>
-      <br>Turn us, then, O God our Savior.
-      <br><i>And let thine anger cease from us.</i></p>
-    </div>
-    <h3>Invitatory and Psalter</h3>
-    <p>O God, make speed to save us.
-    <br><i>O Lord, make haste to help us.</i><br>
-    <br>Glory be to the Father, and to the Son, and to the
-    <br>Holy Ghost: as it was in the beginning, is now, and 
-    <br>ever shall be, world without end. <i>Amen.</i><br>
-    <!-- A daily hymn follows here (In place of Phos Hilaron)-->
-    <div class="hymn" id="hymn"></div>
-    <!-- The morning psalms -->
-    <div class="centered-column"><div class="morning_psalm" id="morning_psalm"></div></div>
-    <!-- The lesson -->
-    <h3>The Lesson</h3></p>
-    <!-- The first reading -->
-    <p><span class='subhead'>The First Reading</span>
-    <br><i id="first_reading_citation" style='color:darkred;'></i><br>
-    <br><span id="reading_heading"></span></p>
-    <div class="centered-column"><div class="first_reading" id="first_reading"></div></div>
-    <!-- The evening psalms -->
-    <p><div class="centered-column"><div class="evening_psalm" id="evening_psalm"></div></div></p>
-    <!-- The second reading -->
-    <p><span class='subhead'>The Second Reading</span>
-    <br><i id="second_reading_citation" style='color:darkred;'></i><br>
-    <br><span id="second_reading_heading"></span></p>
-    <div class="centered-column"><div class="second_reading" id="second_reading"></div></div>
-    <!-- A second daily hymn follows here -->
-    <div class="second_hymn" id="second_hymn"></div><br>
-    <!-- The third reading -->
-    <p><span class='subhead'>The Third Reading</span>
-    <br><i id="third_reading_citation" style='color:darkred;'></i><br>
-    <br><span id="third_reading_heading"></span></p>
-    <div class="centered-column"><div class="third_reading" id="third_reading"></div></div>
-    <!-- The daily canticle -->
-    <div class="canticle" id="canticle"></div><br>
-    <!-- Possible part four -->
-    <div class="part_four" id="part_four">
-      <!-- The fourth reading -->
-      <p><span class='subhead'>The Fourth Reading</span>
-      <br><i id="fourth_reading_citation" style='color:darkred;'></i><br>
-      <br><span id="fourth_reading_heading"></span></p>
-      <div class="centered-column"><div class="fourth_reading" id="fourth_reading"></div></div>
-      <!-- The second daily canticle -->
-      <div class="second_canticle" id="second_canticle"></div><br>
-    </div>
-    <!-- The Apostle's Creed -->
-    <p><span class='subhead'>The Apostle's Creed</span><br>
-    <br><span class='intro'>I believe</span> in God, the Father almighty,
-    <br>maker of heaven and earth;<br>
-    <br>And in Jesus Christ his only Son our Lord;
-    <br>who was conceived by the Holy Ghost,
-    <br>born of the Virgin Mary,
-    <br>suffered under Pontius Pilate,
-    <br>was crucified, dead, and buried.
-    <br>He descended into hell.
-    <br>The third day he rose again from the dead.
-    <br>He ascended into heaven,
-    <br>and sitteth on the right hand of God the Father almighty.
-    <br>From thence he shall come to judge the quick and the dead.<br>
-    <br>I believe in the Holy Ghost,
-    <br>the holy catholic Church,
-    <br>the communion of saints,
-    <br>the forgiveness of sins,
-    <br>the resurrection of the body,
-    <br>and the life everlasting. <i>Amen.</i><br>
-    <br><h3>The Prayers</h3></p>
-    <p>The Lord be with you
-    <br><i>And with thy spirit</i>
-    <br>Let us pray.<br>
-    <br><span class='subhead'>The Lord's Prayer</span>
-    <br><i style='color:darkred;'>Pater noster</i><br>
-    <br><span class='intro'>Our Father,</span> who art in heaven,
-    <br>hallowed be thy Name,
-    <br>thy kingdom come,
-    <br>thy will be done,
-    <br>on earth as it is in heaven.
-    <br>Give us this day our daily bread.
-    <br>And forgive us our trespasses,
-    <br>as we forgive those who trespass against us.
-    <br>And lead us not into temptation,
-    <br>but deliver us from evil.
-    <br>For thine is the kingdom, and the power, and the glory,
-    <br>for ever and ever. <i>Amen.</i><br>
-    <br><span class='subhead'>Suffrages</span><br>
-    <br><span class='intro'>O God,</span> from whom all holy desires, all good counsels,
-    <br>and all just works do proceed; Give unto thy servants
-    <br>that peace which the world cannot give; that both our
-    <br>hearts may be set to obey thy commandments, and also
-    <br>that by thee, we, being defended from the fear of our
-    <br>enemies, may pass our time in rest and quietness;
-    <br>through the merits of Jesus Christ our Savior. <i>Amen.</i><br>
-    <br><span class='intro'>O Lord,</span> show thy mercy upon us;
-    <br><i>And grant us thy salvation.</i><br>
-    <br>Endue thy ministers with righteousness;
-    <br><i>And make thy chosen people joyful.</i><br>
-    <br>Give peace, O Lord, in all the world;
-    <br><i>For only in thee can we live in safety.</i><br>
-    <br>Lord, keep this nation under thy care;
-    <br><i>And guide us in the way of justice and truth.</i><br>
-    <br>Let thy way be known upon the earth;
-    <br><i>Thy saving health among all nations.</i><br>
-    <br>Let not the needy, O Lord, be forgotten;
-    <br><i>Nor the hope of the poor be taken away.</i><br>
-    <br>Create in us clean hearts, O God;
-    <br><i>And sustain us with thy Holy Spirit.</i><br><br>
-    <br><span class='subhead'>The Collect</span></p>
-    <!-- The daily collect -->
-    <div class="collect" id="collect"></div><br>
-    <p><span class='subhead'>A General Thanksgiving</span><br>
-    <br><span class='intro'>Almighty God,</span> Father of all mercies, we
-    <br>thine unworthy servants do give thee most
-    <br>humble and hearty thanks for all thy
-    <br>goodness and loving-kindness to us, and to
-    <br>all. We bless thee for our creation, 
-    <br>preservation, and all the blessings of this 
-    <br>life; but above all, for thine inestimable
-    <br>love in the redemption of the world by our
-    <br>Lord Jesus Christ; for the means of grace, 
-    <br>and for the hope of glory. 
-    <br><br>And, we beseech thee, give us that due 
-    <br>sense of all thy mercies, that our hearts 
-    <br>may be unfeignedly thankful, and that we 
-    <br>shew forth thy praise, not only with our 
-    <br>lips, but in our lives; by giving up 
-    <br>ourselves to thy service, and by walking 
-    <br>before thee in holiness and righteousness  
-    <br>all our days; through Jesus Christ our Lord,  
-    <br>to whom with thee and the Holy Ghost be all  
-    <br>honor and glory, world without end. <i>Amen.</i><br>
-    <br><span class='subhead'>A Prayer of St. Chrysostom</span><br>
-    <br><span class='intro'>Almighty God,</span> who hast given us grace at this
-    <br>time with one accord to make our common
-    <br>supplication unto thee; and hast promised through
-    <br>thy well-beloved Son that when two or three are
-    <br>gathered together in his Name thou wilt be in the 
-    <br>midst of them: Fulfill now, O Lord, the desires 
-    <br>and petitions of thy servants as may be best for 
-    <br>us; granting us in this world knowledge of thy 
-    <br>truth, and in the world to come life everlasting.
-    <br><i>Amen</i><br>
-    <br>Lord, hear our prayer. 
-    <br><i>And let our cry come unto thee.</i><br> 
-    <br>Let us bless the Lord.
-    <br><i>Thanks be to God.</i><br> 
-    <br>May the souls of the faithful, through 
-    <br>the mercy of God, rest in peace.
-    <br><i>Amen.</i></p>
     
 
     <script>
