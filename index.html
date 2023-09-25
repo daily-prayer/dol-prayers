@@ -27,57 +27,76 @@
         font-size: 18px;
         font-weight: 400;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
       }
       .ordinal-date {
         font-family: 'IM Fell French Canon SC', serif;
         font-size: 16px;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
       h3 {
         font-family: 'Baskervville', serif;
         font-size: 24px;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
         font-weight: 400;
       }
       p {
         font-family: 'Baskervville', serif;
         font-size: 16px;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
         font-weight: 400;        
       }
       .intro {
         font-family: 'IM Fell French Canon SC', serif;
         font-size: 18px;
         text-align: center;
-        margin-top: 12px;        
+        margin-top: 0px;        
       }
       .subhead {
         font-family: 'Baskervville', serif;
         font-size: 20px;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
         font-weight: 400;           
       }
-      .versicle, .hymn, .second_hymn, .morning_psalm, .evening_psalm, .canticle, .second_canticle, .collect {
+      .versicle {
         font-family: 'Baskervville', serif;
         font-size: 16px;
         text-align: center;
-        margin-top: 12px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         font-weight: 400;
       }
+
+      .hymn, .second_hymn, .morning_psalm, .evening_psalm, .canticle, .second_canticle, .collect {
+        font-family: 'Baskervville', serif;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-weight: 400;
+      }
+
       .confession-button-container, .hail-button-container {
         text-align: center;
+        margin-top: 24px;
+        margin-bottom: 18px;
       }
+
       .confession-button-container button, .hail-button-container button {
         display: none; /* Hide the buttons by default */
-        margin: 0 10px; /* Adjust the margin as needed */
       }
+
       .bc-confession, .hail {
         display: none;
+        margin-top: 0px;
+      }
+      .confiteor, .angelus {
+        margin-top: 0px;
       }
 
       sup.sc-ldf-bible-reading {
@@ -96,7 +115,7 @@
         flex-direction: column;
         align-items: center; /* Centers content horizontally */
         /* text-align: left; */ /* Left-aligns text within each paragraph */
-        max-width: 375px;
+        max-width: 400px;
         margin: 0 auto; /* Center horizontally within the parent container (body) */
         /*font-size: 16px;*/
       }
@@ -107,7 +126,7 @@
         /*text-align: left;
         margin-left: 30%;
         width: 40%;*/
-        margin-top: 12px;
+        margin-top: 0px;
         font-weight: 400;
       }
 
@@ -130,8 +149,6 @@
       <div class="ordinal-date" id="ordinal-date">
         <!-- The ordinal date will go here -->
       </div>
-      <br>
-      <br>
       <div class="hail-button-container">
         <button id="luther-button">Broad Church Hail Mary</button>
         <button id="angelus-button">The Angelus</button>
@@ -184,10 +201,8 @@
         <br>through the same Jesus Christ our Lord. <i>Amen.</i></p>
       </div>
       <br>
-      <h3>The Office</h3>
+      <h3><br>The Office</h3>
       <div class="versicle" id="versicle"></div>
-      <br>
-      <br>
       <div class="confession-button-container">
         <button id="bc-button">Broad Church Confession</button>
         <button id="confiteor-button">Pray Confiteor instead</button>
@@ -243,7 +258,7 @@
         <br>Turn us, then, O God our Savior.
         <br><i>And let thine anger cease from us.</i></p>
       </div>
-      <h3>Invitatory and Psalter</h3>
+      <h3><br>Invitatory and Psalter</h3>
       <p>O God, make speed to save us.
       <br><i>O Lord, make haste to help us.</i><br>
       <br>Glory be to the Father, and to the Son, and to the
@@ -252,9 +267,9 @@
       <!-- A daily hymn follows here (In place of Phos Hilaron)-->
       <div class="hymn" id="hymn"></div>
       <!-- The morning psalms -->
-      <div class="morning_psalm" id="morning_psalm"></div>
+      <div class="morning_psalm" id="morning_psalm"></div></p>
       <!-- The lesson -->
-      <h3>The Lesson</h3></p>
+      <h3><br>The Lesson</h3>
       <!-- The first reading -->
       <p><span class='subhead'>The First Reading</span>
       <br><i id="first_reading_citation" style='color:darkred;'></i><br>
@@ -263,14 +278,14 @@
       <!-- The evening psalms -->
       <p><div class="evening_psalm" id="evening_psalm"></div></p>
       <!-- The second reading -->
-      <p><span class='subhead'>The Second Reading</span>
+      <p><br><span class='subhead'>The Second Reading</span>
       <br><i id="second_reading_citation" style='color:darkred;'></i><br>
       <br><span id="second_reading_heading"></span></p>
       <div class="second_reading" id="second_reading"></div>
       <!-- A second daily hymn follows here -->
       <div class="second_hymn" id="second_hymn"></div><br>
       <!-- The third reading -->
-      <p><span class='subhead'>The Third Reading</span>
+      <p><br><span class='subhead'>The Third Reading</span>
       <br><i id="third_reading_citation" style='color:darkred;'></i><br>
       <br><span id="third_reading_heading"></span></p>
       <div class="third_reading" id="third_reading"></div>
@@ -279,7 +294,7 @@
       <!-- Possible part four -->
       <div class="part_four" id="part_four">
         <!-- The fourth reading -->
-        <p><span class='subhead'>The Fourth Reading</span>
+        <p><br><span class='subhead'>The Fourth Reading</span>
         <br><i id="fourth_reading_citation" style='color:darkred;'></i><br>
         <br><span id="fourth_reading_heading"></span></p>
         <div class="fourth_reading" id="fourth_reading"></div>
@@ -305,8 +320,8 @@
       <br>the communion of saints,
       <br>the forgiveness of sins,
       <br>the resurrection of the body,
-      <br>and the life everlasting. <i>Amen.</i><br>
-      <br><h3>The Prayers</h3></p>
+      <br>and the life everlasting. <i>Amen.</i><br></p>
+      <h3><br>The Prayers</h3>
       <p>The Lord be with you
       <br><i>And with thy spirit</i>
       <br>Let us pray.<br>
@@ -345,11 +360,11 @@
       <br>Let not the needy, O Lord, be forgotten;
       <br><i>Nor the hope of the poor be taken away.</i><br>
       <br>Create in us clean hearts, O God;
-      <br><i>And sustain us with thy Holy Spirit.</i><br><br>
-      <br><span class='subhead'>The Collect</span></p>
+      <br><i>And sustain us with thy Holy Spirit.</i><br></p>
+      <span class='subhead'>The Collect</span>
       <!-- The daily collect -->
       <div class="collect" id="collect"></div><br>
-      <p><span class='subhead'>A General Thanksgiving</span><br>
+      <p><br><span class='subhead'>A General Thanksgiving</span><br>
       <br><span class='intro'>Almighty God,</span> Father of all mercies, we
       <br>thine unworthy servants do give thee most
       <br>humble and hearty thanks for all thy
@@ -393,9 +408,9 @@
 
     <script>
       // Get the current date
-      let currentDate = new Date();
+      //let currentDate = new Date();
 
-      //let currentDate = new Date(2023, 8, 21);
+      let currentDate = new Date(2023, 11, 21);
 
       // Undefined easterDay
       let easterDay;
@@ -439,21 +454,37 @@
         /* All Saints */ "Let thy priests, O Lord, be clothed with salvation, and let thy<br>saints rejoice in goodness.&emsp;<i style='color:darkred;'>2 Chronicles 6:41</i>",
         /* All Souls */ "And God shall wipe away all tears from their eyes; and there<br>shall be no more death, neither sorrow, nor crying, neither<br>shall there be any more pain: for the former things are<br>passed away.&emsp;<i style='color:darkred;'>Revelation 21:4</i>",
         /* St. Andrew */ "He saw Simon and Andrew his brother casting a net into the sea:<br>for they were fishers. And Jesus said unto them, \"Come ye<br> after me, and I will make you to become fishers of men.\" And<br>straightaway they forsook their nets, and followed him.&emsp;<i style='color:darkred;'>Mark 1:16-18</i>",
-        /* St. Thomas */ "Jesus saith unto him, \"Thomas, because thou hast seen me,<br>thou hast believed: blessed are they that have not seen,<br>and yet have believed.\"&emsp;<i style='color:darkred;'>John 20:29</i>",
+        /* St. Thomas */ "Jesus saith unto him, \"Thomas, because thou hast seen<br>me, thou hast believed: blessed are they that have not<br>seen, and yet have believed.\"&emsp;<i style='color:darkred;'>John 20:29</i>",
         /* St. Stephen */ "And they stoned Stephen, calling upon God, and saying,<br>\"Lord Jesus, receive my spirit.\" And he kneeled down, and<br>cried with a loud voice, \"Lord, lay not this sin to their<br>charge.\" And when he had said this, he fell asleep.&emsp;<i style='color:darkred;'>Acts 7:59-60</i>",
         /* St. John */ "Beloved, let us love one another: for love is of God; and<br>every one that loveth is born of God, and knoweth God. He that<br>loveth not, knoweth not God; for God is love.&emsp;<i style='color:darkred;'>1 John 4:7-8</i>",
         /* Holy Innocents */ "Thus saith the Lord; A voice was heard in Ramah, lamentation,<br>and bitter weeping; Rahel weeping for her children refused<br>to be comforted for her children, because they were not.&emsp;<i style='color:darkred;'>Jeremiah 31:15</i>"
       ];
 
+      // Create an array of hymns for specific holy days
+      let holyHymns = [
+        /* St. Matthew */ "<span class='subhead'>The eternal gifts of Christ the King</span><br><i style='color:darkred;'>Aeterna Christi munera</i><br><br><span class='intro'>The eternal gifts</span>of Christ the King,<br>The Apostles' glory, let us sing;<br>And all, with hearts of gladness, raise<br>Due hymns of thankful love and praise.<br><br>Theirs is the steadfast faith of saints,<br>And hope that never yields nor faints,<br>And love of Christ in perfect glow<br>That lays the prince of this world low.<br><br>In them the Father's glory shone,<br>In them the will of God the Son,<br>In them exults the Holy Ghost,<br>Through them rejoice the heavenly host.<br><br>To thee, Redeemer, now we cry,<br>That thou wouldst join to them on high<br>Thy servants, who this grace implore,<br>Forever and forevermore. <i>Amen.</i>",
+        /* St. Michael */ "<span class='subhead'>Ye holy angels bright</span><br><br><span class='intro'>Ye holy</span> angels bright,<br>Who wait at God's right hand,<br>Or through the realms of light<br>Fly at your Lord's command,<br>Assist our song, or else the theme<br>Too high doth seem for mortal tongue.<br><br>Ye blessèd souls at rest,<br>Who ran this earthly race<br>And now, from sin released,<br>Behold your Savior's face,<br>God's praises sound, as in His light<br>With sweet delight ye do abound.<br><br>Ye saints, who toil below,<br>Adore your heavenly King,<br>And onward as ye go<br>Some joyful anthem sing;<br>Take what He gives, and praise Him still,<br>Through good or ill, who ever lives.<br><br>My soul, bear thou thy part,<br>Triumph in God above,<br>And with a well-tuned heart<br>Sing thou the songs of love;<br>Let all thy days till life shall end,<br>Whatever He send, be filled with praise. <i>Amen.</i>",
+        /* St. Luke */ "<span class='subhead'>Savior, who didst healing give</span><br><i style='color:darkred;'>Jesus ist das schönste Licht</i><br><br><span class='intro'>Savior,</span> who didst healing give<br>Still in power go before us;<br>Thou through death didst bid me live,<br>Unto fuller life restore us;<br>Strength from thee the fainting found,<br>Deaf men heard, the blind went seeing;<br>At thy touch was banished sickness,<br>And the leper felt new being.<br><br>Thou didst work thy deeds of old<br>Through the loving hands of others;<br>Still thy mercies manifold<br>Bless men by the hands of brothers;<br>Angels still before thy face<br>Go, sweet health to brothers bringing;<br>Still, hearts glow to tell his praises<br>With those whose name the Church is ringing.<br><br>Loved physician! for his word<br>Lo, the gospel page burns brighter,<br>Mission servant of the Lord,<br>Painter true, and perfect writer;<br>Savior, of thy bounty send<br>Such as Luke of gospel story,<br>Friends to all in body's prison<br>Till the sufferers see thy glory. <i>Amen.</i>",
+        /* St. James of Jerusalem */ "<span class='subhead'>Martyr of God, whose strength was steeled</span><br><i style='color:darkred;'>Martyr Dei qui unicum</i><br><br><span class='intro'>Martyr of God,</span> whose strength was steeled<br>To follow close God's only Son,<br>Well didst thou brave thy battlefield,<br>And well thy heavenly bliss was won!<br>Now join thy prayers with ours, who pray<br>That God may pardon us and bless;<br>For prayer keeps evil's plague away,<br>And draws from life its weariness.<br><br>Long, long ago, were loosed the chains<br>That held thy body once in thrall;<br>For us how many a bond remains!<br>O Love of God release us all.<br><br>All praise to God the Father be,<br>All praise to Thee, eternal Son;<br>All praise, O Holy Ghost, to Thee<br>While never ending ages run. <i>Amen.</i>",
+        /* Ss. Simon & Jude */ "<span class='subhead'>Thou who sentest thine apostles</span><br><br><span class='intro'>Thou who</span> sentest thine apostles<br>Two and two before thy face,<br>Partners in the night of toiling,<br>Heirs together of thy grace,<br>Throned at length, their labors ended,<br>Now in heaven's exalted place.<br><br>Praise to thee for those thy champions<br>Whom our hymns today proclaim;<br>One, whose zeal by thee englightened<br>Burned anew with nobler flame;<br>One, the brother of thy childhood,<br>Brought at last to know thy Name.<br><br>Praise to thee! Thy fire within them<br>Spake in love, and wrought in power;<br>Seen in mighty signs and wonders<br>In thy church's morning hour;<br>Heard in tones of sternest warning<br>When the storms began to lower.<br><br>Thus with holy Jude and Simon<br>And the thousand faithful more,<br>We, the good confession witnessed,<br>And our lifelong conflict o'er,<br>On the sea of fire and crystal<br>Stand, and wonder, and adore.<br><br>God our Maker, great and wondrous<br>In thy works, to thee be praise;<br>Jesus Christ, to thee be glory,<br>Just and true in all thy ways;<br>Praise to thee, from both proceeding,<br>Spirit blest, through endless days. <i>Amen</i>.",
+        /* All Saints */ "<span class='subhead'>By all your saints still striving</span><br><br><span class='intro'>By all</span> your saints still striving,<br>For all your saints at rest,<br>Your holy name, O Jesus,<br>Forevermore be blessed!<br>For those passed on before us,<br>We sing our praise anew<br>And, walking in their footsteps,<br>Would live our lives for you.<br><br>Apostles, prophets, martyrs,<br>And all the sacred throng,<br>Those named and those unnumbered,<br>Who raise the ceaseless song;<br>All these, passed on before us,<br>O Christ, we now adore,<br>And, walking in their footsteps,<br>Would serve you more and more.<br><br>We pray for saints we know not,<br>For saints still yet to be,<br>For grace to bear true witness<br>And serve you faithfully,<br>Till all the ransomed number<br>Who stand before the throne<br>Ascribe all power and glory<br>And praise to God alone. <i>Amen.</i>",
+        /* All Souls */ "<span class='subhead'>Alleluia! Alleluia! Alleluia!</span><br><br><span class='intro'>Author of life,</span> where'er they be,<br>Safe in thine own eternity,<br>Our loved are living unto thee:<br>Alleluia!<br><br>All souls are thine, and here or there<br>They rest within thy sheltering care;<br>One providence alike they share:<br>Alleluia!<br><br>Thy Word is true, thy ways are just;<br>Above the requiem, \"Dust to dust,\"<br>Shall rise our psalm of grateful trust:<br>Alleluia!<br><br>O happy they in God who rest,<br>No more by fear and doubt oppressed,<br>Living or dying, they are blest:<br>Alleluia! <i>Amen.</i>",
+        /* St. Andrew */ "<span class='subhead'>How fair and pleasant is the sight</span><br><br><span class='intro'>How fair</span> and pleasant is the sight<br>When kindred hearts agree<br>In holy amity and love,<br>United, Lord, by thee.<br><br>Bright pattern of fraternal love<br>Today with joy we see,<br>Saint Andrew, who a brother brought,<br>Saint Peter, Christ, to thee.<br><br>Brothers by nature and by grace,<br>Thou loved'st them as thine own;<br>Brothers united in the cross<br>And brothers in the crown.<br><br>They usher in thine Advent, Lord,<br>Which saved the world from sin;<br>For all who would that Advent greet,<br>Must first with Love begin. <i>Amen.</i>",
+        /* St. Thomas */ "<span class='subhead'>We walk by faith</span><br><br><span class='intro'>We walk</span> by faith and not by sight;<br>with gracious words draw near,<br>O Christ, who spoke as none e'er spoke:<br>\"My peace be with you here.\"<br><br>We may not touch your hands and side,<br>nor follow where you trod;<br>but in your promise we rejoice,<br>and cry, \"My Lord and God!\"<br><br>Help then, O Lord, our unbelief;<br>and may our faith abound<br>to call on you when you are near<br>and seek where you are found.<br><br>That when our life of faith is done,<br>in realms of clearer light<br>may we behold you as you are,<br>with full and endless sight. <i>Amen.</i>",
+        /* St. Stephen */ "<span class='subhead'>Good King Wenceslas</span><br><br><span class='intro'>Good</span> King Wenceslas looked out,<br>On the Feast of Stephen,<br>When the snow lay round about,<br>Deep and crisp and even;<br>In the cold a serf he spied<br>And bestowed his favor,<br>Welcomed him that Christmastide<br>As his Christ and Savior.<br><br>Stephen too by charity<br>And his proclamation<br>Served his King most faithfully,<br>Lord of every nation.<br>He embraced his Master's call,<br>Faith his only armor,<br>Dying at the feet of Saul:<br>First of all the martyrs.<br><br>Let us like Good Wenceslas<br>By this celebration<br>Join the mystery of the cross<br>To the incarnation.<br>Let the earth sing: Hodie!<br>Jubilate Deo!<br>With the angels: Gloria!<br>In excelsis Deo! <i>Amen.</i>",
+        /* St. John */ "<span class='subhead'>Come pure hearts in joyful measure</span><br><br><span class='intro'>Come,</span> pure hearts, in joyful measure<br>sing of those who spread the treasure<br>in the holy Gospels shrined;<br>blessed tidings of salvation,<br>peace on earth their proclamation,<br>love from God to lost mankind.<br><br>See the rivers four that gladden,<br>with their streams, the better Eden<br>planted by our Lord most dear;<br>Christ the fountain, these the waters;<br>drink, O Zion's sons and daughters,<br>drink and find salvation here.<br><br>O that we, thy truth confessing,<br>and thy holy word possessing,<br>Jesus, may thy love adore;<br>unto thee our voices raising,<br>thee with all thy ransomed praising,<br>ever and forevermore. <i>Amen.</i>",
+        /* Holy Innocents */ "<span class='subhead'>In Bethlehem</span><br><br><span class='intro'>In Bethlehem</span> a newborn boy<br>was hailed with songs of praise and joy.<br>Then warning came of danger near:<br>King Herod's troops would soon appear.<br><br>The soldiers sought the child in vain:<br>not yet was he to share our pain.<br>But down the ages rings the cry<br>of those who saw their children die.<br><br>Still rage the fires of hate today,<br>and innocents the price must pay,<br>while aching hearts in every land<br>cry out \"We cannot understand!\"<br><br>Lord Jesus, through our night of loss,<br>shines out the wonder of your cross,<br>the love that cannot cease to bear<br>our human anguish everywhere.<br>May that great love our lives control<br>and conquer hate in every soul,<br>till, pledged to build and not destroy,<br>we share your pain and find your joy. <i>Amen.</i>"
+      ];
+
       // Create an array of hymns 
       let hymns = [
-        "<br><span class='subhead'>Come, Holy Ghost, who ever One</span><br><i style='color:darkred;'>Nunc, Sancte, nobis, Spiritus</i><br><br><span class='intro'>Come, Holy Ghost,</span> who ever One<br>Art with the Father and the Son;<br>Come, Holy Ghost, our souls possess<br>With thy full flood of holiness.<br><br>By every power, by heart and tongue,<br>By act and deed, thy praise be sung:<br>Inflame with perfect love each sense,<br>That others' souls may kindle thence.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
-        "<br><span class='subhead'>Maker of man</span><br><i style='color:darkred;'>Plasmator hominis, Deus</i><br><br><span class='intro'>Maker of man,</span> from heaven thy throne<br>Who orderest all things, God alone;<br>By whose decree the teeming earth<br>To reptile and to beast gave birth.<br><br>The mighty forms that fill the land,<br>Instinct with life at thy command,<br>Thou gavest subdued to humankind<br>For service in their rank assigned.<br><br>From all thy servants chase away<br>Whatever thought impure today<br>Hath mingled with the heart's intent,<br>Or with the actions hath been blent.<br><br>In heaven thine endless joys bestow,<br>But grant thy gifts of grace below;<br>From chains of strife our souls release,<br>Bind fast the gentle bands of peace.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Doth live and reign eternally. <i>Amen.</i>",
-        "<br><span class='subhead'>O God, creation's secret force</span><br><i style='color:darkred;'>Rerum Deus tenax vigor</i><br><br><span class='intro'>O God,</span> creation's secret force,<br>Thyself unmoved, all motion's source,<br>Who from the morn till evening's ray<br>Through all its changes guidest the day:<br><br>Grant us, when this short life is past,<br>The glorious evening that shall last;<br>That, by a holy death attained,<br>Eternal glory may be gained.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
-        "<br><span class='subhead'>God of truth, Lord of might</span><br><i style='color:darkred;'>Rector potens, verax Deus</i><br><br><span class='intro'>O God of truth,</span> O Lord of might,<br>Who orderest time and change aright,<br>And sendest the early morning ray,<br>And lightest the glow of perfect day;<br><br>Extinguish thou each sinful fire,<br>And banish every ill desire;<br>And while thou keepest the body whole<br>Shed forth thy peace upon the soul.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
-        "<br><span class='subhead'>O Christ, our joy</span><br><i style='color:darkred;'>Tu Christe nostrum gaudium</i><br><br><span class='intro'>O Christ,</span> our joy, to whom is given<br>A throne over all the thrones of heaven,<br>In thee, whose hand all things obey,<br>The world's vain pleasures pass away.<br><br>So, suppliants here, we seek to win<br>Thy pardon for thy people's sin,<br>That, by thine all-prevailing grace,<br>Uplifted, we may seek thy face.<br><br>And when, all heaven beneath thee bowed,<br>Thou comest to judgement throned in cloud,<br>Then from our guilt wash out the stain<br>And give us our lost crowns again.<br><br>Be thou our joy and strong defense,<br>Who art our future recompense:<br>So shall the light that springs from thee<br>Be ours through all eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
-        "<br><span class='subhead'>Eternal Monarch, King most High</span><br><i style='color:darkred;'>Aeterne Rex altissime</i><br><br><span class='intro'>Eternal Monarch,</span> King most High,<br>Whose Blood hath brought redemption nigh,<br>By whom the death of Death was wrought,<br>And conquering Grace's battle fought.<br><br>Ascending to the throne of might,<br>And seated at the Father's right,<br>All power in heaven is Jesus' own,<br>That here his manhood had not known.<br><br>That so, in nature's triple frame,<br>Each heavenly and each earthly name,<br>And things in hell's abyss abhorred,<br>May bend the knee and own him Lord.<br><br>Yea, Angels tremble when they see<br>How changed is our humanity;<br>That flesh hath purged what flesh had stained,<br>And God, the Flesh of God, hath reigned.<br><br>Be thou our joy, O mighty Lord,<br>As thou wilt be our great reward;<br>Let all our glory be in thee<br>Both now and through eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
-        "<br><span class='subhead'>Be present, Holy Trinity</span><br><i style='color:darkred;'>Adesto Sancta Trinitas</i><br><br><span class='intro'>Be present,</span> Holy Trinity,<br>Like splendor, and one Deity:<br>Of things above, and things below,<br>Beginning, that no end shall know.<br><br>Thee all the armies of the sky<br>Adore, and laud, and magnify:<br>And Nature, in her triple frame,<br>Forever sanctifies thy name.<br><br>And we, too, thanks and homage pay,<br>Thine own adoring flock today;<br>O join to that celestial song<br>The praises of our suppliant song.<br><br>Light, sole and one, we thee confess,<br>With triple praise we rightly bless;<br>Alpha and Omega we own,<br>With every spirit round thy throne.<br><br>To thee, O unbegotten One,<br>And thee, O sole begotten Son,<br>And thee, O Holy Ghost, we raise<br>Our equal and eternal praise. <i>Amen.</i>"
+        "<span class='subhead'>Come, Holy Ghost, who ever One</span><br><i style='color:darkred;'>Nunc, Sancte, nobis, Spiritus</i><br><br><span class='intro'>Come, Holy Ghost,</span> who ever One<br>Art with the Father and the Son;<br>Come, Holy Ghost, our souls possess<br>With thy full flood of holiness.<br><br>By every power, by heart and tongue,<br>By act and deed, thy praise be sung:<br>Inflame with perfect love each sense,<br>That others' souls may kindle thence.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<span class='subhead'>Maker of man</span><br><i style='color:darkred;'>Plasmator hominis, Deus</i><br><br><span class='intro'>Maker of man,</span> from heaven thy throne<br>Who orderest all things, God alone;<br>By whose decree the teeming earth<br>To reptile and to beast gave birth.<br><br>The mighty forms that fill the land,<br>Instinct with life at thy command,<br>Thou gavest subdued to humankind<br>For service in their rank assigned.<br><br>From all thy servants chase away<br>Whatever thought impure today<br>Hath mingled with the heart's intent,<br>Or with the actions hath been blent.<br><br>In heaven thine endless joys bestow,<br>But grant thy gifts of grace below;<br>From chains of strife our souls release,<br>Bind fast the gentle bands of peace.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Doth live and reign eternally. <i>Amen.</i>",
+        "<span class='subhead'>O God, creation's secret force</span><br><i style='color:darkred;'>Rerum Deus tenax vigor</i><br><br><span class='intro'>O God,</span> creation's secret force,<br>Thyself unmoved, all motion's source,<br>Who from the morn till evening's ray<br>Through all its changes guidest the day:<br><br>Grant us, when this short life is past,<br>The glorious evening that shall last;<br>That, by a holy death attained,<br>Eternal glory may be gained.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<span class='subhead'>God of truth, Lord of might</span><br><i style='color:darkred;'>Rector potens, verax Deus</i><br><br><span class='intro'>O God of truth,</span> O Lord of might,<br>Who orderest time and change aright,<br>And sendest the early morning ray,<br>And lightest the glow of perfect day;<br><br>Extinguish thou each sinful fire,<br>And banish every ill desire;<br>And while thou keepest the body whole<br>Shed forth thy peace upon the soul.<br><br>O Father, that we ask be done<br>Through Jesus Christ, thine only Son,<br>Who, with the Holy Ghost and thee,<br>Shall live and reign eternally. <i>Amen.</i>",
+        "<span class='subhead'>O Christ, our joy</span><br><i style='color:darkred;'>Tu Christe nostrum gaudium</i><br><br><span class='intro'>O Christ,</span> our joy, to whom is given<br>A throne over all the thrones of heaven,<br>In thee, whose hand all things obey,<br>The world's vain pleasures pass away.<br><br>So, suppliants here, we seek to win<br>Thy pardon for thy people's sin,<br>That, by thine all-prevailing grace,<br>Uplifted, we may seek thy face.<br><br>And when, all heaven beneath thee bowed,<br>Thou comest to judgement throned in cloud,<br>Then from our guilt wash out the stain<br>And give us our lost crowns again.<br><br>Be thou our joy and strong defense,<br>Who art our future recompense:<br>So shall the light that springs from thee<br>Be ours through all eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
+        "<span class='subhead'>Eternal Monarch, King most High</span><br><i style='color:darkred;'>Aeterne Rex altissime</i><br><br><span class='intro'>Eternal Monarch,</span> King most High,<br>Whose Blood hath brought redemption nigh,<br>By whom the death of Death was wrought,<br>And conquering Grace's battle fought.<br><br>Ascending to the throne of might,<br>And seated at the Father's right,<br>All power in heaven is Jesus' own,<br>That here his manhood had not known.<br><br>That so, in nature's triple frame,<br>Each heavenly and each earthly name,<br>And things in hell's abyss abhorred,<br>May bend the knee and own him Lord.<br><br>Yea, Angels tremble when they see<br>How changed is our humanity;<br>That flesh hath purged what flesh had stained,<br>And God, the Flesh of God, hath reigned.<br><br>Be thou our joy, O mighty Lord,<br>As thou wilt be our great reward;<br>Let all our glory be in thee<br>Both now and through eternity.<br><br>All glory, Lord, to thee we pay,<br>Ascending over the stars today;<br>All glory, as is ever meet,<br>To Father and to Paraclete. <i>Amen.</i>",
+        "<span class='subhead'>Be present, Holy Trinity</span><br><i style='color:darkred;'>Adesto Sancta Trinitas</i><br><br><span class='intro'>Be present,</span> Holy Trinity,<br>Like splendor, and one Deity:<br>Of things above, and things below,<br>Beginning, that no end shall know.<br><br>Thee all the armies of the sky<br>Adore, and laud, and magnify:<br>And Nature, in her triple frame,<br>Forever sanctifies thy name.<br><br>And we, too, thanks and homage pay,<br>Thine own adoring flock today;<br>O join to that celestial song<br>The praises of our suppliant song.<br><br>Light, sole and one, we thee confess,<br>With triple praise we rightly bless;<br>Alpha and Omega we own,<br>With every spirit round thy throne.<br><br>To thee, O unbegotten One,<br>And thee, O sole begotten Son,<br>And thee, O Holy Ghost, we raise<br>Our equal and eternal praise. <i>Amen.</i>"
       ];
 
       // Create an array of all books of the Bible
@@ -781,6 +812,8 @@
         holyKey = "st-matthew";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[0];
+        // Set the hymn as follows 
+        document.getElementById('hymn').innerHTML = holyHymns[0];
       } else if (daysAfterEaster == michael) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Michael and All Angels";
@@ -788,6 +821,8 @@
         holyKey = "st-michael";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[1];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[1];
       } else if (daysAfterEaster == luke) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Luke the Evangelist";
@@ -795,6 +830,8 @@
         holyKey = "st-luke";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[2];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[2];
       } else if (daysAfterEaster == jamesJerusalem) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint James of Jerusalem, Brother of Our Lord Jesus Christ, and Martyr";
@@ -802,6 +839,8 @@
         holyKey = "st-james-of-jerusalem";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[3];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[3];
       } else if (daysAfterEaster == simonJude) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Simon and Saint Jude, Apostles";
@@ -809,6 +848,8 @@
         holyKey = "ss-simon-and-jude";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[4];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[4];
       } else if (daysAfterEaster == allSaintsEve) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "All Hallows' Eve";
@@ -822,6 +863,8 @@
         holyKey = "all-saints-day";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[5];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[5];
       } else if (daysAfterEaster == allSouls) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "All Souls' Day";
@@ -829,6 +872,8 @@
         holyKey = "all-souls-day";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[6];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[6];
       } else if (daysAfterEaster == andrew) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Andrew the Apostle";
@@ -836,6 +881,8 @@
         holyKey = "st-andrew";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[7];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[7];
       } else if (daysAfterEaster == thomas) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint Thomas the Apostle";
@@ -843,6 +890,8 @@
         holyKey = "st-thomas";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[8];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[8];
       } else if (daysAfterEaster == christmasEve) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Christmas Eve";
@@ -855,6 +904,8 @@
         holyKey = "st-stephen";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[9];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[9];
       } else if (daysAfterEaster == john) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "Saint John, Apostle and Evangelist";
@@ -862,6 +913,8 @@
         holyKey = "st-john";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[10];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[10];
       } else if (daysAfterEaster == innocents) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "The Holy Innocents";
@@ -869,6 +922,8 @@
         holyKey = "holy-innocents";
         // Set the versicle as follows
         document.getElementById('versicle').innerHTML = holyVersicles[11];
+        // Set the hymn as follows
+        document.getElementById('hymn').innerHTML = holyHymns[11];
       } else if (daysAfterEaster == holyNameEve) {
         // Set the day as follows
         document.getElementById('ordinal-date').textContent = "The Eve of the Holy Name of Our Lord Jesus Christ";
@@ -1436,11 +1491,11 @@
           const element = document.getElementById(elementId);
 
           if (isApocrypha) {
-            element.innerHTML += "<br><br><p>Here endeth the Reading.</p>";
+            element.innerHTML += "<center><br>Here endeth the Reading.</center>";
           } else if (isGospel) {
-            element.innerHTML += "<br><br><p>The Gospel of the Lord.<br><i>Praise be to thee, O Christ.</i></p>";
+            element.innerHTML += "<center><br>The Gospel of the Lord.<br><i>Praise be to thee, O Christ.</i></center>";
           } else {
-            element.innerHTML += "<br><br><p>The Word of the Lord.<br><i>Thanks be to God.</i></p>";
+            element.innerHTML += "<center><br>The Word of the Lord.<br><i>Thanks be to God.</i></center>";
           };
         };
 
@@ -1480,7 +1535,7 @@
               // Define its Latin name
               const latinName = item[0].metadata.latinname;
               // Give the psalm a header
-              let psalmHeader = `<br><br><span class='subhead'>${psalmNumber}</span><br><i style='color:darkred;'>${latinName}</i><br><br>`;
+              let psalmHeader = `<br><span class='subhead'>${psalmNumber}</span><br><i style='color:darkred;'>${latinName}</i><br><br>`;
 
               // Loop through the verses
               for (let x = 0; x < item[0].value[0].value.length; x++) {
@@ -1492,7 +1547,7 @@
               };
 
               // Order psalmHeader according to the psalmKey array
-              psalmVerses[psalmKey.indexOf(key)] = `${psalmHeader}<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and <br>ever shall be, world without end. <i>Amen.</i><br><br>`;
+              psalmVerses[psalmKey.indexOf(key)] = `${psalmHeader}<br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br>`;
             };
           };
         };
@@ -1531,21 +1586,21 @@
         /* Sunday */ "<br><span class='subhead'>Glory be to God</span><br><i style='color:darkred;'>Gloria in excelsis</i><br><br><span class='intro'>Glory be</span> to God on high,<br>and on earth peace, good will towards men.<br><br>We praise thee, we bless thee,<br>we worship thee<br>we glorify thee<br>we give thanks to thee for thy great glory,<br>O Lord God, heavenly King,<br>God the Father Almighty.<br><br>O Lord, the only-begotten Son, Jesus Christ;<br>O Lord God, Lamb of God, Son of the Father,<br>that takest away the sins of the world,<br>have mercy upon us.<br>Thou that takest away the sins of the world,<br>receive our prayer.<br>Thou that sittest at the right hand of God the Father,<br>have mercy upon us.<br><br>For thou only art holy;<br>thou only art the Lord;<br>thou only, O Christ,<br>with the Holy Ghost,<br>art most high in the glory of God the Father.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
         /* Monday */ "<br><span class='subhead'>A Song of Praise</span><br><i style='color:darkred;'>Benedictus es, Domine</i><br><i style='color:darkred;'>Song of the Three Young Men, 29-34</i><br><br><span class='intro'>Blessed art thou,</span> O Lord God of our fathers;<br>praised and exalted above all for ever.<br>Blessed art thou for the Name of thy Majesty;<br>praised and exalted above all for ever.<br>Blessed art thou in the temple of thy holiness;<br>praised and exalted above all for ever.<br>Blessed art thou that beholdest the depths,<br>and dwellest between the Cherubim;<br>praised and exalted above all for ever.<br>Blessed art thou on the glorious throne of thy kingdom;<br>praised and exalted above all for ever.<br>Blessed art thou in the firmament of heaven;<br>praised and exalted above all for ever.<br>Blessed art thou, O Father, Son, and Holy Spirit;<br>praised and exalted above all for ever.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
         /* Tuesday */ "<br><span class='subhead'>A Song of Penitence</span><br><i style='color:darkred;'>Kyrie Pantokrator</i><br><i style='color:darkred;'>Prayer of Manasseh, 1-2, 4, 6-7, 11-15</i><br><br><span class='intro'>O Lord</span> Almighty,<br>God of our fathers,<br>of Abraham and Isaac and Jacob<br>and of their righteous offspring;<br>Thou hast made heaven and earth with all their<br>array;<br>All things quake with fear at thy presence;<br>they tremble because of thy power.<br>But thy merciful promise is beyond all measure;<br>it surpasseth all that our minds can fathom.<br>O Lord, thou art full of compassion,<br>long-suffering, and abounding in mercy.<br>Thou holdest back thy hand;<br>thou dost not punish as we deserve.<br>In thy great goodness, Lord, thou hast promised<br>forgiveness to sinners,<br>that they may repent of their sin and be saved.<br>And now, O Lord, I bend the knee of my heart,<br>and make my appeal, sure of thy gracious goodness.<br>I have sinned, O Lord, I have sinned,<br>and I know my wickedness only too well.<br>Therefore I make this prayer to thee:<br>Forgive me, Lord, forgive me.<br>Do not let me perish in my sin,<br>nor condemn me to the depths of the earth.<br>For thou, O Lord, art the God of those who repent,<br>and in me thou wilt show forth thy goodness;<br>Unworthy as I am, thou wilt save me,<br>in accordance with thy great mercy,<br>and I will praise thee without ceasing<br>all the days of my life.<br>For all the powers of heaven sing thy praises,<br>and thine is the glory to ages of ages.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
-        /* Wednesday */ "<br><span class='subhead'>The Song of Simeon</span><br><i style='color:darkred;'>Nunc dimittis</i><br><i style='color:darkred;'>Luke 2:29-32</i><br><br><span class='intro'>Lord,</span> now lettest thou thy servant depart in peace,<br>according to thy word;<br>For mine eyes have seen thy salvation,<br>which thou hast prepared before the face of all people,<br>To be a light to lighten the Gentiles,<br>and to be the glory of thy people Israel.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>",
-        /* Thursday */ "<br><span class='subhead'>The Song of Zechariah</span><br><i style='color:darkred;'>Benedictus Dominus Deus</i><br><i style='color:darkred;'>Luke 1:68-79</i><br><br><span class='intro'>Blessed be</span> the Lord God of Israel,<br>for he hath visited and redeemed his people;<br>And hath raised up a mighty salvation for us<br>in the house of his servant David,<br>As he spake by the mouth of his holy prophets,<br>which have been since the world began:<br>That we should be saved from our enemies,<br>and from the hand of all that hate us;<br>To perform the mercy promised to our forefathers,<br>and to remember his holy covenant;<br>To perform the oath which he sware to our forefather Abraham,<br>that he would give us,<br>That we being delivered out of the hand of our enemies<br>might serve him without fear,<br>In holiness and righteousness before him,<br>all the days of our life.<br><br>And thou, child, shalt be called the prophet of the Highest,<br>for thou shalt go before the face of the Lord<br>to prepare his ways;<br>To give knowledge of salvation unto his people<br>for the remission of their sins,<br>Through the tender mercy of our God,<br>whereby the dayspring from on high hath visited us;<br>To give light to them that sit in darkness<br>and in the shadow of death,<br>and to guide our feet into the way of peace.<br><br>Glory to the Father, and to the Son, and to the Holy Spirit:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>",
+        /* Wednesday */ "<br><span class='subhead'>The Song of Simeon</span><br><i style='color:darkred;'>Nunc dimittis</i><br><i style='color:darkred;'>Luke 2:29-32</i><br><br><span class='intro'>Lord,</span> now lettest thou thy servant depart in peace,<br>according to thy word;<br>For mine eyes have seen thy salvation,<br>which thou hast prepared before the face of all people,<br>To be a light to lighten the Gentiles,<br>and to be the glory of thy people Israel.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
+        /* Thursday */ "<br><span class='subhead'>The Song of Zechariah</span><br><i style='color:darkred;'>Benedictus Dominus Deus</i><br><i style='color:darkred;'>Luke 1:68-79</i><br><br><span class='intro'>Blessed be</span> the Lord God of Israel,<br>for he hath visited and redeemed his people;<br>And hath raised up a mighty salvation for us<br>in the house of his servant David,<br>As he spake by the mouth of his holy prophets,<br>which have been since the world began:<br>That we should be saved from our enemies,<br>and from the hand of all that hate us;<br>To perform the mercy promised to our forefathers,<br>and to remember his holy covenant;<br>To perform the oath which he sware to our forefather Abraham,<br>that he would give us,<br>That we being delivered out of the hand of our enemies<br>might serve him without fear,<br>In holiness and righteousness before him,<br>all the days of our life.<br><br>And thou, child, shalt be called the prophet of the Highest,<br>for thou shalt go before the face of the Lord<br>to prepare his ways;<br>To give knowledge of salvation unto his people<br>for the remission of their sins,<br>Through the tender mercy of our God,<br>whereby the dayspring from on high hath visited us;<br>To give light to them that sit in darkness<br>and in the shadow of death,<br>and to guide our feet into the way of peace.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
         /* Friday */ "<br><span class='subhead'>We Praise Thee</span><br><i style='color:darkred;'>Te Deum laudamus</i><br><br><span class='intro'>We praise thee</span>, O God; we acknowledge thee to be the Lord.<br>All the earth doth worship thee, the Father everlasting.<br>To thee all angels cry aloud,<br>the Heavens and all the Powers therein.<br>To thee Cherubim and Seraphim continually do cry:<br>Holy, holy, holy, Lord God of Sabaoth;<br>Heaven and earth are full of the majesty of thy glory.<br>The glorious company of the apostles praise thee.<br>The goodly fellowship of the prophets praise thee.<br>The noble army of martyrs praise thee.<br>The holy Church throughout all the world<br>doth acknowledge thee,<br>the Father, of an infinite majesty,<br>Thine adorable, true, and only Son,<br>also the Holy Ghost the Comforter.<br><br>Thou art the King of glory, O Christ.<br>Thou art the everlasting Son of the Father.<br>When thou tookest upon thee to deliver man,<br>thou didst humble thyself to be born of a Virgin.<br>When thou hadst overcome the sharpness of death,<br>thou didst open the kingdom of heaven to all believers.<br>Thou sittest at the right hand of God, in the glory of the Father.<br>We believe that thou shalt come to be our judge.<br>We therefore pray thee, help thy servants,<br>whom thou hast redeemed with thy precious blood.<br>Make them to be numbered with thy saints,<br>in glory everlasting.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>",
-        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><br><i style='color:darkred;'>Luke 1:46-55</i><br><br><span class='intro'>My soul</span> doth magnify the Lord,<br>and my spirit hath rejoiced in God my Savior.<br>For he hath regarded<br>the lowliness of his handmaiden.<br>For behold from henceforth<br>all generations shall call me blessed.<br>For he that is mighty hath magnified me,<br>and holy is his Name.<br>And his mercy is on them that fear him<br>throughout all generations.<br>He hath showed strength with his arm;<br>He hath scattered the proud in the imagination of their hearts.<br>He hath put down the mighty from their seat,<br>and hath exalted the humble and meek.<br>He hath filled the hungry with good things,<br>and the rich he hath sent empty away.<br>He remembering his mercy hath holpen his servant Israel,<br>as he promised to our forefathers,<br>Abraham and his seed forever.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>"
+        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><br><i style='color:darkred;'>Luke 1:46-55</i><br><br><span class='intro'>My soul</span> doth magnify the Lord,<br>and my spirit hath rejoiced in God my Savior.<br>For he hath regarded<br>the lowliness of his handmaiden.<br>For behold from henceforth<br>all generations shall call me blessed.<br>For he that is mighty hath magnified me,<br>and holy is his Name.<br>And his mercy is on them that fear him<br>throughout all generations.<br>He hath showed strength with his arm;<br>He hath scattered the proud in the imagination of their hearts.<br>He hath put down the mighty from their seat,<br>and hath exalted the humble and meek.<br>He hath filled the hungry with good things,<br>and the rich he hath sent empty away.<br>He remembering his mercy hath holpen his servant Israel,<br>as he promised to our forefathers,<br>Abraham and his seed forever.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>"
       ];
 
       // Create an array of second canticles for every day of the week
       let secondCanticles = [
-        /* Sunday */ "<br><span class='subhead'>A Song of Christ's Appearing</span><br><i style='color:darkred;'>1 Timothy 3:16; 6:15,16</i><br><br><span class='intro'>Christ</span> was believed in throughout the world<br>and taken up in glory.<br><br>Christ Jesus was revealed in the flesh<br>and vindicated in the spirit.<br>He was seen by angels<br>and proclaimed among the nations.<br>Believed in throughout the world,<br>he was taken up in glory.<br>This will be made manifest at the proper time<br>by the blessed and only Sovereign,<br>Who alone has immortality,<br>and dwells in unapproachable light.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>Christ was believed in throughout the world<br>and taken up in glory.",
-        /* Monday */ "<br><span class='subhead'>A Song of God's Assembled</span><br><i style='color:darkred;'>Hebrews 12:22-24a,28,29</i><br><br><span class='intro'>We have</span> come before the throne of God<br>to share in the inheritance of the saints in light.<br><br>We have come before God's holy mountain,<br>to the heavenly Jerusalem, the city of the living God.<br>We have come before countless angels making festival,<br>before the assembly of the firstborn citizens of heaven.<br>We have come before God, who is judge of all,<br>before the spirits of the just made perfect.<br>We have come before Jesus,<br>the mediator of the new covenant.<br>We are receiving a kingdom that cannot be shaken:<br>so let us give thanks and offer to God acceptable worship,<br>Full of reverence and awe;<br>for our God is a consuming fire.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>We have come before the throne of God<br>to share in the inheritance of the saints in light.",
-        /* Tuesday */ "<br><span class='subhead'>A Song of God's Chosen One</span><br><i style='color:darkred;'>Isaiah 11:1,2,3b-4a,6,9</i><br><br><span class='intro'>The earth</span> shall be full of the knowledge of the Lord.<br><br>There shall come forth a shoot from the stock of Jesse,<br>and a branch shall grow out of his roots.<br>And the Spirit of the Lord shall rest upon him,<br>the spirit of wisdom and understanding,<br>The spirit of counsel and might,<br>the spirit of knowledge and the fear of the Lord.<br>He shall not judge by what his eyes see,<br>or decide by what his ears hear,<br>But with righteousness he shall judge the poor,<br>and decide with equity for the meek of the earth.<br>The wolf shall dwell with the lamb,<br>and the leopard shall lie down with the kid.<br>The calf, the lion and the fatling together,<br>with a little child to lead them.<br>They shall not hurt or destroy in all my holy mountain,<br>for the earth shall be full of the knowledge of the Lord<br>as the waters cover the sea.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>The earth shall be full of the knowledge of the Lord.",
-        /* Wednesday */ "<br><span class='subhead'>A Song of the Word of the Lord</span><br><i style='color:darkred;'>Isaiah 55:6-11</i><br><br><span class='intro'>Return</span> to the Lord, who will have mercy,<br>to our God, who will richly pardon.<br><br>Seek the Lord while he may be found,<br>call upon him while he is near;<br>Let the wicked abandon their ways,<br>and the unrighteous their thoughts;<br>Return to the Lord, who will have mercy;<br>to our God, who will richly pardon.<br>'For my thoughts are not your thoughts,<br>neither are your ways my ways,' says the Lord.<br>'For as the heavens are higher than the earth,<br>So are my ways higher than your ways<br>and my thoughts than your thoughts.<br>'As the rain and the snow come down from above,<br>and return not again but water the earth,<br>'Bringing forth life and giving growth,<br>seed for sowing and bread to eat,<br>'So is my word that goes forth from my mouth;<br>it will not return to me fruitless,<br>'But it will accomplish that which I purpose,<br>and succeed in the task I gave it.'<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>Return to the Lord who will have mercy,<br>to our God, who will richly pardon.",
-        /* Thursday */ "<br><span class='subhead'>A Song of Tobit</span><br><i style='color:darkred;'>Tobit 13:1,3,4-6a</i><br><br><span class='intro'>See what</span> the Lord our God has done<br>and exalt him in the sight of the living.<br><br>Blessed be God, who lives for ever,<br>whose reign endures throughout all ages.<br>Declare God's praise before the nations,<br>you who are the children of Israel.<br>For if our God has scattered you among them,<br>there too has he shown you his greatness.<br>Exalt him in the sight of the living,<br>because he is our Lord and God and our Father for ever.<br>Though God punishes you for your wickedness,<br>mercy will be shown to you all.<br>God will gather you from every nation,<br>from wherever you have been scattered.<br>When you turn to the Lord<br>with all your heart and soul,<br>God will hide his face from you no more.<br>See what the Lord has done for you<br>and give thanks with a loud voice.<br>Praise the Lord of righteousness<br>and exalt the King of the ages.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>See what the Lord our God has done<br>and exalt him in the sight of the living.",
-        /* Friday */ "<br><span class='subhead'>The Song of Christ's Glory</span><br><i style='color:darkred;'>Philippians 2:5-11</i><br><br><span class='intro'>At the name</span> of Jesus<br>every knee shall bow.<br><br>Christ Jesus was in the form of God,<br>but he did not cling to equality with God.<br>He emptied himself, taking the form of a servant,<br>and was born in our human likeness.<br>Being found in human form he humbled himself,<br>and became obedient unto death, even death on a cross.<br>Therefore God has highly exalted him,<br>and bestowed on him the name above every name,<br>That at the name of Jesus every knee shall bow,<br>in heaven and on earth and under the earth;<br>And every tongue confess that Jesus Christ is Lord,<br>to the glory of God the Father.<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i><br><br>At the name of Jesus<br>every knee shall bow.",
-        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><i style='color:darkred;'>David Mowbray</i><br><br><span class='intro'>With Mary</span> let my soul rejoice,<br>and praise God's holy name<br>his saving love from first to last,<br>from age to age the same!<br><br>How strong his arm, how great his power!<br>the proud he will disown;<br>the meek and humble he exalts<br>to share his glorious throne.<br><br>The rich our God will send away<br>and feed the hungry poor;<br>the arms of love remain outstretched<br>at mercy's open door.<br><br>So shall God's promise be fulfilled,<br>to Israel firmly made:<br>a child is born, a Son is given<br>whose crown will never fade.<br><br>All glory to the Father, Son<br>and Spirit now proclaim;<br>with Mary let the world rejoice<br>and praise God's holy name!<br><br>Glory be to the Father, and to the Son, and to the Holy Ghost:<br>as it was in the beginning, is now, and ever shall be,<br>world without end. <i>Amen.</i>"
+        /* Sunday */ "<br><span class='subhead'>A Song of Christ's Appearing</span><br><i style='color:darkred;'>1 Timothy 3:16; 6:15,16</i><br><br><span class='intro'>Christ</span> was believed in throughout the world<br>and taken up in glory.<br><br>Christ Jesus was revealed in the flesh<br>and vindicated in the spirit.<br>He was seen by angels<br>and proclaimed among the nations.<br>Believed in throughout the world,<br>he was taken up in glory.<br>This will be made manifest at the proper time<br>by the blessed and only Sovereign,<br>Who alone has immortality,<br>and dwells in unapproachable light.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>Christ was believed in throughout the world<br>and taken up in glory.",
+        /* Monday */ "<br><span class='subhead'>A Song of God's Assembled</span><br><i style='color:darkred;'>Hebrews 12:22-24a,28,29</i><br><br><span class='intro'>We have</span> come before the throne of God<br>to share in the inheritance of the saints in light.<br><br>We have come before God's holy mountain,<br>to the heavenly Jerusalem, the city of the living God.<br>We have come before countless angels making festival,<br>before the assembly of the firstborn citizens of heaven.<br>We have come before God, who is judge of all,<br>before the spirits of the just made perfect.<br>We have come before Jesus,<br>the mediator of the new covenant.<br>We are receiving a kingdom that cannot be shaken:<br>so let us give thanks and offer to God acceptable worship,<br>Full of reverence and awe;<br>for our God is a consuming fire.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>We have come before the throne of God<br>to share in the inheritance of the saints in light.",
+        /* Tuesday */ "<br><span class='subhead'>A Song of God's Chosen One</span><br><i style='color:darkred;'>Isaiah 11:1,2,3b-4a,6,9</i><br><br><span class='intro'>The earth</span> shall be full of the knowledge of the Lord.<br><br>There shall come forth a shoot from the stock of Jesse,<br>and a branch shall grow out of his roots.<br>And the Spirit of the Lord shall rest upon him,<br>the spirit of wisdom and understanding,<br>The spirit of counsel and might,<br>the spirit of knowledge and the fear of the Lord.<br>He shall not judge by what his eyes see,<br>or decide by what his ears hear,<br>But with righteousness he shall judge the poor,<br>and decide with equity for the meek of the earth.<br>The wolf shall dwell with the lamb,<br>and the leopard shall lie down with the kid.<br>The calf, the lion and the fatling together,<br>with a little child to lead them.<br>They shall not hurt or destroy in all my holy mountain,<br>for the earth shall be full of the knowledge of the Lord<br>as the waters cover the sea.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>The earth shall be full of the knowledge of the Lord.",
+        /* Wednesday */ "<br><span class='subhead'>A Song of the Word of the Lord</span><br><i style='color:darkred;'>Isaiah 55:6-11</i><br><br><span class='intro'>Return</span> to the Lord, who will have mercy,<br>to our God, who will richly pardon.<br><br>Seek the Lord while he may be found,<br>call upon him while he is near;<br>Let the wicked abandon their ways,<br>and the unrighteous their thoughts;<br>Return to the Lord, who will have mercy;<br>to our God, who will richly pardon.<br>'For my thoughts are not your thoughts,<br>neither are your ways my ways,' says the Lord.<br>'For as the heavens are higher than the earth,<br>So are my ways higher than your ways<br>and my thoughts than your thoughts.<br>'As the rain and the snow come down from above,<br>and return not again but water the earth,<br>'Bringing forth life and giving growth,<br>seed for sowing and bread to eat,<br>'So is my word that goes forth from my mouth;<br>it will not return to me fruitless,<br>'But it will accomplish that which I purpose,<br>and succeed in the task I gave it.'<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>Return to the Lord who will have mercy,<br>to our God, who will richly pardon.",
+        /* Thursday */ "<br><span class='subhead'>A Song of Tobit</span><br><i style='color:darkred;'>Tobit 13:1,3,4-6a</i><br><br><span class='intro'>See what</span> the Lord our God has done<br>and exalt him in the sight of the living.<br><br>Blessed be God, who lives for ever,<br>whose reign endures throughout all ages.<br>Declare God's praise before the nations,<br>you who are the children of Israel.<br>For if our God has scattered you among them,<br>there too has he shown you his greatness.<br>Exalt him in the sight of the living,<br>because he is our Lord and God and our Father for ever.<br>Though God punishes you for your wickedness,<br>mercy will be shown to you all.<br>God will gather you from every nation,<br>from wherever you have been scattered.<br>When you turn to the Lord<br>with all your heart and soul,<br>God will hide his face from you no more.<br>See what the Lord has done for you<br>and give thanks with a loud voice.<br>Praise the Lord of righteousness<br>and exalt the King of the ages.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>See what the Lord our God has done<br>and exalt him in the sight of the living.",
+        /* Friday */ "<br><span class='subhead'>The Song of Christ's Glory</span><br><i style='color:darkred;'>Philippians 2:5-11</i><br><br><span class='intro'>At the name</span> of Jesus<br>every knee shall bow.<br><br>Christ Jesus was in the form of God,<br>but he did not cling to equality with God.<br>He emptied himself, taking the form of a servant,<br>and was born in our human likeness.<br>Being found in human form he humbled himself,<br>and became obedient unto death, even death on a cross.<br>Therefore God has highly exalted him,<br>and bestowed on him the name above every name,<br>That at the name of Jesus every knee shall bow,<br>in heaven and on earth and under the earth;<br>And every tongue confess that Jesus Christ is Lord,<br>to the glory of God the Father.<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i><br><br>At the name of Jesus<br>every knee shall bow.",
+        /* Saturday */ "<br><span class='subhead'>The Song of Mary</span><br><i style='color:darkred;'>Magnificat</i><i style='color:darkred;'>David Mowbray</i><br><br><span class='intro'>With Mary</span> let my soul rejoice,<br>and praise God's holy name<br>his saving love from first to last,<br>from age to age the same!<br><br>How strong his arm, how great his power!<br>the proud he will disown;<br>the meek and humble he exalts<br>to share his glorious throne.<br><br>The rich our God will send away<br>and feed the hungry poor;<br>the arms of love remain outstretched<br>at mercy's open door.<br><br>So shall God's promise be fulfilled,<br>to Israel firmly made:<br>a child is born, a Son is given<br>whose crown will never fade.<br><br>All glory to the Father, Son<br>and Spirit now proclaim;<br>with Mary let the world rejoice<br>and praise God's holy name!<br><br>Glory be to the Father, and to the Son, and to the<br>Holy Ghost: as it was in the beginning, is now, and<br>ever shall be, world without end. <i>Amen.</i>"
       ];
 
       // Create an array of collects for every day of the week
